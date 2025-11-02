@@ -1,0 +1,35 @@
+[gd_scene load_steps=4 format=3 uid="uid://dn80t7we4r4ww"]
+
+[ext_resource type="Script" uid="uid://c2ovgfs6123eq" path="res://Player/player.gd" id="1_4flbx"]
+[ext_resource type="Texture2D" uid="uid://c1qw3gbmlbqrr" path="res://Player/snord.png" id="2_4ntmi"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4ntmi"]
+size = Vector2(6, 6)
+
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_4flbx")
+sprite_texture = ExtResource("2_4ntmi")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_4ntmi")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_4ntmi")
+
+[node name="Label" type="Label" parent="."]
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -9.0
+offset_top = -14.000001
+offset_right = 169.0
+offset_bottom = 74.0
+grow_horizontal = 0
+grow_vertical = 2
+scale = Vector2(0.1, 0.1)
+theme_override_font_sizes/font_size = 64
+text = "snord"
