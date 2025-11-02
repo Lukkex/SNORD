@@ -1,6 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://kv723254y5s"]
+[gd_scene load_steps=4 format=3 uid="uid://kv723254y5s"]
 
-[ext_resource type="Texture2D" uid="uid://cvw2aopgk0t24" path="res://assets/snord.png" id="1_gvk52"]
+[ext_resource type="Theme" uid="uid://maqxnhvp58cj" path="res://theme.tres" id="1_j3jwc"]
+[ext_resource type="Script" uid="uid://c4w6bvcumr6mp" path="res://main_menu.gd" id="1_mue8r"]
+[ext_resource type="PackedScene" uid="uid://chece6tc5jl47" path="res://character_select_button.tscn" id="3_mue8r"]
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -9,6 +11,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_mue8r")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 1
@@ -22,15 +25,31 @@ grow_vertical = 2
 layout_mode = 2
 color = Color(0, 0, 0, 1)
 
-[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/ColorRect"]
+[node name="Label" type="Label" parent="MarginContainer/ColorRect"]
 layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -83.5
+offset_right = 83.5
+offset_bottom = 23.0
 grow_horizontal = 2
-grow_vertical = 2
+theme = ExtResource("1_j3jwc")
+text = "
+
+
+
+Select your snordling."
+horizontal_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
 alignment = 1
 
-[node name="TextureButton" type="TextureButton" parent="MarginContainer/ColorRect/HBoxContainer"]
+[node name="VBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer" instance=ExtResource("3_mue8r")]
 layout_mode = 2
-texture_normal = ExtResource("1_gvk52")

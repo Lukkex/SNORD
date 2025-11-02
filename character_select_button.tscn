@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://chece6tc5jl47"]
+
+[ext_resource type="Texture2D" uid="uid://4w04th77lw3r" path="res://assets/snord outlined.png" id="1_21eht"]
+[ext_resource type="Script" uid="uid://8v3mftnxgqpo" path="res://character_select_button.gd" id="1_632il"]
+[ext_resource type="Theme" uid="uid://maqxnhvp58cj" path="res://theme.tres" id="2_632il"]
+
+[node name="CharSelectButton" type="VBoxContainer"]
+script = ExtResource("1_632il")
+
+[node name="TextureButton" type="TextureButton" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+texture_normal = ExtResource("1_21eht")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 2
+theme = ExtResource("2_632il")
+text = "Snord Speverts"
+horizontal_alignment = 1
+
+[connection signal="mouse_entered" from="TextureButton" to="." method="_on_texture_button_mouse_entered"]
+[connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]
