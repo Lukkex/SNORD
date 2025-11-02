@@ -1,0 +1,36 @@
+[gd_scene load_steps=8 format=3 uid="uid://dtl4fy58wfpbr"]
+
+[ext_resource type="Script" uid="uid://btxyxlaqy8hj4" path="res://Button class/button.gd" id="1_e7iei"]
+[ext_resource type="Texture2D" uid="uid://c1qw3gbmlbqrr" path="res://Player/snord.png" id="1_iu6h6"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_58b5i"]
+texture = ExtResource("1_iu6h6")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_iu6h6"]
+texture = ExtResource("1_iu6h6")
+modulate_color = Color(0.19607843, 0.42352942, 0.41568628, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1yyh4"]
+texture = ExtResource("1_iu6h6")
+modulate_color = Color(0.37722725, 0.37588274, 0, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1yyh4"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mbmgq"]
+
+[node name="Button" type="Button"]
+custom_minimum_size = Vector2(400, 120)
+offset_right = 8.0
+offset_bottom = 8.0
+scale = Vector2(0.2, 0.2)
+theme_override_constants/outline_size = 50
+theme_override_font_sizes/font_size = 64
+theme_override_styles/normal = SubResource("StyleBoxTexture_58b5i")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_iu6h6")
+theme_override_styles/hover = SubResource("StyleBoxTexture_1yyh4")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_1yyh4")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_mbmgq")
+text = "snord"
+script = ExtResource("1_e7iei")
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]
