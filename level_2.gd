@@ -3,8 +3,6 @@ extends Node2D
 const WIN_SCREEN = preload("uid://bwi1x7xvk1aue")
 
 func _ready() -> void:
-	if AudioManager.snordmusicloop:
-		AudioManager.snordmusicloop.play()
 	SignalBus.player_died.connect(_restart)
 	SignalBus.player_win.connect(_win)
 

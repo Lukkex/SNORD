@@ -45,4 +45,3 @@ tile_set = SubResource("TileSet_n7ypv")
 [node name="Player" parent="." instance=ExtResource("2_xdadj")]
 position = Vector2(-2, -8)
 speed_multiplier = 12
-collision_on = false
