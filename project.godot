@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="SNORD"
-run/main_scene="res://root.tscn"
+run/main_scene="uid://kv723254y5s"
 config/features=PackedStringArray("4.5", "Forward Plus")
 boot_splash/image="uid://4w04th77lw3r"
 config/icon="res://icon.svg"
