@@ -5,7 +5,7 @@ extends Button
 
 
 func _ready() -> void:
-	text = set_text
+	if set_text != "button": text = set_text
 
 func _on_pressed() -> void:
 	if scene: get_tree().change_scene_to_packed(scene)
