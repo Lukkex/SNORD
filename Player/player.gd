@@ -10,6 +10,9 @@ class_name player
 @export var speed_multiplier := 1
 @export_range(1,5) var channel : int = 3 ## set the starting channel from 0 to 4
 
+# Signals
+signal die
+
 func _ready() -> void:
 	add_to_group("players")
 	_set_y_pos(channel)
@@ -40,8 +43,8 @@ func _on_collision_area_body_entered(body: Node2D) -> void:
 	if body.name == "Spikes":
 		print("die")
 		camera_2d.reparent(get_tree().current_scene)
+		SignalBus.player_died.emit()
 		queue_free()
-		
-		await get_tree().create_timer(1).timeout
 	if body.name == "Victory":
 		print("win")
+		SignalBus.player_died.emit()

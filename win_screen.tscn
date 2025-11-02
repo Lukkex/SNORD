@@ -1,0 +1,50 @@
+[gd_scene load_steps=3 format=3 uid="uid://bwi1x7xvk1aue"]
+
+[ext_resource type="Texture2D" uid="uid://c1qw3gbmlbqrr" path="res://Player/snord.png" id="1_l2arl"]
+[ext_resource type="PackedScene" uid="uid://dtl4fy58wfpbr" path="res://Button class/button.tscn" id="2_wmwda"]
+
+[node name="WinScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Snord" type="Sprite2D" parent="."]
+position = Vector2(568, 301)
+scale = Vector2(136.89287, 51.8125)
+texture = ExtResource("1_l2arl")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 151.0
+offset_top = -5.0
+offset_right = 919.0
+offset_bottom = 83.0
+theme_override_font_sizes/font_size = 64
+text = "Excellent work, padawan"
+
+[node name="Button" parent="." instance=ExtResource("2_wmwda")]
+layout_mode = 0
+offset_left = 221.0
+offset_top = 546.0
+offset_right = 1295.9999
+offset_bottom = 796.0
+text = "go to menu"
+
+[node name="Button2" parent="." instance=ExtResource("2_wmwda")]
+layout_mode = 0
+offset_left = 460.0
+offset_top = 568.0
+offset_right = 1534.9999
+offset_bottom = 818.0
+text = "next level"
+
+[node name="Button3" parent="." instance=ExtResource("2_wmwda")]
+layout_mode = 0
+offset_left = 716.0
+offset_top = 541.0
+offset_right = 1790.9999
+offset_bottom = 791.0
+text = "retry"
