@@ -13,6 +13,7 @@ config_version=5
 config/name="SNORD"
 run/main_scene="res://root.tscn"
 config/features=PackedStringArray("4.5", "Forward Plus")
+boot_splash/image="uid://4w04th77lw3r"
 config/icon="res://icon.svg"
 
 [autoload]
