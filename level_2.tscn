@@ -1,8 +1,10 @@
-[gd_scene load_steps=6 format=4 uid="uid://bvsowf1ovra1a"]
+[gd_scene load_steps=8 format=4 uid="uid://bvsowf1ovra1a"]
 
 [ext_resource type="Texture2D" uid="uid://cv7kamnm1d0qa" path="res://assets/snord tilemap.png" id="1_nmjpi"]
 [ext_resource type="Script" uid="uid://83u45gutgg07" path="res://level_2.gd" id="1_xdadj"]
 [ext_resource type="PackedScene" uid="uid://dn80t7we4r4ww" path="res://Player/player.tscn" id="2_xdadj"]
+[ext_resource type="AudioStream" uid="uid://bix4ccts4gxu3" path="res://assets/loop.wav" id="4_n7ypv"]
+[ext_resource type="AudioStream" uid="uid://kcqtgmbhwew" path="res://assets/snord.mp3" id="5_0s5r2"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1y8me"]
 texture = ExtResource("1_nmjpi")
@@ -35,6 +37,7 @@ tile_map_data = PackedByteArray("AAAAAAAAAAADAAAAAAAAAAEAAAADAAAAAAAAAAIAAAADAAA
 tile_set = SubResource("TileSet_n7ypv")
 
 [node name="Spikes" type="TileMapLayer" parent="Tilemap"]
+tile_map_data = PackedByteArray("AAAfAAQAAAABAAAAAAAtAAIAAAABAAAAAAA8AAUAAAABAAAAAABEAAIAAAABAAAAAABSAAMAAAABAAAAAABeAAEAAAABAAAAAACGAAMAAAABAAAAAACaAAIAAAABAAAAAACbAAMAAAABAAAAAADGAAIAAAABAAAAAADHAAIAAAABAAAAAADIAAIAAAABAAAAAADJAAIAAAABAAAAAADKAAIAAAABAAAAAADLAAIAAAABAAAAAADoAAQAAAABAAAAAAD3AAIAAAABAAAAAAD3AAMAAAABAAAAAAD3AAQAAAABAAAAAAALAQMAAAABAAAAAAAMAQMAAAABAAAAAAAMAQQAAAABAAAAAAAhAQIAAAABAAAAAAAhAQMAAAABAAAAAAA=")
 tile_set = SubResource("TileSet_n7ypv")
 
 [node name="Victory" type="TileMapLayer" parent="Tilemap"]
@@ -45,3 +48,9 @@ tile_set = SubResource("TileSet_n7ypv")
 [node name="Player" parent="." instance=ExtResource("2_xdadj")]
 position = Vector2(-2, -8)
 speed_multiplier = 12
+
+[node name="SnordMusicLoop" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_n7ypv")
+
+[node name="SnordSound1" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_0s5r2")
