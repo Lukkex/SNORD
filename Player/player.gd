@@ -8,6 +8,7 @@ class_name player
 # EXPORTS
 @export var sprite_texture : Texture
 @export var speed_multiplier := 1
+@export var collision_on := true
 @export_range(1,5) var channel : int = 3 ## set the starting channel from 0 to 4
 
 # Signals
@@ -40,11 +41,11 @@ func _set_y_pos(height):
 
 
 func _on_collision_area_body_entered(body: Node2D) -> void:
-	if body.name == "Spikes":
+	if body.name == "Spikes" and collision_on:
 		print("die")
 		camera_2d.reparent(get_tree().current_scene)
 		SignalBus.player_died.emit()
 		queue_free()
 	if body.name == "Victory":
 		print("win")
-		SignalBus.player_died.emit()
+		SignalBus.player_win.emit()
