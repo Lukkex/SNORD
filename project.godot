@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 
 Global="*res://global.gd"
 AudioManager="*res://audio_manager.gd"
+SignalBus="*res://SignalBus.gd"
 
 [input]
 
