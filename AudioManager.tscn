@@ -1,10 +1,14 @@
-[gd_scene load_steps=3 format=3 uid="uid://dpm1xg7813svx"]
+[gd_scene load_steps=4 format=3 uid="uid://dpm1xg7813svx"]
 
 [ext_resource type="AudioStream" uid="uid://bix4ccts4gxu3" path="res://assets/loop.wav" id="1_2nh25"]
 [ext_resource type="Script" uid="uid://c8dewukqt7qwk" path="res://audio_manager.gd" id="1_d16gy"]
+[ext_resource type="AudioStream" uid="uid://kcqtgmbhwew" path="res://assets/snord.mp3" id="3_er85w"]
 
 [node name="AudioManager" type="Node2D"]
 script = ExtResource("1_d16gy")
 
 [node name="SnordMusicLoop" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("1_2nh25")
+
+[node name="SnordSound1" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_er85w")
