@@ -1,11 +1,16 @@
 extends VBoxContainer
 
+@onready var snord = $SnordSound1
 @onready var textbutton = $TextureButton
-@onready var player_skin = textbutton.texture.path
+@export_file("*.tscn") var scene : String
 
 func _on_texture_button_pressed() -> void:
-	AudioManager.snord1.play()
+	snord.play()
+	if scene:
+		get_tree().change_scene_to_file(scene)
+	pass
 
 
 func _on_texture_button_mouse_entered() -> void:
-	AudioManager.snord1.play()
+	snord.play()
+	pass

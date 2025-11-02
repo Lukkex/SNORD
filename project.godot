@@ -13,13 +13,14 @@ config_version=5
 config/name="SNORD"
 run/main_scene="res://root.tscn"
 config/features=PackedStringArray("4.5", "Forward Plus")
+boot_splash/image="uid://4w04th77lw3r"
 config/icon="res://icon.svg"
 
 [autoload]
 
 Global="*res://global.gd"
-AudioManager="*res://audio_manager.gd"
 SignalBus="*res://SignalBus.gd"
+AudioManager="res://audio_manager.gd"
 
 [input]
 

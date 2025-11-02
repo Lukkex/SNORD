@@ -1,8 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://kv723254y5s"]
+[gd_scene load_steps=6 format=3 uid="uid://kv723254y5s"]
 
 [ext_resource type="Theme" uid="uid://maqxnhvp58cj" path="res://theme.tres" id="1_j3jwc"]
 [ext_resource type="Script" uid="uid://c4w6bvcumr6mp" path="res://main_menu.gd" id="1_mue8r"]
 [ext_resource type="PackedScene" uid="uid://chece6tc5jl47" path="res://character_select_button.tscn" id="3_mue8r"]
+[ext_resource type="AudioStream" uid="uid://bix4ccts4gxu3" path="res://assets/loop.wav" id="4_ikcl0"]
+[ext_resource type="AudioStream" uid="uid://kcqtgmbhwew" path="res://assets/snord.mp3" id="5_ljn4s"]
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -53,3 +55,12 @@ alignment = 1
 
 [node name="VBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer" instance=ExtResource("3_mue8r")]
 layout_mode = 2
+scene = "uid://c4qr8vdt8bk8g"
+
+[node name="SnordMusicLoop" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_ikcl0")
+
+[node name="SnordSound1" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_ljn4s")
+
+[editable path="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer"]

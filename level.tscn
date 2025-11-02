@@ -1,8 +1,10 @@
-[gd_scene load_steps=6 format=4 uid="uid://c4qr8vdt8bk8g"]
+[gd_scene load_steps=8 format=4 uid="uid://c4qr8vdt8bk8g"]
 
 [ext_resource type="Texture2D" uid="uid://cv7kamnm1d0qa" path="res://assets/snord tilemap.png" id="1_u52ul"]
 [ext_resource type="Script" uid="uid://cvik30apwdvcx" path="res://level.gd" id="1_vonw3"]
 [ext_resource type="PackedScene" uid="uid://dn80t7we4r4ww" path="res://Player/player.tscn" id="2_vonw3"]
+[ext_resource type="AudioStream" uid="uid://bix4ccts4gxu3" path="res://assets/loop.wav" id="4_f2txt"]
+[ext_resource type="AudioStream" uid="uid://kcqtgmbhwew" path="res://assets/snord.mp3" id="5_1ainy"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vonw3"]
 texture = ExtResource("1_u52ul")
@@ -46,3 +48,9 @@ tile_set = SubResource("TileSet_oi3di")
 position = Vector2(14, -8)
 speed_multiplier = 6
 collision_on = false
+
+[node name="SnordMusicLoop" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_f2txt")
+
+[node name="SnordSound1" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_1ainy")
