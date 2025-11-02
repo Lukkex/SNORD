@@ -18,8 +18,8 @@ config/icon="res://icon.svg"
 [autoload]
 
 Global="*res://global.gd"
-AudioManager="*res://audio_manager.gd"
 SignalBus="*res://SignalBus.gd"
+AudioManager="res://audio_manager.gd"
 
 [input]
 

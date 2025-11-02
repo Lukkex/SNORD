@@ -1,12 +1,18 @@
 extends Node2D
 
-const WIN_SCREEN = preload("uid://bwi1x7xvk1aue")
+@onready var music = $SnordMusicLoop
+
+const WIN_SCREEN = preload("res://win_screen.tscn")
 
 func _ready() -> void:
-	if AudioManager.snordmusicloop:
-		AudioManager.snordmusicloop.play()
+	if music:
+		music.play()
 	SignalBus.player_died.connect(_restart)
 	SignalBus.player_win.connect(_win)
+
+func _physics_process(delta: float) -> void:
+	if !music.playing:
+		music.play()
 
 func _restart():
 	await get_tree().create_timer(1).timeout

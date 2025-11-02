@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://chece6tc5jl47"]
+[gd_scene load_steps=5 format=3 uid="uid://chece6tc5jl47"]
 
 [ext_resource type="Texture2D" uid="uid://4w04th77lw3r" path="res://assets/snord outlined.png" id="1_21eht"]
 [ext_resource type="Script" uid="uid://8v3mftnxgqpo" path="res://character_select_button.gd" id="1_632il"]
 [ext_resource type="Theme" uid="uid://maqxnhvp58cj" path="res://theme.tres" id="2_632il"]
+[ext_resource type="AudioStream" uid="uid://kcqtgmbhwew" path="res://assets/snord.mp3" id="4_hd0b4"]
 
 [node name="CharSelectButton" type="VBoxContainer"]
 script = ExtResource("1_632il")
@@ -17,6 +18,9 @@ layout_mode = 2
 theme = ExtResource("2_632il")
 text = "Snord Speverts"
 horizontal_alignment = 1
+
+[node name="SnordSound1" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_hd0b4")
 
 [connection signal="mouse_entered" from="TextureButton" to="." method="_on_texture_button_mouse_entered"]
 [connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]
