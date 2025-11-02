@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://dn80t7we4r4ww"]
+[gd_scene load_steps=5 format=3 uid="uid://dn80t7we4r4ww"]
 
 [ext_resource type="Script" uid="uid://c2ovgfs6123eq" path="res://Player/player.gd" id="1_4flbx"]
 [ext_resource type="Texture2D" uid="uid://c1qw3gbmlbqrr" path="res://Player/snord.png" id="2_4ntmi"]
@@ -6,14 +6,21 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4ntmi"]
 size = Vector2(6, 6)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_btcbx"]
+size = Vector2(6, 6)
+
 [node name="Player" type="CharacterBody2D"]
+collision_layer = 2
+collision_mask = 0
 script = ExtResource("1_4flbx")
 sprite_texture = ExtResource("2_4ntmi")
+speed_multiplier = 8
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_4ntmi")
 
 [node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(10, 10)
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("2_4ntmi")
@@ -33,3 +40,12 @@ grow_vertical = 2
 scale = Vector2(0.1, 0.1)
 theme_override_font_sizes/font_size = 64
 text = "snord"
+
+[node name="CollisionArea" type="Area2D" parent="."]
+collision_layer = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CollisionArea"]
+shape = SubResource("RectangleShape2D_btcbx")
+debug_color = Color(0.9930658, 0, 0.2497159, 0.41960785)
+
+[connection signal="body_entered" from="CollisionArea" to="." method="_on_collision_area_body_entered"]
