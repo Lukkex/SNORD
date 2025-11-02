@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://bwi1x7xvk1aue"]
+[gd_scene load_steps=5 format=3 uid="uid://bwi1x7xvk1aue"]
 
 [ext_resource type="Texture2D" uid="uid://c1qw3gbmlbqrr" path="res://Player/snord.png" id="1_l2arl"]
 [ext_resource type="PackedScene" uid="uid://dtl4fy58wfpbr" path="res://Button class/button.tscn" id="2_wmwda"]
+[ext_resource type="PackedScene" uid="uid://bvsowf1ovra1a" path="res://level_2.tscn" id="3_l5t5q"]
+[ext_resource type="PackedScene" uid="uid://c4qr8vdt8bk8g" path="res://level.tscn" id="4_1txte"]
 
 [node name="WinScreen" type="Control"]
 layout_mode = 3
@@ -40,6 +42,7 @@ offset_top = 568.0
 offset_right = 1534.9999
 offset_bottom = 818.0
 text = "next level"
+scene = ExtResource("3_l5t5q")
 
 [node name="Button3" parent="." instance=ExtResource("2_wmwda")]
 layout_mode = 0
@@ -48,3 +51,4 @@ offset_top = 541.0
 offset_right = 1790.9999
 offset_bottom = 791.0
 text = "retry"
+scene = ExtResource("4_1txte")
