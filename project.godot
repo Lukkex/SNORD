@@ -14,7 +14,7 @@ config/name="SNORD"
 run/main_scene="uid://kv723254y5s"
 config/features=PackedStringArray("4.5", "Forward Plus")
 boot_splash/image="uid://4w04th77lw3r"
-config/icon="res://icon.svg"
+config/icon="uid://c1qw3gbmlbqrr"
 
 [autoload]
 
