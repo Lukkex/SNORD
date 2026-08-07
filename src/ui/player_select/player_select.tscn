@@ -1,0 +1,69 @@
+[gd_scene format=3 uid="uid://dgycxi3l5alvd"]
+
+[ext_resource type="Theme" uid="uid://maqxnhvp58cj" path="res://src/ui/themes/theme.tres" id="1_ems7s"]
+[ext_resource type="PackedScene" uid="uid://cvxvp2n8a3200" path="res://src/ui/player_select/player_select_item.tscn" id="1_l0pe6"]
+
+[node name="PlayerSelect" type="Control" unique_id=13376186]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=530807629]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 150
+theme_override_constants/margin_top = 80
+theme_override_constants/margin_right = 150
+theme_override_constants/margin_bottom = 80
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=1112554480]
+layout_mode = 2
+theme_override_constants/separation = 80
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer" unique_id=1415272691]
+layout_mode = 2
+theme = ExtResource("1_ems7s")
+theme_override_font_sizes/font_size = 32
+text = "SELECT YOUR CHARACTER"
+horizontal_alignment = 1
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=1882686947]
+layout_mode = 2
+theme_override_constants/separation = 24
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/VBoxContainer2" unique_id=119509238]
+layout_mode = 2
+offset_transform_enabled = true
+theme_override_constants/separation = 24
+alignment = 1
+
+[node name="player_select_item" parent="MarginContainer/VBoxContainer/VBoxContainer2/HBoxContainer" unique_id=860131542 instance=ExtResource("1_l0pe6")]
+layout_mode = 2
+
+[node name="player_select_item2" parent="MarginContainer/VBoxContainer/VBoxContainer2/HBoxContainer" unique_id=802251231 instance=ExtResource("1_l0pe6")]
+layout_mode = 2
+
+[node name="player_select_item3" parent="MarginContainer/VBoxContainer/VBoxContainer2/HBoxContainer" unique_id=825190321 instance=ExtResource("1_l0pe6")]
+layout_mode = 2
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/VBoxContainer/VBoxContainer2" unique_id=443455635]
+layout_mode = 2
+offset_transform_enabled = true
+theme_override_constants/separation = 24
+alignment = 1
+
+[node name="player_select_item" parent="MarginContainer/VBoxContainer/VBoxContainer2/HBoxContainer2" unique_id=1697702398 instance=ExtResource("1_l0pe6")]
+layout_mode = 2
+
+[node name="player_select_item2" parent="MarginContainer/VBoxContainer/VBoxContainer2/HBoxContainer2" unique_id=1478027474 instance=ExtResource("1_l0pe6")]
+layout_mode = 2
+
+[node name="player_select_item3" parent="MarginContainer/VBoxContainer/VBoxContainer2/HBoxContainer2" unique_id=145755257 instance=ExtResource("1_l0pe6")]
+layout_mode = 2

@@ -1,0 +1,200 @@
+[gd_scene format=4 uid="uid://cvxvp2n8a3200"]
+
+[ext_resource type="Script" uid="uid://hj15qpdgygaq" path="res://src/ui/player_select/player_select_item.gd" id="1_73ube"]
+[ext_resource type="Texture2D" uid="uid://c1qw3gbmlbqrr" path="res://src/player/snord.png" id="1_hmhyd"]
+[ext_resource type="Theme" uid="uid://maqxnhvp58cj" path="res://src/ui/themes/theme.tres" id="2_5bowb"]
+[ext_resource type="Texture2D" uid="uid://cyg2lxb1yypq4" path="res://src/ui/player_select/chareacter select sprites (visual).png" id="2_6brxg"]
+[ext_resource type="Texture2D" uid="uid://b3r87mrar0u4j" path="res://src/ui/player_select/chareacter select sprite.png" id="4_ib2hi"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6brxg"]
+texture = ExtResource("4_ib2hi")
+0:0/0 = 0
+0:0/0/terrain_set = 0
+0:0/0/terrain = 0
+0:0/0/terrains_peering_bit/right_side = 0
+0:0/0/terrains_peering_bit/bottom_side = 0
+0:0/0/terrains_peering_bit/bottom_left_corner = 0
+0:0/0/terrains_peering_bit/left_side = 0
+0:0/0/terrains_peering_bit/top_left_corner = 0
+0:0/0/terrains_peering_bit/top_side = 0
+0:0/0/terrains_peering_bit/top_right_corner = 0
+1:0/0 = 0
+1:0/0/terrain_set = 0
+1:0/0/terrain = 0
+1:0/0/terrains_peering_bit/right_side = 0
+1:0/0/terrains_peering_bit/left_side = 0
+1:0/0/terrains_peering_bit/top_left_corner = 0
+1:0/0/terrains_peering_bit/top_side = 0
+1:0/0/terrains_peering_bit/top_right_corner = 0
+2:0/0 = 0
+2:0/0/terrain_set = 0
+2:0/0/terrain = 0
+2:0/0/terrains_peering_bit/right_side = 0
+2:0/0/terrains_peering_bit/bottom_right_corner = 0
+2:0/0/terrains_peering_bit/bottom_side = 0
+2:0/0/terrains_peering_bit/left_side = 0
+2:0/0/terrains_peering_bit/top_left_corner = 0
+2:0/0/terrains_peering_bit/top_side = 0
+2:0/0/terrains_peering_bit/top_right_corner = 0
+3:0/0 = 0
+3:0/0/terrain_set = 0
+3:0/0/terrain = 0
+3:0/0/terrains_peering_bit/bottom_side = 0
+3:0/0/terrains_peering_bit/bottom_left_corner = 0
+3:0/0/terrains_peering_bit/left_side = 0
+3:0/0/terrains_peering_bit/top_left_corner = 0
+3:0/0/terrains_peering_bit/top_side = 0
+4:0/0 = 0
+4:0/0/terrain_set = 0
+4:0/0/terrain = 0
+4:0/0/terrains_peering_bit/right_side = 0
+4:0/0/terrains_peering_bit/bottom_right_corner = 0
+4:0/0/terrains_peering_bit/bottom_side = 0
+4:0/0/terrains_peering_bit/top_side = 0
+4:0/0/terrains_peering_bit/top_right_corner = 0
+5:0/0 = 0
+5:0/0/terrain_set = 0
+5:0/0/terrain = 0
+5:0/0/terrains_peering_bit/right_side = 0
+5:0/0/terrains_peering_bit/bottom_right_corner = 0
+5:0/0/terrains_peering_bit/bottom_side = 0
+5:0/0/terrains_peering_bit/bottom_left_corner = 0
+5:0/0/terrains_peering_bit/left_side = 0
+5:0/0/terrains_peering_bit/top_left_corner = 0
+5:0/0/terrains_peering_bit/top_side = 0
+6:0/0 = 0
+6:0/0/terrain_set = 0
+6:0/0/terrain = 0
+6:0/0/terrains_peering_bit/right_side = 0
+6:0/0/terrains_peering_bit/bottom_right_corner = 0
+6:0/0/terrains_peering_bit/bottom_side = 0
+6:0/0/terrains_peering_bit/bottom_left_corner = 0
+6:0/0/terrains_peering_bit/left_side = 0
+7:0/0 = 0
+7:0/0/terrain_set = 0
+7:0/0/terrain = 0
+7:0/0/terrains_peering_bit/right_side = 0
+7:0/0/terrains_peering_bit/bottom_right_corner = 0
+7:0/0/terrains_peering_bit/bottom_side = 0
+7:0/0/terrains_peering_bit/bottom_left_corner = 0
+7:0/0/terrains_peering_bit/left_side = 0
+7:0/0/terrains_peering_bit/top_side = 0
+7:0/0/terrains_peering_bit/top_right_corner = 0
+8:0/0 = 0
+8:0/0/terrain_set = 0
+8:0/0/terrains_peering_bit/right_side = 0
+8:0/0/terrains_peering_bit/bottom_right_corner = 0
+8:0/0/terrains_peering_bit/bottom_side = 0
+9:0/0 = 0
+9:0/0/terrain_set = 0
+9:0/0/terrains_peering_bit/bottom_side = 0
+9:0/0/terrains_peering_bit/bottom_left_corner = 0
+9:0/0/terrains_peering_bit/left_side = 0
+10:0/0 = 0
+10:0/0/terrain_set = 0
+10:0/0/terrain = 0
+10:0/0/terrains_peering_bit/right_side = 0
+10:0/0/terrains_peering_bit/bottom_right_corner = 0
+10:0/0/terrains_peering_bit/bottom_side = 0
+10:0/0/terrains_peering_bit/bottom_left_corner = 0
+10:0/0/terrains_peering_bit/left_side = 0
+10:0/0/terrains_peering_bit/top_left_corner = 0
+10:0/0/terrains_peering_bit/top_side = 0
+10:0/0/terrains_peering_bit/top_right_corner = 0
+11:0/0 = 0
+11:0/0/terrain_set = 0
+11:0/0/terrains_peering_bit/right_side = 0
+11:0/0/terrains_peering_bit/top_side = 0
+11:0/0/terrains_peering_bit/top_right_corner = 0
+12:0/0 = 0
+12:0/0/terrain_set = 0
+12:0/0/terrains_peering_bit/left_side = 0
+12:0/0/terrains_peering_bit/top_left_corner = 0
+12:0/0/terrains_peering_bit/top_side = 0
+
+[sub_resource type="TileSet" id="TileSet_ohj6x"]
+terrain_set_0/mode = 0
+terrain_set_0/terrain_0/name = "1"
+terrain_set_0/terrain_0/color = Color(0.5, 0.34375, 0.25, 1)
+sources/1 = SubResource("TileSetAtlasSource_6brxg")
+
+[node name="PlayerSelectItem" type="Control" unique_id=860131542]
+z_index = 1
+custom_minimum_size = Vector2(96, 114)
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_73ube")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="." unique_id=1291511038]
+clip_contents = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -15.0
+offset_right = -48.0
+offset_bottom = -90.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(2, 2)
+texture = ExtResource("2_6brxg")
+region_rect = Rect2(0, 0, 48, 48)
+patch_margin_left = 16
+patch_margin_top = 16
+patch_margin_right = 16
+patch_margin_bottom = 16
+
+[node name="CharacterCutoff" type="TextureRect" parent="." unique_id=1621514481]
+z_index = 1
+clip_contents = true
+layout_mode = 0
+offset_left = 16.0
+offset_top = -6.0
+offset_right = 80.0
+offset_bottom = 57.0
+
+[node name="TextureRect" type="TextureRect" parent="CharacterCutoff" unique_id=2019489203]
+layout_mode = 0
+offset_top = 4.0
+offset_right = 64.0
+offset_bottom = 78.0
+texture = ExtResource("1_hmhyd")
+expand_mode = 5
+
+[node name="Name" type="Label" parent="." unique_id=986012284]
+custom_minimum_size = Vector2(64, 0)
+layout_mode = 0
+offset_left = 16.0
+offset_top = 69.0
+offset_right = 80.0
+offset_bottom = 94.0
+size_flags_horizontal = 4
+offset_transform_enabled = true
+offset_transform_position = Vector2(3, 0)
+theme = ExtResource("2_5bowb")
+theme_override_font_sizes/font_size = 8
+text = "snord speverts"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1721378531]
+custom_minimum_size = Vector2(64, 0)
+layout_mode = 1
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -32.0
+offset_top = -9.0
+offset_right = 32.0
+offset_bottom = 29.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1150442296]
+layer = -1
+visible = false
+
+[node name="TileMapLayer" type="TileMapLayer" parent="CanvasLayer" unique_id=1845988262]
+tile_map_data = PackedByteArray("AAABAAAAAQAKAAAAAAABAAEAAQAKAAAAAAABAAIAAQAKAAAAAAABAAMAAQAKAAAAAAACAAMAAQAKAAAAAAACAAQAAQAKAAAAAAADAAMAAQAKAAAAAAADAAIAAQAKAAAAAAACAAIAAQAKAAAAAAADAAEAAQAKAAAAAAACAAEAAQAKAAAAAAACAAAAAQAKAAAAAAADAAAAAQAKAAAAAAABAAQAAQAKAAAAAAABAAUAAQAKAAAAAAACAAUAAQAKAAAAAAACAAYAAQABAAAAAAADAAUAAQAKAAAAAAADAAQAAQAKAAAAAAAEAAQAAQAKAAAAAAAEAAMAAQAKAAAAAAAEAAIAAQAKAAAAAAAEAAEAAQAKAAAAAAABAP//AQAGAAAAAAACAP//AQAGAAAAAAABAAYAAQABAAAAAAADAAYAAQABAAAAAAAEAAYAAQABAAAAAAAEAAUAAQAKAAAAAAAAAAYAAQALAAAAAAAAAAUAAQAEAAAAAAAAAAQAAQAEAAAAAAAAAAMAAQAEAAAAAAAAAAIAAQAEAAAAAAAAAAEAAQAEAAAAAAAAAAAAAQAEAAAAAAAEAAAAAQAKAAAAAAAFAAYAAQAMAAAAAAAFAAUAAQADAAAAAAAFAAQAAQADAAAAAAAFAAMAAQADAAAAAAAFAAIAAQADAAAAAAAFAAEAAQADAAAAAAAFAAAAAQADAAAAAAAEAP//AQAGAAAAAAADAP//AQAGAAAAAAAAAP//AQAIAAAAAAAFAP//AQAJAAAAAAA=")
+tile_set = SubResource("TileSet_ohj6x")
