@@ -14,7 +14,7 @@ compatibility/default_parent_skeleton_in_mesh_instance_3d=true
 
 [application]
 
-config/name="SNORD"
+config/name="SNORD ULTRA MASTER REDUX: RETURN OF THE SNORDLINGS"
 run/main_scene="uid://kv723254y5s"
 config/features=PackedStringArray("4.7", "Forward Plus")
 boot_splash/image="uid://4w04th77lw3r"
@@ -26,6 +26,10 @@ Global="*uid://cwyxt7i38frqk"
 SignalBus="*uid://btmpx1p8x011u"
 AudioManager="uid://c8dewukqt7qwk"
 LevelManager="*uid://ddpi18wqpksiw"
+
+[display]
+
+window/stretch/mode="canvas_items"
 
 [input]
 
