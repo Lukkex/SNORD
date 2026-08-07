@@ -1,10 +1,9 @@
 [gd_scene format=3 uid="uid://bwi1x7xvk1aue"]
 
 [ext_resource type="Texture2D" uid="uid://c1qw3gbmlbqrr" path="res://src/player/snord.png" id="1_l2arl"]
+[ext_resource type="Script" uid="uid://bqs2mhcdx2v65" path="res://src/ui/win_screen.gd" id="1_su5wl"]
 [ext_resource type="PackedScene" uid="uid://dtl4fy58wfpbr" path="res://src/ui/buttons/button.tscn" id="2_wmwda"]
-[ext_resource type="PackedScene" uid="uid://bvsowf1ovra1a" path="res://src/levels/level_2.tscn" id="3_l5t5q"]
 [ext_resource type="PackedScene" uid="uid://p3db2nqyq53p" path="res://main-menu.tscn" id="3_ymxn2"]
-[ext_resource type="PackedScene" uid="uid://bvsowf1ovra1a" path="res://src/levels/level_2.tscn" id="4_1txte"]
 
 [node name="WinScreen" type="Control" unique_id=195482948]
 layout_mode = 3
@@ -13,6 +12,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_su5wl")
 
 [node name="Snord" type="Sprite2D" parent="." unique_id=701335145]
 position = Vector2(568, 301)
@@ -28,7 +28,7 @@ offset_bottom = 83.0
 theme_override_font_sizes/font_size = 64
 text = "Excellent work, padawan"
 
-[node name="Button" parent="." unique_id=1727489594 instance=ExtResource("2_wmwda")]
+[node name="MainMenuButton" parent="." unique_id=1727489594 instance=ExtResource("2_wmwda")]
 layout_mode = 0
 offset_left = 221.0
 offset_top = 546.0
@@ -37,20 +37,21 @@ offset_bottom = 796.0
 text = "go to menu"
 scene = ExtResource("3_ymxn2")
 
-[node name="Button2" parent="." unique_id=1086564258 instance=ExtResource("2_wmwda")]
+[node name="NextLevelButton" parent="." unique_id=1086564258 instance=ExtResource("2_wmwda")]
 layout_mode = 0
 offset_left = 460.0
 offset_top = 568.0
 offset_right = 1534.9999
 offset_bottom = 818.0
 text = "next level"
-scene = ExtResource("3_l5t5q")
 
-[node name="Button3" parent="." unique_id=983857561 instance=ExtResource("2_wmwda")]
+[node name="RetryButton" parent="." unique_id=983857561 instance=ExtResource("2_wmwda")]
 layout_mode = 0
 offset_left = 716.0
 offset_top = 541.0
 offset_right = 1790.9999
 offset_bottom = 791.0
 text = "retry"
-scene = ExtResource("4_1txte")
+
+[connection signal="pressed" from="NextLevelButton" to="." method="_on_next_level_button_pressed"]
+[connection signal="pressed" from="RetryButton" to="." method="_on_retry_button_pressed"]
