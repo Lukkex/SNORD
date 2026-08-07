@@ -1,8 +1,8 @@
 [gd_scene format=4 uid="uid://c4qr8vdt8bk8g"]
 
 [ext_resource type="Texture2D" uid="uid://cv7kamnm1d0qa" path="res://assets/snord tilemap.png" id="1_u52ul"]
-[ext_resource type="Script" uid="uid://cvik30apwdvcx" path="res://level.gd" id="1_vonw3"]
-[ext_resource type="PackedScene" uid="uid://dn80t7we4r4ww" path="res://Player/player.tscn" id="2_vonw3"]
+[ext_resource type="Script" uid="uid://cvik30apwdvcx" path="res://src/levels/level.gd" id="1_vonw3"]
+[ext_resource type="PackedScene" uid="uid://dn80t7we4r4ww" path="res://src/player/player.tscn" id="2_vonw3"]
 [ext_resource type="AudioStream" uid="uid://bix4ccts4gxu3" path="res://assets/loop.wav" id="4_f2txt"]
 [ext_resource type="AudioStream" uid="uid://kcqtgmbhwew" path="res://assets/snord.mp3" id="5_1ainy"]
 

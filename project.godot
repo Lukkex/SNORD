@@ -22,9 +22,9 @@ config/icon="uid://c1qw3gbmlbqrr"
 
 [autoload]
 
-Global="*res://global.gd"
-SignalBus="*res://SignalBus.gd"
-AudioManager="res://audio_manager.gd"
+Global="*uid://cwyxt7i38frqk"
+SignalBus="*uid://btmpx1p8x011u"
+AudioManager="uid://c8dewukqt7qwk"
 
 [input]
 
