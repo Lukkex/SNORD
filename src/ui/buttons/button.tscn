@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dtl4fy58wfpbr"]
 
-[ext_resource type="Script" path="res://Button class/button.gd" id="1_e7iei"]
 [ext_resource type="Texture2D" uid="uid://c1qw3gbmlbqrr" path="res://src/player/snord.png" id="1_iu6h6"]
+[ext_resource type="Script" uid="uid://btxyxlaqy8hj4" path="res://src/ui/buttons/button.gd" id="2_eexqu"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_58b5i"]
 texture = ExtResource("1_iu6h6")
@@ -18,7 +18,7 @@ modulate_color = Color(0.37722725, 0.37588274, 0, 1)
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mbmgq"]
 
-[node name="Button" type="Button"]
+[node name="Button" type="Button" unique_id=282253013]
 custom_minimum_size = Vector2(400, 120)
 offset_right = 8.0
 offset_bottom = 8.0
@@ -31,6 +31,6 @@ theme_override_styles/hover = SubResource("StyleBoxTexture_1yyh4")
 theme_override_styles/disabled = SubResource("StyleBoxEmpty_1yyh4")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_mbmgq")
 text = "snord"
-script = ExtResource("1_e7iei")
+script = ExtResource("2_eexqu")
 
 [connection signal="pressed" from="." to="." method="_on_pressed"]
