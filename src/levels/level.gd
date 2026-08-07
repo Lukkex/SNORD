@@ -2,7 +2,7 @@ extends Node2D
 
 @onready var music = $SnordMusicLoop
 
-const WIN_SCREEN = preload("res://win_screen.tscn")
+const WIN_SCREEN = preload("res://src/ui/win_screen.tscn")
 
 func _ready() -> void:
 	if music:

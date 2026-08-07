@@ -1,6 +1,6 @@
 extends Node2D
 
-const WIN_SCREEN = preload("uid://bwi1x7xvk1aue")
+const WIN_SCREEN = preload("res://src/ui/win_screen.tscn")
 
 func _ready() -> void:
 	SignalBus.player_died.connect(_restart)
