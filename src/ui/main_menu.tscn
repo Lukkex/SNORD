@@ -28,7 +28,7 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id="Animation_35tjg"]
 resource_name = "fade_in"
-length = 6.0
+length = 3.5000000000000004
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true

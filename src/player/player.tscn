@@ -2,7 +2,6 @@
 
 [ext_resource type="Script" uid="uid://c2ovgfs6123eq" path="res://src/player/player.gd" id="1_4flbx"]
 [ext_resource type="Texture2D" uid="uid://c1qw3gbmlbqrr" path="res://src/player/snord.png" id="2_4ntmi"]
-[ext_resource type="Texture2D" uid="uid://cvw2aopgk0t24" path="res://assets/snord.png" id="2_rxibo"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4ntmi"]
 size = Vector2(6, 6)
@@ -10,7 +9,7 @@ size = Vector2(6, 6)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_btcbx"]
 size = Vector2(6, 6)
 
-[node name="Player" type="CharacterBody2D" unique_id=1814486546]
+[node name="Player" type="CharacterBody2D" unique_id=935365934]
 collision_layer = 2
 collision_mask = 0
 script = ExtResource("1_4flbx")
