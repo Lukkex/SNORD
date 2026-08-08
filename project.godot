@@ -15,7 +15,7 @@ compatibility/default_parent_skeleton_in_mesh_instance_3d=true
 [application]
 
 config/name="SNORD ULTRA MASTER REDUX: RETURN OF THE SNORDLINGS"
-run/main_scene="uid://kv723254y5s"
+run/main_scene="uid://6ieeuwg2234v"
 config/features=PackedStringArray("4.7", "Forward Plus")
 boot_splash/image="uid://4w04th77lw3r"
 config/icon="uid://c1qw3gbmlbqrr"

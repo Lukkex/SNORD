@@ -2,6 +2,12 @@
 
 [ext_resource type="Script" uid="uid://c4w6bvcumr6mp" path="res://src/ui/main_menu.gd" id="1_qoywa"]
 [ext_resource type="Theme" uid="uid://maqxnhvp58cj" path="res://src/ui/themes/theme.tres" id="2_f0s2b"]
+[ext_resource type="VideoStream" uid="uid://cv3tied3utv0i" path="res://assets/SNORDv2.ogv" id="3_5mgu5"]
+[ext_resource type="PackedScene" uid="uid://dtl4fy58wfpbr" path="res://src/ui/buttons/button.tscn" id="4_5mgu5"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5mgu5"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_h03rr"]
 
 [node name="MainMenu" type="Control" unique_id=1726995039]
 layout_mode = 3
@@ -26,17 +32,46 @@ layout_mode = 2
 theme = ExtResource("2_f0s2b")
 alignment = 1
 
-[node name="SNORD" type="Label" parent="MarginContainer2/VBoxContainer" unique_id=1285222921]
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="MarginContainer2/VBoxContainer" unique_id=872612135]
 layout_mode = 2
-theme = ExtResource("2_f0s2b")
-theme_override_font_sizes/font_size = 110
-text = "SNORD"
-horizontal_alignment = 1
+size_flags_horizontal = 4
+stream = ExtResource("3_5mgu5")
+autoplay = true
+loop = true
 
 [node name="CrazyAssShit" type="Label" parent="MarginContainer2/VBoxContainer" unique_id=708686742]
+visible = false
 layout_mode = 2
 theme = ExtResource("2_f0s2b")
+theme_override_font_sizes/font_size = 11
 text = "The Legendary Conquerer of the Nine Realms: FATES REBORN
 ULTIMATE DELUXE COLLECTOR'S EDITION 
 GAMEPASS + DLC INCLUDED"
 horizontal_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer2/VBoxContainer" unique_id=161012356]
+layout_mode = 2
+
+[node name="CrazyAssShit2" type="Label" parent="MarginContainer2/VBoxContainer" unique_id=911396368]
+layout_mode = 2
+theme = ExtResource("2_f0s2b")
+theme_override_font_sizes/font_size = 11
+text = "  
+
+
+"
+horizontal_alignment = 1
+
+[node name="PlayButton" parent="MarginContainer2/VBoxContainer" unique_id=282253013 instance=ExtResource("4_5mgu5")]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 36
+theme_override_styles/normal = SubResource("StyleBoxEmpty_5mgu5")
+text = "PLAY"
+
+[node name="QuitButton" parent="MarginContainer2/VBoxContainer" unique_id=1105960784 instance=ExtResource("4_5mgu5")]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 36
+theme_override_styles/normal = SubResource("StyleBoxEmpty_h03rr")
+text = "QUIT"
