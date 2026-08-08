@@ -4,6 +4,8 @@
 [ext_resource type="Theme" uid="uid://maqxnhvp58cj" path="res://src/ui/themes/theme.tres" id="2_f0s2b"]
 [ext_resource type="VideoStream" uid="uid://cv3tied3utv0i" path="res://assets/SNORDv2.ogv" id="3_5mgu5"]
 [ext_resource type="PackedScene" uid="uid://dtl4fy58wfpbr" path="res://src/ui/buttons/button.tscn" id="4_5mgu5"]
+[ext_resource type="Script" uid="uid://cxv7ae718vqpt" path="res://src/ui/buttons/quit_button.gd" id="5_h03rr"]
+[ext_resource type="PackedScene" uid="uid://c4qr8vdt8bk8g" path="res://src/levels/level.tscn" id="5_ljhhu"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5mgu5"]
 
@@ -68,6 +70,7 @@ size_flags_horizontal = 4
 theme_override_font_sizes/font_size = 36
 theme_override_styles/normal = SubResource("StyleBoxEmpty_5mgu5")
 text = "PLAY"
+scene = ExtResource("5_ljhhu")
 
 [node name="QuitButton" parent="MarginContainer2/VBoxContainer" unique_id=1105960784 instance=ExtResource("4_5mgu5")]
 layout_mode = 2
@@ -75,3 +78,4 @@ size_flags_horizontal = 4
 theme_override_font_sizes/font_size = 36
 theme_override_styles/normal = SubResource("StyleBoxEmpty_h03rr")
 text = "QUIT"
+script = ExtResource("5_h03rr")
