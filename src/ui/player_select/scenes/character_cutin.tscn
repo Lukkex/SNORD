@@ -4,241 +4,389 @@
 [ext_resource type="Script" uid="uid://d3a5bronnimwu" path="res://src/ui/player_select/scenes/character_cutin.gd" id="1_iel81"]
 [ext_resource type="Texture2D" uid="uid://cgbk372a6bxrg" path="res://src/ui/player_select/snordlings.png" id="1_qow5p"]
 
-[sub_resource type="Animation" id="Animation_qow5p"]
+[sub_resource type="Curve" id="Curve_iel81"]
+_limits = [-1.0, 1.0, 0.0, 5.0]
+_data = [Vector2(0, -1), 0.0, 0.0, 0, 0, Vector2(1.3617885, 1), 0.0, 0.0, 0, 0, Vector2(2.621951, -1), 0.0, 0.0, 0, 0, Vector2(3.7804875, 1), 0.0, 0.0, 0, 0, Vector2(5, -1), 0.0, 0.0, 0, 0]
+point_count = 5
+
+[sub_resource type="CurveTexture" id="CurveTexture_iel81"]
+curve = SubResource("Curve_iel81")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_ohj6x"]
+particle_flag_disable_z = true
+angle_min = -89.99999
+angle_max = 90.000015
+angular_velocity_min = -436.05002
+angular_velocity_max = 400.55997
+radial_velocity_min = 190.01997
+radial_velocity_max = 999.99994
+gravity = Vector3(0, 980, 0)
+scale_min = 0.0
+scale_max = 30.9
+color = Color(0.27752784, 0.2775277, 0.27752772, 1)
+hue_variation_min = -1.0
+hue_variation_max = 0.99999994
+hue_variation_curve = SubResource("CurveTexture_iel81")
+collision_mode = 1
+collision_friction = 0.0
+collision_bounce = 0.0
+
+[sub_resource type="Animation" id="Animation_iel81"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:position")
+tracks/0/path = NodePath("left/bg:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(-169.00005, 311.99997)]
+"values": [Vector2(-584, 0)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Left:position")
+tracks/1/path = NodePath("right:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(-336, 0)]
+"values": [Vector2(2432, 0)]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("Right:position")
+tracks/2/path = NodePath("Lore:position")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(1553.0001, 23.000015)]
+"values": [Vector2(2416, 0)]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("RichTextLabel:position")
+tracks/3/path = NodePath("left/character:position")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(933, 190)]
+"values": [Vector2(-528, 0)]
 }
 
-[sub_resource type="Animation" id="Animation_ia4hv"]
-resource_name = "cut_IN"
+[sub_resource type="Animation" id="Animation_mjxo2"]
+resource_name = "cut_in"
+length = 0.75
 step = 0.25
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Left:position")
+tracks/0/path = NodePath("left/bg:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.25),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(-336, 0), Vector2(24, 0)]
+"values": [Vector2(-584, 0), Vector2(0, 0)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Right:position")
+tracks/1/path = NodePath("right:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
 "times": PackedFloat32Array(0, 0.25),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(1553.0001, 23.000015), Vector2(1225, 23.00002)]
+"values": [Vector2(2432, 0), Vector2(1880, 0)]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("Sprite2D:position")
+tracks/2/path = NodePath("Lore:position")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0, 0.25, 0.5),
+"times": PackedFloat32Array(0, 0.23, 0.5),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [Vector2(-169.00005, 311.99997), Vector2(-169.00005, 311.99997), Vector2(134.99995, 311.99997)]
+"values": [Vector2(2416, 0), Vector2(2416, 0), Vector2(1880, 0)]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("RichTextLabel:position")
+tracks/3/path = NodePath("left/character:position")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
-"times": PackedFloat32Array(0, 0.5, 0.75),
+"times": PackedFloat32Array(0, 0.23, 0.5),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [Vector2(1237, 190), Vector2(1237, 190), Vector2(933, 190)]
+"values": [Vector2(-528, 0), Vector2(-528, 0), Vector2(0, 0)]
+}
+tracks/4/type = "method"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath(".")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0.25, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [0.15, 5.0],
+"method": &"camera_shake"
+}, {
+"args": [0.15, 10.0],
+"method": &"camera_shake"
+}]
+}
+tracks/5/type = "method"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath(".")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0.5),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [1.0],
+"method": &"shake_particles"
+}]
 }
 
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_iel81"]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_3o431"]
 _data = {
-&"RESET": SubResource("Animation_qow5p"),
-&"cut_IN": SubResource("Animation_ia4hv")
+&"RESET": SubResource("Animation_iel81"),
+&"cut_in": SubResource("Animation_mjxo2")
 }
 
 [node name="CharacterCutin" type="CanvasLayer" unique_id=132953481]
 script = ExtResource("1_iel81")
 
-[node name="Left" type="Control" parent="." unique_id=950928024]
+[node name="left" type="Control" parent="." unique_id=896013723]
 layout_mode = 3
 anchors_preset = 0
-offset_left = -336.0
-offset_right = -296.0
+offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="ColorRect5" type="ColorRect" parent="Left" unique_id=919777784]
-layout_mode = 0
-offset_left = -114.99997
-offset_top = 197.0
-offset_right = 222.96725
-offset_bottom = 951.1494
-rotation = -0.21126013
-color = Color(0.1728327, 0.17283267, 0.17283267, 1)
+[node name="GPUParticles2D" type="GPUParticles2D" parent="left" unique_id=543445678]
+z_index = 4
+position = Vector2(128, -64)
+emitting = false
+amount = 12
+lifetime = 4.0
+explosiveness = 0.69
+process_material = SubResource("ParticleProcessMaterial_ohj6x")
 
-[node name="ColorRect6" type="ColorRect" parent="Left" unique_id=1763249981]
-layout_mode = 0
-offset_left = -169.99997
-offset_top = -165.0
-offset_right = 167.96725
-offset_bottom = 589.1494
-rotation = -0.21126013
-color = Color(0.1728327, 0.17283267, 0.17283267, 1)
-
-[node name="ColorRect7" type="ColorRect" parent="Left" unique_id=11835689]
-layout_mode = 0
-offset_left = -221.00005
-offset_top = -526.00006
-offset_right = 116.96718
-offset_bottom = 228.14935
-rotation = -0.21126013
-color = Color(0.1728327, 0.17283267, 0.17283267, 1)
-
-[node name="ColorRect2" type="ColorRect" parent="Left" unique_id=1348758996]
-layout_mode = 0
-offset_left = -126.0
-offset_top = 197.0
-offset_right = 211.96722
-offset_bottom = 951.1494
-rotation = -0.21126013
-
-[node name="ColorRect3" type="ColorRect" parent="Left" unique_id=1073467406]
-layout_mode = 0
-offset_left = -181.0
-offset_top = -165.00003
-offset_right = 156.96722
-offset_bottom = 589.1494
-rotation = -0.21126013
-
-[node name="ColorRect4" type="ColorRect" parent="Left" unique_id=1174150777]
-layout_mode = 0
-offset_left = -232.00003
-offset_top = -526.00006
-offset_right = 105.96719
-offset_bottom = 228.14935
-rotation = -0.21126013
-
-[node name="Right" type="Control" parent="." unique_id=2078851488]
-layout_mode = 3
+[node name="bg" type="Control" parent="left" unique_id=1931292630]
 anchors_preset = 0
-offset_left = 1553.0001
-offset_top = 23.000015
-offset_right = 1593.0001
-offset_bottom = 63.000015
-rotation = -0.16857292
+offset_left = -584.0
+offset_right = -544.0
+offset_bottom = 40.0
 
-[node name="ColorRect8" type="ColorRect" parent="Right" unique_id=1932247457]
+[node name="ColorRect4" type="ColorRect" parent="left/bg" unique_id=1034281462]
 layout_mode = 0
-offset_left = -12.815918
-offset_top = 1133.0579
-offset_right = 325.15137
-offset_bottom = 1887.2073
-rotation = 3.0689683
-color = Color(0.14767182, 0.14767179, 0.14767179, 1)
+offset_left = -213.99997
+offset_top = -284.0
+offset_right = 177.00003
+offset_bottom = 483.9358
+rotation = -0.31444404
+color = Color(0.28118682, 0.28118688, 0.28118682, 1)
 
-[node name="ColorRect9" type="ColorRect" parent="Right" unique_id=1617439642]
+[node name="ColorRect5" type="ColorRect" parent="left/bg" unique_id=1495363461]
 layout_mode = 0
-offset_left = -12.815674
-offset_top = 771.0575
-offset_right = 325.1516
-offset_bottom = 1525.2069
-rotation = 3.0689683
-color = Color(0.14767182, 0.14767179, 0.14767179, 1)
+offset_left = -292.00003
+offset_top = 192.0
+offset_right = 292.4847
+offset_bottom = 957.15125
+rotation = -0.31444404
+color = Color(0.28118682, 0.28118688, 0.28118682, 1)
 
-[node name="ColorRect10" type="ColorRect" parent="Right" unique_id=1935968947]
+[node name="ColorRect6" type="ColorRect" parent="left/bg" unique_id=270149133]
 layout_mode = 0
-offset_left = -12.81543
-offset_top = 410.05756
-offset_right = 325.15186
-offset_bottom = 1164.2073
-rotation = 3.0689683
-color = Color(0.14767182, 0.14767179, 0.14767179, 1)
+offset_left = -294.00003
+offset_top = 655.0
+offset_right = 391.15866
+offset_bottom = 1424.95
+rotation = -0.31444404
+color = Color(0.28118682, 0.28118688, 0.28118682, 1)
 
-[node name="ColorRect5" type="ColorRect" parent="Right" unique_id=2067306130]
+[node name="ColorRect" type="ColorRect" parent="left/bg" unique_id=1302241037]
 layout_mode = 0
-offset_top = 1135.2388
-offset_right = 337.9673
-offset_bottom = 1889.3882
-rotation = 3.0689683
+offset_left = -230.0
+offset_top = -284.0
+offset_right = 161.0
+offset_bottom = 485.94995
+rotation = -0.31444404
 
-[node name="ColorRect6" type="ColorRect" parent="Right" unique_id=1826302103]
+[node name="ColorRect2" type="ColorRect" parent="left/bg" unique_id=1520030371]
 layout_mode = 0
-offset_top = 773.23865
-offset_right = 337.9673
-offset_bottom = 1527.3881
-rotation = 3.0689683
+offset_left = -308.00003
+offset_top = 192.0
+offset_right = 276.4847
+offset_bottom = 961.94995
+rotation = -0.31444404
 
-[node name="ColorRect7" type="ColorRect" parent="Right" unique_id=2050494043]
+[node name="ColorRect3" type="ColorRect" parent="left/bg" unique_id=1475342670]
 layout_mode = 0
-offset_top = 412.23865
-offset_right = 337.9673
-offset_bottom = 1166.3881
-rotation = 3.0689683
+offset_left = -310.00003
+offset_top = 655.0
+offset_right = 375.15866
+offset_bottom = 1424.95
+rotation = -0.31444404
 
-[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=8902247]
+[node name="character" type="Control" parent="left" unique_id=292283256]
+anchors_preset = 0
+offset_left = -528.0
+offset_right = -488.0
+offset_bottom = 40.0
+
+[node name="Sprite2D" type="Sprite2D" parent="left/character" unique_id=1238482798]
+position = Vector2(180, 533)
+scale = Vector2(36, 36)
+texture = ExtResource("1_qow5p")
+flip_h = true
+region_enabled = true
+region_rect = Rect2(0, 0, 8, 8)
+
+[node name="Name" type="Label" parent="left/character" unique_id=1429734494]
+custom_maximum_size = Vector2(380, -1)
+layout_mode = 0
+offset_left = 34.0
+offset_top = 717.0
+offset_right = 414.0
+offset_bottom = 852.0
+theme = ExtResource("1_ia4hv")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 48
+text = "Snord Speverts"
+autowrap_mode = 2
+
+[node name="right" type="Control" parent="." unique_id=985220242]
+layout_mode = 3
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = 512.0
+offset_right = 552.0
+offset_bottom = 40.0
+grow_horizontal = 0
+
+[node name="GPUParticles2D3" type="GPUParticles2D" parent="right" unique_id=829509700]
+z_index = 4
+position = Vector2(-264, -56)
+emitting = false
+amount = 12
+lifetime = 4.0
+explosiveness = 0.69
+process_material = SubResource("ParticleProcessMaterial_ohj6x")
+
+[node name="ColorRect4" type="ColorRect" parent="right" unique_id=1772093146]
+layout_mode = 0
+offset_left = -582.0
+offset_top = -284.0
+offset_right = 174.36182
+offset_bottom = 485.94995
+rotation = -0.31444404
+color = Color(0.3069228, 0.30692264, 0.30692276, 1)
+
+[node name="ColorRect5" type="ColorRect" parent="right" unique_id=1164306091]
+layout_mode = 0
+offset_left = -434.23572
+offset_top = 271.21756
+offset_right = 150.24902
+offset_bottom = 957.8655
+rotation = -0.31444404
+color = Color(0.3069228, 0.30692264, 0.30692276, 1)
+
+[node name="ColorRect6" type="ColorRect" parent="right" unique_id=2011068886]
+layout_mode = 0
+offset_left = -337.01437
+offset_top = 645.7316
+offset_right = 348.14432
+offset_bottom = 1425.4277
+rotation = -0.31444404
+color = Color(0.3069228, 0.30692264, 0.30692276, 1)
+
+[node name="ColorRect" type="ColorRect" parent="right" unique_id=1718884524]
+layout_mode = 0
+offset_left = -566.0
+offset_top = -284.0
+offset_right = 190.36182
+offset_bottom = 485.94995
+rotation = -0.31444404
+
+[node name="ColorRect2" type="ColorRect" parent="right" unique_id=1890428982]
+layout_mode = 0
+offset_left = -415.2004
+offset_top = 280.55023
+offset_right = 169.28433
+offset_bottom = 957.38434
+rotation = -0.31444404
+
+[node name="ColorRect3" type="ColorRect" parent="right" unique_id=2082159682]
+layout_mode = 0
+offset_left = -318.0
+offset_top = 655.0
+offset_right = 367.1587
+offset_bottom = 1424.95
+rotation = -0.31444404
+
+[node name="Lore" type="Control" parent="." unique_id=1819775496]
+layout_mode = 3
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = 496.0
+offset_right = 536.0
+offset_bottom = 40.0
+grow_horizontal = 0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Lore" unique_id=8902247]
 custom_minimum_size = Vector2(200, 0)
-offset_left = 933.0
-offset_top = 190.0
-offset_right = 1133.0002
-offset_bottom = 388.0
+layout_mode = 0
+offset_left = -194.0
+offset_top = 662.0
+offset_right = 6.000244
+offset_bottom = 923.0
 theme = ExtResource("1_ia4hv")
 theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 24
+theme_override_font_sizes/bold_font_size = 24
+theme_override_font_sizes/bold_italics_font_size = 24
+theme_override_font_sizes/italics_font_size = 24
+theme_override_font_sizes/mono_font_size = 24
+text = "Coolest cat on this side of the Resort"
+fit_content = true
+scroll_active = false
+autowrap_mode = 2
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="Lore" unique_id=586234849]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 0
+offset_left = -295.0
+offset_top = 152.0
+offset_right = 5.0
+offset_bottom = 502.0
+theme = ExtResource("1_ia4hv")
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 24
+theme_override_font_sizes/bold_font_size = 24
+theme_override_font_sizes/bold_italics_font_size = 24
+theme_override_font_sizes/italics_font_size = 24
+theme_override_font_sizes/mono_font_size = 24
 text = "LOREM IPSUM
 
 EVIL ASS BITCH DOES CRAZY SHIT LOL THIS IS THE LORE OR SOMETHING ARE YOU EVEN READING THIS??"
@@ -246,15 +394,11 @@ fit_content = true
 scroll_active = false
 autowrap_mode = 2
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1238482798]
-position = Vector2(-169.00005, 311.99997)
-scale = Vector2(31.247501, 31.247501)
-texture = ExtResource("1_qow5p")
-flip_h = true
-region_enabled = true
-region_rect = Rect2(0, 0, 8, 8)
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=258273583]
+libraries/ = SubResource("AnimationLibrary_3o431")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=868447021]
-libraries/ = SubResource("AnimationLibrary_iel81")
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1449253725]
+anchor_mode = 0
 
-[connection signal="animation_changed" from="AnimationPlayer" to="." method="_on_animation_player_animation_changed"]
+[node name="Timer" type="Timer" parent="." unique_id=1380710795]
+one_shot = true

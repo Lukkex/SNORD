@@ -18,9 +18,12 @@ extends Control
 @onready var button: Button = $PortraitFrame/MarginContainer/Button
 
 func _ready() -> void:
-	if character_sprite != null: texture_rect.texture = character_sprite
+	if character_sprite != null: 
+		texture_rect.texture = character_sprite
+		flames_effect.texture = character_sprite
 	if character_name != null: char_name.text = character_name
 	if bg_color != null: portrait_background.color = bg_color
+	
 	flames_effect.emitting = false
 	
 	SignalBus.character_selected.connect(cut_flames)
@@ -28,8 +31,8 @@ func _ready() -> void:
 func _on_button_pressed() -> void:
 	pass
 	flames_effect.emitting = true
-	SignalBus.emit_signal("character_selected")
+	SignalBus.emit_signal("character_selected", character_sprite, char_name)
 	flames_effect.emitting = true
 
-func cut_flames():
+func cut_flames(_arg1, _arg2):
 	flames_effect.emitting = false
