@@ -6,10 +6,13 @@
 [ext_resource type="PackedScene" uid="uid://dtl4fy58wfpbr" path="res://src/ui/buttons/button.tscn" id="4_5mgu5"]
 [ext_resource type="Script" uid="uid://cxv7ae718vqpt" path="res://src/ui/buttons/quit_button.gd" id="5_h03rr"]
 [ext_resource type="PackedScene" uid="uid://c4qr8vdt8bk8g" path="res://src/levels/level.tscn" id="5_ljhhu"]
+[ext_resource type="PackedScene" uid="uid://bbowfq6kn7lxh" path="res://src/ui/debug_menu.tscn" id="7_35tjg"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5mgu5"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_h03rr"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wnslw"]
 
 [sub_resource type="Animation" id="Animation_ljhhu"]
 length = 0.001
@@ -117,6 +120,16 @@ theme_override_font_sizes/font_size = 36
 theme_override_styles/normal = SubResource("StyleBoxEmpty_h03rr")
 text = "QUIT"
 script = ExtResource("5_h03rr")
+
+[node name="DebugButton" parent="MarginContainer2" unique_id=389251316 instance=ExtResource("4_5mgu5")]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 0
+theme_override_font_sizes/font_size = 36
+theme_override_styles/normal = SubResource("StyleBoxEmpty_5mgu5")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_wnslw")
+text = ""
+scene = ExtResource("7_35tjg")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=721688956]
 layout_mode = 1
