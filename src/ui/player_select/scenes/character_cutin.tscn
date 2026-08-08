@@ -1,0 +1,260 @@
+[gd_scene format=3 uid="uid://dlmdhmvgi52kx"]
+
+[ext_resource type="Theme" uid="uid://maqxnhvp58cj" path="res://src/ui/themes/theme.tres" id="1_ia4hv"]
+[ext_resource type="Script" uid="uid://d3a5bronnimwu" path="res://src/ui/player_select/scenes/character_cutin.gd" id="1_iel81"]
+[ext_resource type="Texture2D" uid="uid://cgbk372a6bxrg" path="res://src/ui/player_select/snordlings.png" id="1_qow5p"]
+
+[sub_resource type="Animation" id="Animation_qow5p"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-169.00005, 311.99997)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Left:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-336, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Right:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1553.0001, 23.000015)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("RichTextLabel:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(933, 190)]
+}
+
+[sub_resource type="Animation" id="Animation_ia4hv"]
+resource_name = "cut_IN"
+step = 0.25
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Left:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.25),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-336, 0), Vector2(24, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Right:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.25),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1553.0001, 23.000015), Vector2(1225, 23.00002)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite2D:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.25, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(-169.00005, 311.99997), Vector2(-169.00005, 311.99997), Vector2(134.99995, 311.99997)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("RichTextLabel:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.5, 0.75),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1237, 190), Vector2(1237, 190), Vector2(933, 190)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_iel81"]
+_data = {
+&"RESET": SubResource("Animation_qow5p"),
+&"cut_IN": SubResource("Animation_ia4hv")
+}
+
+[node name="CharacterCutin" type="CanvasLayer" unique_id=132953481]
+script = ExtResource("1_iel81")
+
+[node name="Left" type="Control" parent="." unique_id=950928024]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -336.0
+offset_right = -296.0
+offset_bottom = 40.0
+
+[node name="ColorRect5" type="ColorRect" parent="Left" unique_id=919777784]
+layout_mode = 0
+offset_left = -114.99997
+offset_top = 197.0
+offset_right = 222.96725
+offset_bottom = 951.1494
+rotation = -0.21126013
+color = Color(0.1728327, 0.17283267, 0.17283267, 1)
+
+[node name="ColorRect6" type="ColorRect" parent="Left" unique_id=1763249981]
+layout_mode = 0
+offset_left = -169.99997
+offset_top = -165.0
+offset_right = 167.96725
+offset_bottom = 589.1494
+rotation = -0.21126013
+color = Color(0.1728327, 0.17283267, 0.17283267, 1)
+
+[node name="ColorRect7" type="ColorRect" parent="Left" unique_id=11835689]
+layout_mode = 0
+offset_left = -221.00005
+offset_top = -526.00006
+offset_right = 116.96718
+offset_bottom = 228.14935
+rotation = -0.21126013
+color = Color(0.1728327, 0.17283267, 0.17283267, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="Left" unique_id=1348758996]
+layout_mode = 0
+offset_left = -126.0
+offset_top = 197.0
+offset_right = 211.96722
+offset_bottom = 951.1494
+rotation = -0.21126013
+
+[node name="ColorRect3" type="ColorRect" parent="Left" unique_id=1073467406]
+layout_mode = 0
+offset_left = -181.0
+offset_top = -165.00003
+offset_right = 156.96722
+offset_bottom = 589.1494
+rotation = -0.21126013
+
+[node name="ColorRect4" type="ColorRect" parent="Left" unique_id=1174150777]
+layout_mode = 0
+offset_left = -232.00003
+offset_top = -526.00006
+offset_right = 105.96719
+offset_bottom = 228.14935
+rotation = -0.21126013
+
+[node name="Right" type="Control" parent="." unique_id=2078851488]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 1553.0001
+offset_top = 23.000015
+offset_right = 1593.0001
+offset_bottom = 63.000015
+rotation = -0.16857292
+
+[node name="ColorRect8" type="ColorRect" parent="Right" unique_id=1932247457]
+layout_mode = 0
+offset_left = -12.815918
+offset_top = 1133.0579
+offset_right = 325.15137
+offset_bottom = 1887.2073
+rotation = 3.0689683
+color = Color(0.14767182, 0.14767179, 0.14767179, 1)
+
+[node name="ColorRect9" type="ColorRect" parent="Right" unique_id=1617439642]
+layout_mode = 0
+offset_left = -12.815674
+offset_top = 771.0575
+offset_right = 325.1516
+offset_bottom = 1525.2069
+rotation = 3.0689683
+color = Color(0.14767182, 0.14767179, 0.14767179, 1)
+
+[node name="ColorRect10" type="ColorRect" parent="Right" unique_id=1935968947]
+layout_mode = 0
+offset_left = -12.81543
+offset_top = 410.05756
+offset_right = 325.15186
+offset_bottom = 1164.2073
+rotation = 3.0689683
+color = Color(0.14767182, 0.14767179, 0.14767179, 1)
+
+[node name="ColorRect5" type="ColorRect" parent="Right" unique_id=2067306130]
+layout_mode = 0
+offset_top = 1135.2388
+offset_right = 337.9673
+offset_bottom = 1889.3882
+rotation = 3.0689683
+
+[node name="ColorRect6" type="ColorRect" parent="Right" unique_id=1826302103]
+layout_mode = 0
+offset_top = 773.23865
+offset_right = 337.9673
+offset_bottom = 1527.3881
+rotation = 3.0689683
+
+[node name="ColorRect7" type="ColorRect" parent="Right" unique_id=2050494043]
+layout_mode = 0
+offset_top = 412.23865
+offset_right = 337.9673
+offset_bottom = 1166.3881
+rotation = 3.0689683
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=8902247]
+custom_minimum_size = Vector2(200, 0)
+offset_left = 933.0
+offset_top = 190.0
+offset_right = 1133.0002
+offset_bottom = 388.0
+theme = ExtResource("1_ia4hv")
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+text = "LOREM IPSUM
+
+EVIL ASS BITCH DOES CRAZY SHIT LOL THIS IS THE LORE OR SOMETHING ARE YOU EVEN READING THIS??"
+fit_content = true
+scroll_active = false
+autowrap_mode = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1238482798]
+position = Vector2(-169.00005, 311.99997)
+scale = Vector2(31.247501, 31.247501)
+texture = ExtResource("1_qow5p")
+flip_h = true
+region_enabled = true
+region_rect = Rect2(0, 0, 8, 8)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=868447021]
+libraries/ = SubResource("AnimationLibrary_iel81")
+
+[connection signal="animation_changed" from="AnimationPlayer" to="." method="_on_animation_player_animation_changed"]
