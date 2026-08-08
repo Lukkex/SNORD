@@ -22,17 +22,14 @@ func _ready() -> void:
 	if character_name != null: char_name.text = character_name
 	if bg_color != null: portrait_background.color = bg_color
 	flames_effect.emitting = false
+	
+	SignalBus.character_selected.connect(cut_flames)
 
 func _on_button_pressed() -> void:
 	pass
 	flames_effect.emitting = true
 	SignalBus.emit_signal("character_selected")
-	# pull up character cutin
+	flames_effect.emitting = true
 
-func _on_button_mouse_entered() -> void:
-	#flames_effect.emitting = true
-	pass
-
-func _on_button_mouse_exited() -> void:
-	#flames_effect.emitting = false
-	pass
+func cut_flames():
+	flames_effect.emitting = false
