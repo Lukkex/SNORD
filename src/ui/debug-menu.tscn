@@ -3,9 +3,9 @@
 [ext_resource type="Script" uid="uid://c4w6bvcumr6mp" path="res://src/ui/main_menu.gd" id="1_jbpcu"]
 [ext_resource type="Theme" uid="uid://maqxnhvp58cj" path="res://src/ui/themes/theme.tres" id="2_udugg"]
 [ext_resource type="PackedScene" uid="uid://dtl4fy58wfpbr" path="res://src/ui/buttons/button.tscn" id="3_jbpcu"]
-[ext_resource type="AudioStream" uid="uid://bix4ccts4gxu3" path="res://assets/loop.wav" id="4_81p6x"]
 [ext_resource type="PackedScene" uid="uid://bwi1x7xvk1aue" path="res://src/ui/win_screen.tscn" id="4_udugg"]
-[ext_resource type="AudioStream" uid="uid://kcqtgmbhwew" path="res://assets/snord.mp3" id="5_0f1fb"]
+[ext_resource type="PackedScene" uid="uid://c4qr8vdt8bk8g" path="res://src/levels/level.tscn" id="5_81p6x"]
+[ext_resource type="PackedScene" uid="uid://bvsowf1ovra1a" path="res://src/levels/level_2.tscn" id="6_0f1fb"]
 
 [node name="DebugMenu" type="Control" unique_id=1726995039]
 layout_mode = 3
@@ -28,15 +28,12 @@ grow_vertical = 2
 layout_mode = 2
 color = Color(0, 0, 0, 1)
 
-[node name="Label" type="Label" parent="MarginContainer/ColorRect" unique_id=1353671048]
-layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -83.5
-offset_right = 83.5
-offset_bottom = 23.0
-grow_horizontal = 2
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=202024635]
+layout_mode = 2
+theme_override_constants/separation = 3
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer" unique_id=1353671048]
+layout_mode = 2
 theme = ExtResource("2_udugg")
 text = "
 
@@ -45,8 +42,16 @@ text = "
 haha this is the debug menu haha yeah gottem woohoo yeah"
 horizontal_alignment = 1
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=202024635]
+[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=117009920]
 layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+alignment = 1
+
+[node name="WinScreen" parent="MarginContainer/VBoxContainer/HBoxContainer2" unique_id=282253013 instance=ExtResource("3_jbpcu")]
+layout_mode = 2
+text = "win screen"
+scene = ExtResource("4_udugg")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=632668600]
 layout_mode = 2
@@ -54,13 +59,12 @@ size_flags_horizontal = 4
 size_flags_vertical = 6
 alignment = 1
 
-[node name="Button" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=282253013 instance=ExtResource("3_jbpcu")]
+[node name="Level 1" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=1962539473 instance=ExtResource("3_jbpcu")]
 layout_mode = 2
-text = "win screen"
-scene = ExtResource("4_udugg")
+text = "level 1"
+scene = ExtResource("5_81p6x")
 
-[node name="SnordMusicLoop" type="AudioStreamPlayer" parent="." unique_id=284413779]
-stream = ExtResource("4_81p6x")
-
-[node name="SnordSound1" type="AudioStreamPlayer" parent="." unique_id=450913539]
-stream = ExtResource("5_0f1fb")
+[node name="Level 2" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=971260451 instance=ExtResource("3_jbpcu")]
+layout_mode = 2
+text = "level 2"
+scene = ExtResource("6_0f1fb")

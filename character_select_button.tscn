@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://4w04th77lw3r" path="res://assets/snord outlined.png" id="1_21eht"]
 [ext_resource type="Script" uid="uid://8v3mftnxgqpo" path="res://src/ui/buttons/character_select_button.gd" id="1_hd0b4"]
-[ext_resource type="Theme" path="res://theme.tres" id="2_632il"]
+[ext_resource type="Theme" uid="uid://maqxnhvp58cj" path="res://src/ui/themes/theme.tres" id="2_632il"]
 [ext_resource type="AudioStream" uid="uid://kcqtgmbhwew" path="res://assets/snord.mp3" id="4_hd0b4"]
 
 [node name="CharSelectButton" type="VBoxContainer" unique_id=1608302942]
