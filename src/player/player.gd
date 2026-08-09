@@ -25,15 +25,15 @@ func _ready() -> void:
 		update_characrer()
 	
 	Global.player = self
-	speed_multiplier = Global.speed_multipler
+	speed_multiplier = Global.speed_multiplier
 
 func update_characrer():
 	sprite_2d.texture = character.character_sprite
 	character_name.text = character.character_name.get_slice(" ", 0)
 
-func _process(_delta: float) -> void:
-	speed_multiplier = Global.speed_multipler
-	velocity.x = get_gravity().y * _delta * speed_multiplier
+func _physics_process(delta: float) -> void:
+	speed_multiplier = Global.speed_multiplier
+	velocity.x = get_gravity().y * delta * speed_multiplier
 	print(velocity)
 	
 	if channel: _set_y_pos(channel)
