@@ -5,3 +5,5 @@ extends Node
 
 var speed_multipler : float = 10.0
 var player : Player
+
+var character : CharProfile

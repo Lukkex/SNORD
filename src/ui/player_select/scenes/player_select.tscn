@@ -95,6 +95,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_krjuy")
 char_array = Array[ExtResource("2_r5ekk")]([SubResource("Resource_krjuy"), SubResource("Resource_r5ekk"), SubResource("Resource_xwsro"), SubResource("Resource_t7ldo"), SubResource("Resource_hit5b"), SubResource("Resource_rcyvg")])
+target_scene = "uid://c4qr8vdt8bk8g"
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=530807629]
 layout_mode = 1

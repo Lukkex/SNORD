@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://c2ovgfs6123eq" path="res://src/player/player.gd" id="1_4flbx"]
 [ext_resource type="Texture2D" uid="uid://c1qw3gbmlbqrr" path="res://src/player/snord.png" id="2_4ntmi"]
+[ext_resource type="Texture2D" uid="uid://cvw2aopgk0t24" path="res://assets/snord.png" id="2_rxibo"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4ntmi"]
 size = Vector2(6, 6)
@@ -13,7 +14,7 @@ size = Vector2(6, 6)
 collision_layer = 2
 collision_mask = 0
 script = ExtResource("1_4flbx")
-sprite_texture = ExtResource("2_4ntmi")
+default_sprite = ExtResource("2_rxibo")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=134528080]
 shape = SubResource("RectangleShape2D_4ntmi")
@@ -24,21 +25,16 @@ zoom = Vector2(10, 10)
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=609722824]
 texture = ExtResource("2_4ntmi")
 
-[node name="Label" type="Label" parent="." unique_id=2090456474]
-anchors_preset = 6
-anchor_left = 1.0
-anchor_top = 0.5
-anchor_right = 1.0
-anchor_bottom = 0.5
-offset_left = -9.0
-offset_top = -14.000001
-offset_right = 169.0
+[node name="Name" type="Label" parent="." unique_id=2090456474]
+custom_minimum_size = Vector2(200, 0)
+offset_left = -9.999999
+offset_top = -13.999999
+offset_right = 190.0
 offset_bottom = 74.0
-grow_horizontal = 0
-grow_vertical = 2
 scale = Vector2(0.1, 0.1)
 theme_override_font_sizes/font_size = 64
 text = "snord"
+horizontal_alignment = 1
 
 [node name="CollisionArea" type="Area2D" parent="." unique_id=221964595]
 collision_layer = 0

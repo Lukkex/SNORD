@@ -2,8 +2,9 @@
 
 [ext_resource type="Theme" uid="uid://maqxnhvp58cj" path="res://src/ui/themes/theme.tres" id="1_j3jwc"]
 [ext_resource type="Script" uid="uid://c4w6bvcumr6mp" path="res://src/ui/main_menu.gd" id="1_mue8r"]
-[ext_resource type="PackedScene" uid="uid://e31enhbi4h52" path="res://character_select_button.tscn" id="3_mue8r"]
+[ext_resource type="PackedScene" uid="uid://1ny0o5ay1a17" path="res://src/ui/HUD.tscn" id="3_mue8r"]
 [ext_resource type="AudioStream" uid="uid://bix4ccts4gxu3" path="res://assets/loop.wav" id="4_ikcl0"]
+[ext_resource type="PackedScene" uid="uid://chece6tc5jl47" path="res://src/ui/buttons/character_select_button.tscn" id="4_jil7n"]
 [ext_resource type="AudioStream" uid="uid://kcqtgmbhwew" path="res://assets/snord.mp3" id="5_ljn4s"]
 
 [node name="MainMenu" type="Control" unique_id=1726995039]
@@ -55,7 +56,15 @@ alignment = 1
 
 [node name="VBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=1573898986 instance=ExtResource("3_mue8r")]
 layout_mode = 2
-scene = "uid://c4qr8vdt8bk8g"
+
+[node name="CharSelectButton" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=749581578 instance=ExtResource("4_jil7n")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scene = "uid://dgycxi3l5alvd"
 
 [node name="SnordMusicLoop" type="AudioStreamPlayer" parent="." unique_id=284413779]
 stream = ExtResource("4_ikcl0")
