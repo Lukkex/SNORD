@@ -1,0 +1,143 @@
+[gd_scene format=3 uid="uid://6ieeuwg2234v"]
+
+[ext_resource type="Script" uid="uid://c4w6bvcumr6mp" path="res://src/ui/main_menu.gd" id="1_qoywa"]
+[ext_resource type="Theme" uid="uid://maqxnhvp58cj" path="res://src/ui/themes/theme.tres" id="2_f0s2b"]
+[ext_resource type="VideoStream" uid="uid://cv3tied3utv0i" path="res://assets/SNORDv2.ogv" id="3_5mgu5"]
+[ext_resource type="PackedScene" uid="uid://dtl4fy58wfpbr" path="res://src/ui/buttons/button.tscn" id="4_5mgu5"]
+[ext_resource type="Script" uid="uid://cxv7ae718vqpt" path="res://src/ui/buttons/quit_button.gd" id="5_h03rr"]
+[ext_resource type="PackedScene" uid="uid://dgycxi3l5alvd" path="res://src/ui/player_select/scenes/player_select.tscn" id="5_o1bnh"]
+[ext_resource type="PackedScene" uid="uid://dnl2cxegrcl6a" path="res://src/ui/debug_menu.tscn" id="7_35tjg"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5mgu5"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_h03rr"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wnslw"]
+
+[sub_resource type="Animation" id="Animation_ljhhu"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:modulate:a")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1.0]
+}
+
+[sub_resource type="Animation" id="Animation_35tjg"]
+resource_name = "fade_in"
+length = 3.5000000000000004
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:modulate:a")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2.4333334, 3.4333334),
+"transitions": PackedFloat32Array(1.624506, 0.17075509, 1.2311447),
+"update": 0,
+"values": [1.0, 0.2, 0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_tmx6h"]
+_data = {
+&"RESET": SubResource("Animation_ljhhu"),
+&"fade_in": SubResource("Animation_35tjg")
+}
+
+[node name="MainMenu" type="Control" unique_id=1726995039]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_qoywa")
+
+[node name="MarginContainer2" type="MarginContainer" parent="." unique_id=1333499321]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_f0s2b")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer2" unique_id=1880367365]
+layout_mode = 2
+theme = ExtResource("2_f0s2b")
+alignment = 1
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="MarginContainer2/VBoxContainer" unique_id=872612135]
+layout_mode = 2
+size_flags_horizontal = 4
+stream = ExtResource("3_5mgu5")
+speed_scale = 0.569
+autoplay = true
+loop = true
+
+[node name="CrazyAssShit" type="Label" parent="MarginContainer2/VBoxContainer" unique_id=708686742]
+visible = false
+layout_mode = 2
+theme = ExtResource("2_f0s2b")
+theme_override_font_sizes/font_size = 11
+text = "The Legendary Conquerer of the Nine Realms: FATES REBORN
+ULTIMATE DELUXE COLLECTOR'S EDITION 
+GAMEPASS + DLC INCLUDED"
+horizontal_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer2/VBoxContainer" unique_id=161012356]
+layout_mode = 2
+
+[node name="CrazyAssShit2" type="Label" parent="MarginContainer2/VBoxContainer" unique_id=911396368]
+layout_mode = 2
+theme = ExtResource("2_f0s2b")
+theme_override_font_sizes/font_size = 11
+text = "  
+
+
+"
+horizontal_alignment = 1
+
+[node name="PlayButton" parent="MarginContainer2/VBoxContainer" unique_id=282253013 instance=ExtResource("4_5mgu5")]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 36
+theme_override_styles/normal = SubResource("StyleBoxEmpty_5mgu5")
+text = "PLAY"
+scene = ExtResource("5_o1bnh")
+
+[node name="QuitButton" parent="MarginContainer2/VBoxContainer" unique_id=1105960784 instance=ExtResource("4_5mgu5")]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 36
+theme_override_styles/normal = SubResource("StyleBoxEmpty_h03rr")
+text = "QUIT"
+script = ExtResource("5_h03rr")
+
+[node name="DebugButton" parent="MarginContainer2" unique_id=389251316 instance=ExtResource("4_5mgu5")]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 0
+theme_override_font_sizes/font_size = 36
+theme_override_styles/normal = SubResource("StyleBoxEmpty_5mgu5")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_wnslw")
+text = ""
+scene = ExtResource("7_35tjg")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=721688956]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=572745356]
+libraries/ = SubResource("AnimationLibrary_tmx6h")

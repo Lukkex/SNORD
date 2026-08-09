@@ -1,10 +1,9 @@
 extends Node2D
-
 class_name SpikeLevel
 
 @export var level_speed_multiplier : float = 1.0
 
-const WIN_SCREEN = preload("res://src/ui/win_screen.tscn")
+const WIN_SCREEN = preload("uid://bwi1x7xvk1aue")
 
 func _ready() -> void:
 	SignalBus.player_died.connect(_restart)
