@@ -11,3 +11,5 @@ class_name CharProfile
 @export var bg_color : Color = Color.from_hsv(0.0, 0.0, 1.0, 1.0)
 ## Sprite
 @export var character_sprite : AtlasTexture = null
+## Speed Multiplier
+@export var speed_multiplier : float = 1.0
