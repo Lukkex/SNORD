@@ -7,6 +7,7 @@ extends Control
 
 func _ready() -> void:
 	#music.play()
-	animation_player.play("fade_in")
-	await animation_player.animation_finished
+	if animation_player != null: 
+		animation_player.play("fade_in")
+		await animation_player.animation_finished
 	remove_child(color_rect)

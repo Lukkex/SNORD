@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://cv7kamnm1d0qa" path="res://assets/snord tilemap.png" id="1_nmjpi"]
 [ext_resource type="Script" uid="uid://83u45gutgg07" path="res://src/levels/level_2.gd" id="1_xdadj"]
-[ext_resource type="PackedScene" uid="uid://6ieeuwg2234v" path="res://src/ui/main_menu.tscn" id="2_xdadj"]
+[ext_resource type="PackedScene" uid="uid://dn80t7we4r4ww" path="res://src/player/player.tscn" id="3_j6mmr"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1y8me"]
 texture = ExtResource("1_nmjpi")
@@ -43,8 +43,5 @@ position = Vector2(680, 0)
 tile_map_data = PackedByteArray("AADjAAUAAAACAAAAAADjAAQAAAACAAAAAADjAAMAAAACAAAAAADjAAIAAAACAAAAAADjAAEAAAACAAAAAAA=")
 tile_set = SubResource("TileSet_n7ypv")
 
-[node name="Player" parent="." unique_id=2093972124 instance=ExtResource("2_xdadj")]
-position = Vector2(-2, -8)
-speed_multiplier = 12
-
-[connection signal="die" from="Player" to="." method="_on_player_die"]
+[node name="Player" parent="." unique_id=935365934 instance=ExtResource("3_j6mmr")]
+position = Vector2(14, -8)
