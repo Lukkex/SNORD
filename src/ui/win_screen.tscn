@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://c1qw3gbmlbqrr" path="res://src/player/snord.png" id="1_l2arl"]
 [ext_resource type="Script" uid="uid://bqs2mhcdx2v65" path="res://src/ui/win_screen.gd" id="1_su5wl"]
 [ext_resource type="PackedScene" uid="uid://dtl4fy58wfpbr" path="res://src/ui/buttons/button.tscn" id="2_wmwda"]
-[ext_resource type="PackedScene" uid="uid://6ieeuwg2234v" path="res://src/ui/main_menu.tscn" id="4_mu7nr"]
+[ext_resource type="PackedScene" uid="uid://dnl2cxegrcl6a" path="res://src/ui/debug_menu.tscn" id="4_mu7nr"]
 
 [node name="WinScreen" type="Control" unique_id=195482948]
 layout_mode = 3
