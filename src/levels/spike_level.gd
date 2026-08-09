@@ -10,7 +10,7 @@ func _ready() -> void:
 	SignalBus.player_died.connect(_restart)
 	SignalBus.player_win.connect(_win)
 	AudioManager.snordmusicloop.play()
-	Global.player.speed_multipler = self.speed_multiplier
+	Global.speed_multipler = speed_multiplier
 
 func _restart():
 	await get_tree().create_timer(1).timeout

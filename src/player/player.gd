@@ -1,18 +1,16 @@
 extends CharacterBody2D
-class_name player
+class_name Player
 
 ## On READYS
 @onready var sprite_2d: Sprite2D = $Sprite2D
 @onready var camera_2d: Camera2D = $Camera2D
-@onready var snord_sound = $"../SnordSound1"
 
 # EXPORTS
 @export var sprite_texture : Texture
-@export var speed_multiplier := 1
+@export var speed_multiplier : float
 @export var collision_on := true
 @export_range(1,5) var channel : int = 3 ## set the starting channel from 0 to 4
 
-# Signals
 signal die
 
 func _ready() -> void:
@@ -20,8 +18,10 @@ func _ready() -> void:
 	_set_y_pos(channel)
 	if sprite_texture: sprite_2d.texture = sprite_texture
 	Global.player = self
+	speed_multiplier = Global.speed_multipler
 
 func _process(_delta: float) -> void:
+	speed_multiplier = Global.speed_multipler
 	velocity.x = get_gravity().y * _delta * speed_multiplier
 	print(velocity)
 	

@@ -1,4 +1,5 @@
 extends SpikeLevel
 
 func _ready() -> void:
-	speed_multiplier = 1.0
+	speed_multiplier = 10.0
+	super()

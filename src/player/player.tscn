@@ -14,7 +14,6 @@ collision_layer = 2
 collision_mask = 0
 script = ExtResource("1_4flbx")
 sprite_texture = ExtResource("2_4ntmi")
-speed_multiplier = 8
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=134528080]
 shape = SubResource("RectangleShape2D_4ntmi")
