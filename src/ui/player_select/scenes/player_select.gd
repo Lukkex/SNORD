@@ -1,6 +1,9 @@
 extends Control
 
+## Add characters to the game!
 @export var char_array: Array[CharProfile]
+## Intended to be level 1
+@export_file("*.tscn") var target_scene : String
 
 @onready var confirmation_button: Button = $ConfirmationButton
 @onready var row1: HBoxContainer = $MarginContainer/VBoxContainer/VBoxContainer2/HBoxContainer
@@ -31,4 +34,6 @@ func ready(character):
 	confirmation_button.visible = true
 
 func _on_confirmation_button_pressed() -> void:
-	pass # Replace with function body.
+	Global.character = selected_character
+	if target_scene: get_tree().change_scene_to_file(target_scene)
+	else: print("scene not set")

@@ -3,22 +3,33 @@ class_name Player
 
 ## On READYS
 @onready var sprite_2d: Sprite2D = $Sprite2D
+@onready var character_name: Label = $Name
 @onready var camera_2d: Camera2D = $Camera2D
 
 # EXPORTS
-@export var sprite_texture : Texture
+@export var default_sprite : Texture
 @export var speed_multiplier : float
 @export var collision_on := true
 @export_range(1,5) var channel : int = 3 ## set the starting channel from 0 to 4
+
+var character : CharProfile
 
 signal die
 
 func _ready() -> void:
 	add_to_group("players")
 	_set_y_pos(channel)
-	if sprite_texture: sprite_2d.texture = sprite_texture
+	
+	character = Global.character
+	if character != null:
+		update_characrer()
+	
 	Global.player = self
 	speed_multiplier = Global.speed_multipler
+
+func update_characrer():
+	sprite_2d.texture = character.character_sprite
+	character_name.text = character.character_name.get_slice(" ", 0)
 
 func _process(_delta: float) -> void:
 	speed_multiplier = Global.speed_multipler

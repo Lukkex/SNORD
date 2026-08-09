@@ -11,7 +11,3 @@ class_name CharProfile
 @export var bg_color : Color = Color.from_hsv(0.0, 0.0, 1.0, 1.0)
 ## Sprite
 @export var character_sprite : AtlasTexture = null
-
-# probably not needed rn
-func _init(p_char = "", p_desc = "", p_flair = "", p_bg = null, p_sprite = null) -> void:
-	pass
