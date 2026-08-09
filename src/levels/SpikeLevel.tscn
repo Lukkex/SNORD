@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://ddonwqrqmx65k"]
+
+[ext_resource type="Script" uid="uid://dapxehjhoagb" path="res://src/levels/spike_level.gd" id="1_nleif"]
+
+[node name="SpikeLevel" type="Node2D" unique_id=1172859048]
+script = ExtResource("1_nleif")
