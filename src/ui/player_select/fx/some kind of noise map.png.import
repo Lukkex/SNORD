@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cgbk372a6bxrg"
-path="res://.godot/imported/snordlings.png-1b22c49cebf7d0209fac754100fd6462.ctex"
+uid="uid://qoef44l4uxww"
+path="res://.godot/imported/some kind of noise map.png-3eb714bf443f2e12ae22f59ba098b9a6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://src/ui/player_select/snordlings.png"
-dest_files=["res://.godot/imported/snordlings.png-1b22c49cebf7d0209fac754100fd6462.ctex"]
+source_file="res://src/ui/player_select/fx/some kind of noise map.png"
+dest_files=["res://.godot/imported/some kind of noise map.png-3eb714bf443f2e12ae22f59ba098b9a6.ctex"]
 
 [params]
 

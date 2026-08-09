@@ -8,23 +8,31 @@ extends CanvasLayer
 @onready var timer: Timer = $Timer
 
 ## To modify
-@onready var lore_snippet_1: RichTextLabel = $Lore/RichTextLabel
-@onready var lore_snippet_2: RichTextLabel = $Lore/RichTextLabel2
+@onready var flair: RichTextLabel = $Flair
+@onready var description: RichTextLabel = $Lore/Descriptoin
 @onready var sprite_2d: Sprite2D = $left/character/Sprite2D
 @onready var character_nameplate: Label = $left/character/Name
 
 @onready var gpu_particles_2d: GPUParticles2D = $left/GPUParticles2D
 @onready var gpu_particles_2d_3: GPUParticles2D = $right/GPUParticles2D3
 
+@onready var bg2: Control = $left/bg
+
+
 func _ready() -> void:
 	SignalBus.character_selected.connect(cut_in)
-	
 
-func cut_in(character : Texture = null, char_name : Label = null):
-	if character != null: sprite_2d.texture = character
-	if char_name != null: character_nameplate.text = char_name.text
+func cut_in(character : CharProfile = null):
+	if character != null: 
+		sprite_2d.texture = character.character_sprite
+		character_nameplate.text = character.character_name
+		description.text = character.description
+		flair.text = character.flair
+		flair.set("theme_override_colors/default_color", character.bg_color)
+		recolor_bg(character.bg_color)
 	
 	animation_player.stop()
+	#recolor_bg()
 	animation_player.play("cut_in")
 
 ## TODO: add sound effect lmao
@@ -54,3 +62,8 @@ func shake_particles(duration: float = 1):
 	
 	gpu_particles_2d.emitting = false
 	gpu_particles_2d_3.emitting = false
+
+func recolor_bg(color : Color):
+	for x in bg2.get_children():
+		if x is ColorRect:
+			x.color = color

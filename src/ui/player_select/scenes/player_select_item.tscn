@@ -2,9 +2,9 @@
 
 [ext_resource type="Script" uid="uid://hj15qpdgygaq" path="res://src/ui/player_select/player_select_item.gd" id="1_73ube"]
 [ext_resource type="Texture2D" uid="uid://c1qw3gbmlbqrr" path="res://src/player/snord.png" id="1_hmhyd"]
-[ext_resource type="Texture2D" uid="uid://fsna8h0b7dix" path="res://src/ui/player_select/chareacter select sprite transparent.png" id="2_1tj25"]
+[ext_resource type="Texture2D" uid="uid://fsna8h0b7dix" path="res://src/ui/player_select/sprites/chareacter select sprite transparent.png" id="2_1tj25"]
 [ext_resource type="Theme" uid="uid://maqxnhvp58cj" path="res://src/ui/themes/theme.tres" id="2_5bowb"]
-[ext_resource type="Shader" uid="uid://2c71yia3232j" path="res://src/ui/player_select/flames.tres" id="5_1tj25"]
+[ext_resource type="Shader" uid="uid://2c71yia3232j" path="res://src/ui/player_select/fx/flames.tres" id="5_1tj25"]
 [ext_resource type="Texture2D" uid="uid://c0bfqa1vxg7ud" path="res://assets/snord kinda big.png" id="6_vqypw"]
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_egki0"]

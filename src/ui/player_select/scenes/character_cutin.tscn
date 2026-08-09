@@ -2,7 +2,7 @@
 
 [ext_resource type="Theme" uid="uid://maqxnhvp58cj" path="res://src/ui/themes/theme.tres" id="1_ia4hv"]
 [ext_resource type="Script" uid="uid://d3a5bronnimwu" path="res://src/ui/player_select/scenes/character_cutin.gd" id="1_iel81"]
-[ext_resource type="Texture2D" uid="uid://cgbk372a6bxrg" path="res://src/ui/player_select/snordlings.png" id="1_qow5p"]
+[ext_resource type="Texture2D" uid="uid://cgbk372a6bxrg" path="res://src/ui/player_select/sprites/snordlings.png" id="1_qow5p"]
 
 [sub_resource type="Curve" id="Curve_iel81"]
 _limits = [-1.0, 1.0, 0.0, 5.0]
@@ -81,10 +81,34 @@ tracks/3/keys = {
 "update": 0,
 "values": [Vector2(-528, 0)]
 }
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Flair:scale")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Flair:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(231.00002, 256)]
+}
 
 [sub_resource type="Animation" id="Animation_mjxo2"]
 resource_name = "cut_in"
-length = 0.75
+length = 1.5
 step = 0.25
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -141,13 +165,16 @@ tracks/4/path = NodePath(".")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
-"times": PackedFloat32Array(0.25, 0.5),
-"transitions": PackedFloat32Array(1, 1),
+"times": PackedFloat32Array(0.25, 0.5, 1.25),
+"transitions": PackedFloat32Array(1, 1, 1),
 "values": [{
 "args": [0.15, 5.0],
 "method": &"camera_shake"
 }, {
 "args": [0.15, 10.0],
+"method": &"camera_shake"
+}, {
+"args": [0.15, 20.0],
 "method": &"camera_shake"
 }]
 }
@@ -158,12 +185,39 @@ tracks/5/path = NodePath(".")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
-"times": PackedFloat32Array(0.5),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(0.5, 1.25),
+"transitions": PackedFloat32Array(1, 1),
 "values": [{
 "args": [1.0],
 "method": &"shake_particles"
+}, {
+"args": [1.0],
+"method": &"shake_particles"
 }]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Flair:scale")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 1, 1.25),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(2.49, 2.49), Vector2(2.49, 2.49), Vector2(1, 1)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Flair:position")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 1, 1.25),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1947.0001, -402.99997), Vector2(1947.0001, -402.99997), Vector2(231.00002, 256)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_3o431"]
@@ -196,29 +250,34 @@ offset_left = -584.0
 offset_right = -544.0
 offset_bottom = 40.0
 
-[node name="ColorRect4" type="ColorRect" parent="left/bg" unique_id=1034281462]
+[node name="border" type="Control" parent="left/bg" unique_id=864528921]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ColorRect4" type="ColorRect" parent="left/bg/border" unique_id=1034281462]
 layout_mode = 0
-offset_left = -213.99997
+offset_left = -214.0
 offset_top = -284.0
-offset_right = 177.00003
+offset_right = 177.0
 offset_bottom = 483.9358
 rotation = -0.31444404
 color = Color(0.28118682, 0.28118688, 0.28118682, 1)
 
-[node name="ColorRect5" type="ColorRect" parent="left/bg" unique_id=1495363461]
+[node name="ColorRect5" type="ColorRect" parent="left/bg/border" unique_id=1495363461]
 layout_mode = 0
-offset_left = -292.00003
+offset_left = -292.0
 offset_top = 192.0
-offset_right = 292.4847
+offset_right = 292.48474
 offset_bottom = 957.15125
 rotation = -0.31444404
 color = Color(0.28118682, 0.28118688, 0.28118682, 1)
 
-[node name="ColorRect6" type="ColorRect" parent="left/bg" unique_id=270149133]
+[node name="ColorRect6" type="ColorRect" parent="left/bg/border" unique_id=270149133]
 layout_mode = 0
-offset_left = -294.00003
+offset_left = -294.0
 offset_top = 655.0
-offset_right = 391.15866
+offset_right = 391.1587
 offset_bottom = 1424.95
 rotation = -0.31444404
 color = Color(0.28118682, 0.28118688, 0.28118682, 1)
@@ -293,7 +352,12 @@ lifetime = 4.0
 explosiveness = 0.69
 process_material = SubResource("ParticleProcessMaterial_ohj6x")
 
-[node name="ColorRect4" type="ColorRect" parent="right" unique_id=1772093146]
+[node name="bg" type="Control" parent="right" unique_id=1263564211]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ColorRect4" type="ColorRect" parent="right/bg" unique_id=1772093146]
 layout_mode = 0
 offset_left = -582.0
 offset_top = -284.0
@@ -302,7 +366,7 @@ offset_bottom = 485.94995
 rotation = -0.31444404
 color = Color(0.3069228, 0.30692264, 0.30692276, 1)
 
-[node name="ColorRect5" type="ColorRect" parent="right" unique_id=1164306091]
+[node name="ColorRect5" type="ColorRect" parent="right/bg" unique_id=1164306091]
 layout_mode = 0
 offset_left = -434.23572
 offset_top = 271.21756
@@ -311,16 +375,16 @@ offset_bottom = 957.8655
 rotation = -0.31444404
 color = Color(0.3069228, 0.30692264, 0.30692276, 1)
 
-[node name="ColorRect6" type="ColorRect" parent="right" unique_id=2011068886]
+[node name="ColorRect6" type="ColorRect" parent="right/bg" unique_id=2011068886]
 layout_mode = 0
-offset_left = -337.01437
+offset_left = -337.0144
 offset_top = 645.7316
-offset_right = 348.14432
+offset_right = 348.1443
 offset_bottom = 1425.4277
 rotation = -0.31444404
 color = Color(0.3069228, 0.30692264, 0.30692276, 1)
 
-[node name="ColorRect" type="ColorRect" parent="right" unique_id=1718884524]
+[node name="ColorRect" type="ColorRect" parent="right/bg" unique_id=1718884524]
 layout_mode = 0
 offset_left = -566.0
 offset_top = -284.0
@@ -328,15 +392,15 @@ offset_right = 190.36182
 offset_bottom = 485.94995
 rotation = -0.31444404
 
-[node name="ColorRect2" type="ColorRect" parent="right" unique_id=1890428982]
+[node name="ColorRect2" type="ColorRect" parent="right/bg" unique_id=1890428982]
 layout_mode = 0
-offset_left = -415.2004
+offset_left = -415.20044
 offset_top = 280.55023
-offset_right = 169.28433
+offset_right = 169.2843
 offset_bottom = 957.38434
 rotation = -0.31444404
 
-[node name="ColorRect3" type="ColorRect" parent="right" unique_id=2082159682]
+[node name="ColorRect3" type="ColorRect" parent="right/bg" unique_id=2082159682]
 layout_mode = 0
 offset_left = -318.0
 offset_top = 655.0
@@ -350,30 +414,11 @@ anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
 offset_left = 496.0
-offset_right = 536.0
+offset_right = 536.00024
 offset_bottom = 40.0
 grow_horizontal = 0
 
-[node name="RichTextLabel" type="RichTextLabel" parent="Lore" unique_id=8902247]
-custom_minimum_size = Vector2(200, 0)
-layout_mode = 0
-offset_left = -194.0
-offset_top = 662.0
-offset_right = 6.000244
-offset_bottom = 923.0
-theme = ExtResource("1_ia4hv")
-theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/normal_font_size = 24
-theme_override_font_sizes/bold_font_size = 24
-theme_override_font_sizes/bold_italics_font_size = 24
-theme_override_font_sizes/italics_font_size = 24
-theme_override_font_sizes/mono_font_size = 24
-text = "Coolest cat on this side of the Resort"
-fit_content = true
-scroll_active = false
-autowrap_mode = 2
-
-[node name="RichTextLabel2" type="RichTextLabel" parent="Lore" unique_id=586234849]
+[node name="Descriptoin" type="RichTextLabel" parent="Lore" unique_id=586234849]
 custom_minimum_size = Vector2(300, 0)
 layout_mode = 0
 offset_left = -295.0
@@ -390,6 +435,30 @@ theme_override_font_sizes/mono_font_size = 24
 text = "LOREM IPSUM
 
 EVIL ASS BITCH DOES CRAZY SHIT LOL THIS IS THE LORE OR SOMETHING ARE YOU EVEN READING THIS??"
+fit_content = true
+scroll_active = false
+autowrap_mode = 2
+
+[node name="Flair" type="RichTextLabel" parent="." unique_id=8902247]
+z_index = 7
+custom_minimum_size = Vector2(400, 0)
+clip_contents = false
+offset_left = 231.00002
+offset_top = 256.0
+offset_right = 761.9995
+offset_bottom = 517.0
+rotation = 0.12876847
+theme = ExtResource("1_ia4hv")
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/line_separation = 5
+theme_override_constants/outline_size = 20
+theme_override_font_sizes/normal_font_size = 36
+theme_override_font_sizes/bold_font_size = 36
+theme_override_font_sizes/bold_italics_font_size = 36
+theme_override_font_sizes/italics_font_size = 36
+theme_override_font_sizes/mono_font_size = 36
+text = "Coolest cat on this side of the Resort"
 fit_content = true
 scroll_active = false
 autowrap_mode = 2

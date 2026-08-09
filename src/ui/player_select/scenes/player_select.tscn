@@ -2,33 +2,89 @@
 
 [ext_resource type="Theme" uid="uid://maqxnhvp58cj" path="res://src/ui/themes/theme.tres" id="1_ems7s"]
 [ext_resource type="Script" uid="uid://b1wb6alytgg4b" path="res://src/ui/player_select/scenes/player_select.gd" id="1_krjuy"]
-[ext_resource type="PackedScene" uid="uid://cvxvp2n8a3200" path="res://src/ui/player_select/scenes/player_select_item.tscn" id="1_l0pe6"]
-[ext_resource type="Texture2D" uid="uid://cgbk372a6bxrg" path="res://src/ui/player_select/snordlings.png" id="3_c5gok"]
+[ext_resource type="Script" uid="uid://ds00hxh8i02lp" path="res://src/ui/player_select/char_profile.gd" id="2_r5ekk"]
+[ext_resource type="Texture2D" uid="uid://cgbk372a6bxrg" path="res://src/ui/player_select/sprites/snordlings.png" id="3_c5gok"]
 [ext_resource type="PackedScene" uid="uid://dlmdhmvgi52kx" path="res://src/ui/player_select/scenes/character_cutin.tscn" id="4_2n0j3"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1tj25"]
 atlas = ExtResource("3_c5gok")
 region = Rect2(0, 0, 8, 8)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_c5gok"]
-atlas = ExtResource("3_c5gok")
-region = Rect2(16, 0, 8, 8)
+[sub_resource type="Resource" id="Resource_krjuy"]
+script = ExtResource("2_r5ekk")
+character_name = "Snort Speverts"
+description = "The guy. literally, name of the game. They're cult classic and don't even need a cult. Omnigender. Literally all of them. Some kind of god or something. wow. So cool...
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_3scau"]
-atlas = ExtResource("3_c5gok")
-region = Rect2(24, 0, 8, 8)
+wow."
+flair = "Who do you think you are? Me!"
+bg_color = Color(0.94038236, 0.9581949, 0.7113911, 1)
+character_sprite = SubResource("AtlasTexture_1tj25")
+metadata/_custom_type_script = "uid://ds00hxh8i02lp"
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_7ser6"]
 atlas = ExtResource("3_c5gok")
 region = Rect2(8, 0, 8, 8)
 
+[sub_resource type="Resource" id="Resource_r5ekk"]
+script = ExtResource("2_r5ekk")
+character_name = "Snorlina Slooker"
+description = "Truly a bitch, but shes the female lead, pursue her."
+flair = "Im sexy and I know it"
+bg_color = Color(0.9242132, 0.5599199, 0.83996004, 1)
+character_sprite = SubResource("AtlasTexture_7ser6")
+metadata/_custom_type_script = "uid://ds00hxh8i02lp"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c5gok"]
+atlas = ExtResource("3_c5gok")
+region = Rect2(16, 0, 8, 8)
+
+[sub_resource type="Resource" id="Resource_xwsro"]
+script = ExtResource("2_r5ekk")
+character_name = "Snose Sid"
+description = "big nose, small personality. This guy does NOT THINK EVER AT ALL. But he is incredibly dependable, and ever loyal."
+flair = "Snose smash."
+bg_color = Color(0.5510623, 0.7255916, 0.47859716, 1)
+character_sprite = SubResource("AtlasTexture_c5gok")
+metadata/_custom_type_script = "uid://ds00hxh8i02lp"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3scau"]
+atlas = ExtResource("3_c5gok")
+region = Rect2(24, 0, 8, 8)
+
+[sub_resource type="Resource" id="Resource_t7ldo"]
+script = ExtResource("2_r5ekk")
+character_name = "Snodd Todderson"
+description = "Looks dependable, isnt. great music. Makes bangers. Loves eating bagels with cream cheese-- but they put mustard too.. I'm worried.."
+flair = "Im blue baby dabba da dooo im blueuee dabba de dabba dooooo"
+bg_color = Color(0.53387487, 0.74634236, 0.9573378, 1)
+character_sprite = SubResource("AtlasTexture_3scau")
+metadata/_custom_type_script = "uid://ds00hxh8i02lp"
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_dl8f8"]
 atlas = ExtResource("3_c5gok")
 region = Rect2(32, 0, 8, 8)
 
+[sub_resource type="Resource" id="Resource_hit5b"]
+script = ExtResource("2_r5ekk")
+character_name = "Snart Von Shniensen"
+description = "Clearly a distinguished gentlesnord. The royalty among peasants. He doesn't do anything because he has servants to do things for him."
+flair = "peon."
+bg_color = Color(0.3823494, 0.32898095, 0.8309826, 1)
+character_sprite = SubResource("AtlasTexture_dl8f8")
+metadata/_custom_type_script = "uid://ds00hxh8i02lp"
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_2bggk"]
 atlas = ExtResource("3_c5gok")
 region = Rect2(40, 0, 8, 8)
+
+[sub_resource type="Resource" id="Resource_rcyvg"]
+script = ExtResource("2_r5ekk")
+character_name = "Snake"
+description = "literally a snake.. how did you get here?"
+flair = "ss."
+bg_color = Color(0.80781406, 0.51215756, 0.19699952, 1)
+character_sprite = SubResource("AtlasTexture_2bggk")
+metadata/_custom_type_script = "uid://ds00hxh8i02lp"
 
 [node name="PlayerSelect" type="Control" unique_id=13376186]
 layout_mode = 3
@@ -38,6 +94,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_krjuy")
+char_array = Array[ExtResource("2_r5ekk")]([SubResource("Resource_krjuy"), SubResource("Resource_r5ekk"), SubResource("Resource_xwsro"), SubResource("Resource_t7ldo"), SubResource("Resource_hit5b"), SubResource("Resource_rcyvg")])
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=530807629]
 layout_mode = 1
@@ -72,47 +129,11 @@ offset_transform_enabled = true
 theme_override_constants/separation = 80
 alignment = 1
 
-[node name="player_select_item" parent="MarginContainer/VBoxContainer/VBoxContainer2/HBoxContainer" unique_id=860131542 instance=ExtResource("1_l0pe6")]
-layout_mode = 2
-character_name = "Snord Speverts"
-bg_color = Color(1, 1, 1, 1)
-character_sprite = SubResource("AtlasTexture_1tj25")
-
-[node name="player_select_item2" parent="MarginContainer/VBoxContainer/VBoxContainer2/HBoxContainer" unique_id=802251231 instance=ExtResource("1_l0pe6")]
-layout_mode = 2
-character_name = "Snose Sid"
-bg_color = Color(0.83, 0.42717335, 0.074699976, 1)
-character_sprite = SubResource("AtlasTexture_c5gok")
-
-[node name="player_select_item3" parent="MarginContainer/VBoxContainer/VBoxContainer2/HBoxContainer" unique_id=825190321 instance=ExtResource("1_l0pe6")]
-layout_mode = 2
-character_name = "Snodd Todderson"
-bg_color = Color(0.3233, 0.53, 0.37152997, 1)
-character_sprite = SubResource("AtlasTexture_3scau")
-
 [node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/VBoxContainer/VBoxContainer2" unique_id=443455635]
 layout_mode = 2
 offset_transform_enabled = true
 theme_override_constants/separation = 80
 alignment = 1
-
-[node name="player_select_item" parent="MarginContainer/VBoxContainer/VBoxContainer2/HBoxContainer2" unique_id=1697702398 instance=ExtResource("1_l0pe6")]
-layout_mode = 2
-character_name = "Snorlina Slooker"
-bg_color = Color(0.97966033, 0.7190654, 0.9021986, 1)
-character_sprite = SubResource("AtlasTexture_7ser6")
-
-[node name="player_select_item2" parent="MarginContainer/VBoxContainer/VBoxContainer2/HBoxContainer2" unique_id=1478027474 instance=ExtResource("1_l0pe6")]
-layout_mode = 2
-character_name = "Snart Von Shniensen"
-bg_color = Color(0.40730003, 0.35400003, 0.6, 1)
-character_sprite = SubResource("AtlasTexture_dl8f8")
-
-[node name="player_select_item3" parent="MarginContainer/VBoxContainer/VBoxContainer2/HBoxContainer2" unique_id=145755257 instance=ExtResource("1_l0pe6")]
-layout_mode = 2
-character_name = "Snake"
-bg_color = Color(0.85906786, 0.6274408, 0.2314657, 1)
-character_sprite = SubResource("AtlasTexture_2bggk")
 
 [node name="ConfirmationButton" type="Button" parent="." unique_id=153666392]
 layout_mode = 1
@@ -134,3 +155,5 @@ theme_override_font_sizes/font_size = 32
 text = "Confirm Selection"
 
 [node name="CharacterCutin" parent="." unique_id=132953481 instance=ExtResource("4_2n0j3")]
+
+[connection signal="pressed" from="ConfirmationButton" to="." method="_on_confirmation_button_pressed"]

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://fsna8h0b7dix"
-path="res://.godot/imported/chareacter select sprite transparent.png-d76c308717f9bb812bca57262f7c51e0.ctex"
+uid="uid://cyg2lxb1yypq4"
+path="res://.godot/imported/chareacter select sprites (visual).png-f573e08c17c9cbf4650b649e05813937.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://src/ui/player_select/chareacter select sprite transparent.png"
-dest_files=["res://.godot/imported/chareacter select sprite transparent.png-d76c308717f9bb812bca57262f7c51e0.ctex"]
+source_file="res://src/ui/player_select/sprites/chareacter select sprites (visual).png"
+dest_files=["res://.godot/imported/chareacter select sprites (visual).png-f573e08c17c9cbf4650b649e05813937.ctex"]
 
 [params]
 
