@@ -19,6 +19,7 @@ func _ready() -> void:
 	add_to_group("players")
 	_set_y_pos(channel)
 	if sprite_texture: sprite_2d.texture = sprite_texture
+	Global.player = self
 
 func _process(_delta: float) -> void:
 	velocity.x = get_gravity().y * _delta * speed_multiplier
@@ -30,11 +31,11 @@ func _process(_delta: float) -> void:
 
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("up"):
-		snord_sound.play()
+		AudioManager.snord1.play()
 		if channel != 1: channel -= 1
 		else: pass # NOTE: can add error sound effect or som here and flash sprite red or som
 	if event.is_action_pressed("down"):
-		snord_sound.play()
+		AudioManager.snord1.play()
 		if channel != 5: channel += 1
 		else: pass # NOTE: can add error sound effect or som here and flash sprite red or som
 
@@ -46,11 +47,11 @@ func _set_y_pos(height):
 func _on_collision_area_body_entered(body: Node2D) -> void:
 	if body.name == "Spikes" and collision_on:
 		print("die")
-		snord_sound.play()
+		AudioManager.snord1.play()
 		camera_2d.reparent(get_tree().current_scene)
 		SignalBus.player_died.emit()
 		queue_free()
 	if body.name == "Victory":
 		print("win")
-		snord_sound.play()
+		AudioManager.snord1.play()
 		SignalBus.player_win.emit()

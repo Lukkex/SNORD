@@ -1,7 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://dn80t7we4r4ww"]
+[gd_scene format=3 uid="uid://dn80t7we4r4ww"]
 
-[ext_resource type="Script" uid="uid://c2ovgfs6123eq" path="res://Player/player.gd" id="1_4flbx"]
-[ext_resource type="Texture2D" uid="uid://c1qw3gbmlbqrr" path="res://Player/snord.png" id="2_4ntmi"]
+[ext_resource type="Script" uid="uid://c2ovgfs6123eq" path="res://src/player/player.gd" id="1_4flbx"]
+[ext_resource type="Texture2D" uid="uid://c1qw3gbmlbqrr" path="res://src/player/snord.png" id="2_4ntmi"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4ntmi"]
 size = Vector2(6, 6)
@@ -9,23 +9,23 @@ size = Vector2(6, 6)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_btcbx"]
 size = Vector2(6, 6)
 
-[node name="Player" type="CharacterBody2D"]
+[node name="Player" type="CharacterBody2D" unique_id=1814486546]
 collision_layer = 2
 collision_mask = 0
 script = ExtResource("1_4flbx")
 sprite_texture = ExtResource("2_4ntmi")
 speed_multiplier = 8
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=134528080]
 shape = SubResource("RectangleShape2D_4ntmi")
 
-[node name="Camera2D" type="Camera2D" parent="."]
+[node name="Camera2D" type="Camera2D" parent="." unique_id=374385633]
 zoom = Vector2(10, 10)
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=609722824]
 texture = ExtResource("2_4ntmi")
 
-[node name="Label" type="Label" parent="."]
+[node name="Label" type="Label" parent="." unique_id=2090456474]
 anchors_preset = 6
 anchor_left = 1.0
 anchor_top = 0.5
@@ -41,10 +41,10 @@ scale = Vector2(0.1, 0.1)
 theme_override_font_sizes/font_size = 64
 text = "snord"
 
-[node name="CollisionArea" type="Area2D" parent="."]
+[node name="CollisionArea" type="Area2D" parent="." unique_id=221964595]
 collision_layer = 0
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CollisionArea"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CollisionArea" unique_id=325598919]
 shape = SubResource("RectangleShape2D_btcbx")
 debug_color = Color(0.9930658, 0, 0.2497159, 0.41960785)
 
