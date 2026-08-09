@@ -32,6 +32,7 @@ description = "Truly a bitch, but shes the female lead, pursue her."
 flair = "Im sexy and I know it"
 bg_color = Color(0.9242132, 0.5599199, 0.83996004, 1)
 character_sprite = SubResource("AtlasTexture_7ser6")
+speed_multiplier = 1.1
 metadata/_custom_type_script = "uid://ds00hxh8i02lp"
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_c5gok"]
@@ -45,6 +46,7 @@ description = "big nose, small personality. This guy does NOT THINK EVER AT ALL.
 flair = "Snose smash."
 bg_color = Color(0.5510623, 0.7255916, 0.47859716, 1)
 character_sprite = SubResource("AtlasTexture_c5gok")
+speed_multiplier = 1.5
 metadata/_custom_type_script = "uid://ds00hxh8i02lp"
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3scau"]
@@ -58,6 +60,7 @@ description = "Looks dependable, isnt. great music. Makes bangers. Loves eating 
 flair = "Im blue baby dabba da dooo im blueuee dabba de dabba dooooo"
 bg_color = Color(0.53387487, 0.74634236, 0.9573378, 1)
 character_sprite = SubResource("AtlasTexture_3scau")
+speed_multiplier = 0.7
 metadata/_custom_type_script = "uid://ds00hxh8i02lp"
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_dl8f8"]
@@ -71,6 +74,7 @@ description = "Clearly a distinguished gentlesnord. The royalty among peasants. 
 flair = "peon."
 bg_color = Color(0.3823494, 0.32898095, 0.8309826, 1)
 character_sprite = SubResource("AtlasTexture_dl8f8")
+speed_multiplier = 1.7
 metadata/_custom_type_script = "uid://ds00hxh8i02lp"
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_2bggk"]
@@ -84,6 +88,7 @@ description = "literally a snake.. how did you get here?"
 flair = "ss."
 bg_color = Color(0.80781406, 0.51215756, 0.19699952, 1)
 character_sprite = SubResource("AtlasTexture_2bggk")
+speed_multiplier = 3.0
 metadata/_custom_type_script = "uid://ds00hxh8i02lp"
 
 [node name="PlayerSelect" type="Control" unique_id=13376186]
