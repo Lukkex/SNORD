@@ -1,9 +1,33 @@
 [gd_scene format=3 uid="uid://1ny0o5ay1a17"]
 
-[node name="Hud" type="Control" unique_id=1827238346]
+[ext_resource type="Script" uid="uid://be6hm1uja0tj5" path="res://src/ui/hud.gd" id="1_4ul33"]
+[ext_resource type="Theme" uid="uid://maqxnhvp58cj" path="res://src/ui/themes/theme.tres" id="1_hu4tt"]
+
+[node name="HUD" type="Control" unique_id=1827238346]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_4ul33")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1826729127]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 50
+
+[node name="TimerLabel" type="Label" parent="MarginContainer" unique_id=841019128]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme = ExtResource("1_hu4tt")
+text = "00:00:000"
+horizontal_alignment = 1
