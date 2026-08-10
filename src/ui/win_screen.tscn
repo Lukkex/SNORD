@@ -3,7 +3,6 @@
 [ext_resource type="Texture2D" uid="uid://c1qw3gbmlbqrr" path="res://src/player/snord.png" id="1_l2arl"]
 [ext_resource type="Script" uid="uid://bqs2mhcdx2v65" path="res://src/ui/win_screen.gd" id="1_su5wl"]
 [ext_resource type="PackedScene" uid="uid://dtl4fy58wfpbr" path="res://src/ui/buttons/button.tscn" id="2_wmwda"]
-[ext_resource type="PackedScene" uid="uid://6ieeuwg2234v" path="res://src/ui/main_menu.tscn" id="4_su5wl"]
 
 [node name="WinScreen" type="Control" unique_id=195482948]
 layout_mode = 3
@@ -51,7 +50,7 @@ text = "retry"
 [node name="MainMenuButton" parent="MarginContainer/HBoxContainer/VBoxContainer" unique_id=1727489594 instance=ExtResource("2_wmwda")]
 layout_mode = 2
 text = "go to menu"
-scene = ExtResource("4_su5wl")
+scene = "uid://6ieeuwg2234v"
 
 [connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/NextLevelButton" to="." method="_on_next_level_button_pressed"]
 [connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/RetryButton" to="." method="_on_retry_button_pressed"]

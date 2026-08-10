@@ -2,9 +2,6 @@
 
 [ext_resource type="Theme" uid="uid://maqxnhvp58cj" path="res://src/ui/themes/theme.tres" id="2_udugg"]
 [ext_resource type="PackedScene" uid="uid://dtl4fy58wfpbr" path="res://src/ui/buttons/button.tscn" id="3_jbpcu"]
-[ext_resource type="PackedScene" uid="uid://bwi1x7xvk1aue" path="res://src/ui/win_screen.tscn" id="4_n8wrk"]
-[ext_resource type="PackedScene" uid="uid://c4qr8vdt8bk8g" path="res://src/levels/level.tscn" id="5_81p6x"]
-[ext_resource type="PackedScene" uid="uid://bvsowf1ovra1a" path="res://src/levels/level_2.tscn" id="6_0f1fb"]
 
 [node name="DebugMenu" type="Control" unique_id=1726995039]
 layout_mode = 3
@@ -49,7 +46,7 @@ alignment = 1
 [node name="WinScreen" parent="MarginContainer/VBoxContainer/HBoxContainer2" unique_id=282253013 instance=ExtResource("3_jbpcu")]
 layout_mode = 2
 text = "win screen"
-scene = ExtResource("4_n8wrk")
+scene = "uid://bwi1x7xvk1aue"
 
 [node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=632668600]
 layout_mode = 2
@@ -60,9 +57,9 @@ alignment = 1
 [node name="Level 1" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=1962539473 instance=ExtResource("3_jbpcu")]
 layout_mode = 2
 text = "level 1"
-scene = ExtResource("5_81p6x")
+scene = "uid://c4qr8vdt8bk8g"
 
 [node name="Level 2" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=971260451 instance=ExtResource("3_jbpcu")]
 layout_mode = 2
 text = "level 2"
-scene = ExtResource("6_0f1fb")
+scene = "uid://bvsowf1ovra1a"

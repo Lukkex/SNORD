@@ -1,6 +1,5 @@
 extends Control
 
-@onready var music = $SnordMusicLoop
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 @onready var video_stream_player: VideoStreamPlayer = $MarginContainer2/VBoxContainer/VideoStreamPlayer
 @onready var color_rect: ColorRect = $ColorRect
