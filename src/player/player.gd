@@ -14,8 +14,6 @@ class_name Player
 
 var character : CharProfile
 
-signal die
-
 func _ready() -> void:
 	add_to_group("players")
 	_set_y_pos(channel)
