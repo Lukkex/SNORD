@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="CharProfile" format=3 uid="uid://c1m6f6h85nuno"]
+
+[ext_resource type="Texture2D" uid="uid://cgbk372a6bxrg" path="res://src/ui/player_select/sprites/snordlings.png" id="1_trham"]
+[ext_resource type="Script" uid="uid://ds00hxh8i02lp" path="res://src/ui/player_select/char_profile.gd" id="2_4sdo7"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1tj25"]
+atlas = ExtResource("1_trham")
+region = Rect2(0, 0, 8, 8)
+
+[resource]
+script = ExtResource("2_4sdo7")
+character_name = "Snort Speverts"
+description = "The guy. literally, name of the game. They're cult classic and don't even need a cult. Omnigender. Literally all of them. Some kind of god or something. wow. So cool...
+
+wow."
+flair = "Who do you think you are? Me!"
+bg_color = Color(0.94038236, 0.9581949, 0.7113911, 1)
+character_sprite = SubResource("AtlasTexture_1tj25")
+metadata/_custom_type_script = "uid://ds00hxh8i02lp"

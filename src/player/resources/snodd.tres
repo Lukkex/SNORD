@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="CharProfile" format=3 uid="uid://cl5m8eo3qymfy"]
+
+[ext_resource type="Texture2D" uid="uid://cgbk372a6bxrg" path="res://src/ui/player_select/sprites/snordlings.png" id="1_tu2d5"]
+[ext_resource type="Script" uid="uid://ds00hxh8i02lp" path="res://src/ui/player_select/char_profile.gd" id="2_yriwj"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3scau"]
+atlas = ExtResource("1_tu2d5")
+region = Rect2(24, 0, 8, 8)
+
+[resource]
+script = ExtResource("2_yriwj")
+character_name = "Snodd Todderson"
+description = "Looks dependable, isnt. great music. Makes bangers. Loves eating bagels with cream cheese-- but they put mustard too.. I'm worried.."
+flair = "Im blue baby dabba da dooo im blueuee dabba de dabba dooooo"
+bg_color = Color(0.53387487, 0.74634236, 0.9573378, 1)
+character_sprite = SubResource("AtlasTexture_3scau")
+speed_multiplier = 0.7
+metadata/_custom_type_script = "uid://ds00hxh8i02lp"
