@@ -18,7 +18,7 @@ region = Rect2(48, 0, 8, 8)
 
 [sub_resource type="Resource" id="Resource_rcyvg"]
 script = ExtResource("2_r5ekk")
-character_name = "Kyrle"
+character_name = "Kyle"
 description = "The cooler Snord. Literally everything Snord wants to be. Kyle's hair is a constant reminder that Snord will never amount to anything outside their destined existence. We don't like Kyle"
 bg_color = Color(0.23919895, 0.26539922, 0.1773937, 1)
 character_sprite = SubResource("AtlasTexture_sqbmo")
