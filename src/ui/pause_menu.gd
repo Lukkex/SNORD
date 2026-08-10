@@ -12,7 +12,6 @@ func _ready() -> void:
 
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("escape"):
-		
 		character_name.text = Global.character.character_name
 		settings_menu.visible = false
 		pausemenu()
@@ -34,6 +33,7 @@ func pausemenu():
 		
 		await tween2.finished
 		visible = true
+		AudioManager.play_character_move_sound()
 
 func _on_resume_pressed():
 	if visible:
