@@ -45,11 +45,11 @@ func _physics_process(delta: float) -> void:
 
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("up"):
-		AudioManager.snord1.play()
+		AudioManager.play_character_move_sound()
 		if channel != 1: channel -= 1
 		else: pass # NOTE: can add error sound effect or som here and flash sprite red or som
 	if event.is_action_pressed("down"):
-		AudioManager.snord1.play()
+		AudioManager.play_character_move_sound()
 		if channel != 5: channel += 1
 		else: pass # NOTE: can add error sound effect or som here and flash sprite red or som
 	
@@ -71,11 +71,11 @@ func _set_y_pos(height):
 func _on_collision_area_body_entered(body: Node2D) -> void:
 	if body.name == "Spikes" and collision_on:
 		print("die")
-		AudioManager.snord1.play()
+		AudioManager.play_character_move_sound()
 		camera_2d.reparent(get_tree().current_scene)
 		SignalBus.player_died.emit()
 		queue_free()
 	if body.name == "Victory":
 		print("win")
-		AudioManager.snord1.play()
+		AudioManager.play_character_move_sound()
 		SignalBus.player_win.emit()
