@@ -17,7 +17,6 @@ extends CanvasLayer
 @onready var gpu_particles_2d_3: GPUParticles2D = $right/GPUParticles2D3
 
 @onready var bg2: Control = $left/bg
-@onready var bg: Control = $right/bg
 
 
 func _ready() -> void:
@@ -66,8 +65,5 @@ func shake_particles(duration: float = 1):
 
 func recolor_bg(color : Color):
 	for x in bg2.get_children():
-		if x is ColorRect:
-			x.color = color
-	for x in bg.get_children():
 		if x is ColorRect:
 			x.color = color

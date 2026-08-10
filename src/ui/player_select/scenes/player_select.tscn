@@ -10,34 +10,6 @@
 [ext_resource type="Resource" uid="uid://cl5m8eo3qymfy" path="res://src/player/resources/snodd.tres" id="6_eyotc"]
 [ext_resource type="Resource" uid="uid://ltogccyb5q73" path="res://src/player/resources/snart.tres" id="7_nd7sw"]
 [ext_resource type="Resource" uid="uid://cnagn7i5lmo5r" path="res://src/player/resources/snake.tres" id="8_7lfci"]
-[ext_resource type="Texture2D" uid="uid://cgbk372a6bxrg" path="res://src/ui/player_select/sprites/snordlings.png" id="9_g80vi"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_sqbmo"]
-atlas = ExtResource("9_g80vi")
-region = Rect2(48, 0, 8, 8)
-
-[sub_resource type="Resource" id="Resource_rcyvg"]
-script = ExtResource("2_r5ekk")
-character_name = "Kyrle"
-description = "The cooler Snord. Literally everything Snord wants to be. Kyle's hair is a constant reminder that Snord will never amount to anything outside their destined existence. We don't like Kyle"
-bg_color = Color(0.23919895, 0.26539922, 0.1773937, 1)
-character_sprite = SubResource("AtlasTexture_sqbmo")
-speed_multiplier = 0.1
-metadata/_custom_type_script = "uid://ds00hxh8i02lp"
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_g80vi"]
-atlas = ExtResource("9_g80vi")
-region = Rect2(56, 0, 8, 8)
-
-[sub_resource type="Resource" id="Resource_g80vi"]
-script = ExtResource("2_r5ekk")
-character_name = "Hubert Hubertson"
-description = "has a resting bitch face. They're actually really kind when you get to know them. Infamous around their peers, highly unapproachable.s"
-flair = "..hey"
-bg_color = Color(0.37, 0.06265333, 0.040700007, 1)
-character_sprite = SubResource("AtlasTexture_g80vi")
-speed_multiplier = 0.4
-metadata/_custom_type_script = "uid://ds00hxh8i02lp"
 
 [node name="PlayerSelect" type="Control" unique_id=13376186]
 layout_mode = 3
@@ -47,7 +19,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_krjuy")
-char_array = Array[ExtResource("2_r5ekk")]([ExtResource("3_rcyvg"), ExtResource("4_g80vi"), ExtResource("5_x3a8t"), ExtResource("6_eyotc"), ExtResource("7_nd7sw"), ExtResource("8_7lfci"), SubResource("Resource_rcyvg"), SubResource("Resource_g80vi")])
+char_array = Array[ExtResource("2_r5ekk")]([ExtResource("3_rcyvg"), ExtResource("4_g80vi"), ExtResource("5_x3a8t"), ExtResource("6_eyotc"), ExtResource("7_nd7sw"), ExtResource("8_7lfci")])
 target_scene = "uid://c4qr8vdt8bk8g"
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=530807629]
@@ -62,33 +34,30 @@ theme_override_constants/margin_top = 80
 theme_override_constants/margin_right = 150
 theme_override_constants/margin_bottom = 80
 
-[node name="CharacterContainer" type="VBoxContainer" parent="MarginContainer" unique_id=1112554480]
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=1112554480]
 layout_mode = 2
 theme_override_constants/separation = 64
 
-[node name="Label" type="Label" parent="MarginContainer/CharacterContainer" unique_id=1415272691]
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer" unique_id=1415272691]
 layout_mode = 2
 theme = ExtResource("1_ems7s")
 theme_override_font_sizes/font_size = 32
 text = "SELECT YOUR CHARACTER"
 horizontal_alignment = 1
 
-[node name="VBoxContainer2" type="VBoxContainer" parent="MarginContainer/CharacterContainer" unique_id=1882686947]
+[node name="VBoxContainer2" type="VBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=1882686947]
 layout_mode = 2
 theme_override_constants/separation = 80
 
-[node name="Row1" type="HBoxContainer" parent="MarginContainer/CharacterContainer/VBoxContainer2" unique_id=119509238]
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/VBoxContainer2" unique_id=119509238]
 layout_mode = 2
-theme_override_constants/separation = 80
-alignment = 1
-
-[node name="Row2" type="HBoxContainer" parent="MarginContainer/CharacterContainer/VBoxContainer2" unique_id=443455635]
-layout_mode = 2
+offset_transform_enabled = true
 theme_override_constants/separation = 80
 alignment = 1
 
-[node name="Row3" type="HBoxContainer" parent="MarginContainer/CharacterContainer/VBoxContainer2" unique_id=1230402264]
+[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/VBoxContainer/VBoxContainer2" unique_id=443455635]
 layout_mode = 2
+offset_transform_enabled = true
 theme_override_constants/separation = 80
 alignment = 1
 

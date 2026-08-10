@@ -6,9 +6,8 @@ extends Control
 @export_file("*.tscn") var target_scene : String
 
 @onready var confirmation_button: Button = $ConfirmationButton
-@onready var row_1: HBoxContainer = $MarginContainer/CharacterContainer/VBoxContainer2/Row1
-@onready var row_2: HBoxContainer = $MarginContainer/CharacterContainer/VBoxContainer2/Row2
-@onready var row_3: HBoxContainer = $MarginContainer/CharacterContainer/VBoxContainer2/Row3
+@onready var row1: HBoxContainer = $MarginContainer/VBoxContainer/VBoxContainer2/HBoxContainer
+@onready var row2: HBoxContainer = $MarginContainer/VBoxContainer/VBoxContainer2/HBoxContainer2
 
 const PLAYER_SELECT_ITEM = preload("uid://cvxvp2n8a3200")
 
@@ -16,17 +15,13 @@ var selected_character : CharProfile
 
 func _ready() -> void:
 	for x in char_array:
-		if row_1.get_child_count() < 5:
+		if row1.get_child_count() < 5:
 			var y : PlayerSelectContainer = PLAYER_SELECT_ITEM.instantiate()
-			row_1.add_child(y)
+			row1.add_child(y)
 			y.call_deferred("prep", x)
-		elif row_2.get_child_count() < 5:
+		elif row2.get_child_count() < 5:
 			var y : PlayerSelectContainer = PLAYER_SELECT_ITEM.instantiate()
-			row_2.add_child(y)
-			y.call_deferred("prep", x)
-		elif row_3.get_child_count() < 5:
-			var y : PlayerSelectContainer = PLAYER_SELECT_ITEM.instantiate()
-			row_3.add_child(y)
+			row2.add_child(y)
 			y.call_deferred("prep", x)
 		else:
 			return

@@ -357,12 +357,7 @@ anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="Border" type="Control" parent="right/bg" unique_id=668734672]
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="ColorRect4" type="ColorRect" parent="right/bg/Border" unique_id=1772093146]
+[node name="ColorRect4" type="ColorRect" parent="right/bg" unique_id=1772093146]
 layout_mode = 0
 offset_left = -582.0
 offset_top = -284.0
@@ -371,7 +366,7 @@ offset_bottom = 485.94995
 rotation = -0.31444404
 color = Color(0.3069228, 0.30692264, 0.30692276, 1)
 
-[node name="ColorRect5" type="ColorRect" parent="right/bg/Border" unique_id=1164306091]
+[node name="ColorRect5" type="ColorRect" parent="right/bg" unique_id=1164306091]
 layout_mode = 0
 offset_left = -434.23572
 offset_top = 271.21756
@@ -380,7 +375,7 @@ offset_bottom = 957.8655
 rotation = -0.31444404
 color = Color(0.3069228, 0.30692264, 0.30692276, 1)
 
-[node name="ColorRect6" type="ColorRect" parent="right/bg/Border" unique_id=2011068886]
+[node name="ColorRect6" type="ColorRect" parent="right/bg" unique_id=2011068886]
 layout_mode = 0
 offset_left = -337.0144
 offset_top = 645.7316
@@ -432,7 +427,6 @@ offset_right = 5.0
 offset_bottom = 502.0
 theme = ExtResource("1_ia4hv")
 theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_constants/line_separation = 5
 theme_override_font_sizes/normal_font_size = 24
 theme_override_font_sizes/bold_font_size = 24
 theme_override_font_sizes/bold_italics_font_size = 24
@@ -444,7 +438,6 @@ EVIL ASS BITCH DOES CRAZY SHIT LOL THIS IS THE LORE OR SOMETHING ARE YOU EVEN RE
 fit_content = true
 scroll_active = false
 autowrap_mode = 2
-horizontal_alignment = 2
 
 [node name="Flair" type="RichTextLabel" parent="." unique_id=8902247]
 z_index = 7
