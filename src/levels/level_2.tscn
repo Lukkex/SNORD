@@ -22,6 +22,7 @@ sources/0 = SubResource("TileSetAtlasSource_1y8me")
 
 [node name="Level 2" type="Node2D" unique_id=1792820289]
 script = ExtResource("1_xdadj")
+level_num = 2
 
 [node name="Tilemap" type="Node2D" parent="." unique_id=590079255]
 position = Vector2(-18, -44)

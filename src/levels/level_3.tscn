@@ -1,6 +1,6 @@
 [gd_scene format=4 uid="uid://ctu5tyliul42x"]
 
-[ext_resource type="Script" uid="uid://83u45gutgg07" path="res://src/levels/level_2.gd" id="1_6koly"]
+[ext_resource type="Script" uid="uid://chwcmrvavocs5" path="res://src/levels/level_3.gd" id="1_6koly"]
 [ext_resource type="Texture2D" uid="uid://cv7kamnm1d0qa" path="res://assets/snord tilemap.png" id="2_kjahc"]
 [ext_resource type="PackedScene" uid="uid://dn80t7we4r4ww" path="res://src/player/player.tscn" id="3_10dma"]
 
@@ -22,6 +22,7 @@ sources/0 = SubResource("TileSetAtlasSource_1y8me")
 
 [node name="Level 3" type="Node2D" unique_id=1792820289]
 script = ExtResource("1_6koly")
+level_num = 3
 
 [node name="Tilemap" type="Node2D" parent="." unique_id=590079255]
 position = Vector2(-18, -44)
