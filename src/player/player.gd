@@ -23,6 +23,7 @@ func _ready() -> void:
 		update_characrer()
 	
 	Global.player = self
+	Global.player_camera = camera_2d
 	speed_multiplier = Global.speed_multiplier
 
 func update_characrer():

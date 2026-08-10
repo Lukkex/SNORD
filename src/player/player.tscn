@@ -20,11 +20,13 @@ default_sprite = ExtResource("2_4ntmi")
 shape = SubResource("RectangleShape2D_4ntmi")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=374385633]
+process_mode = 3
 zoom = Vector2(10, 10)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="Camera2D" unique_id=1467546285]
 
 [node name="HUD" parent="Camera2D/CanvasLayer" unique_id=1827238346 instance=ExtResource("3_mf2ua")]
+process_mode = 1
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=609722824]
 texture = ExtResource("2_4ntmi")

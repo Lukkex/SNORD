@@ -5,5 +5,6 @@ extends Node
 
 var speed_multiplier : float = 10.0
 var player : Player
+var player_camera : Camera2D
 var timer_enabled : bool = true
 var character : CharProfile = preload("uid://c1m6f6h85nuno")

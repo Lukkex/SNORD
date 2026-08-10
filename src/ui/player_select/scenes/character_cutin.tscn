@@ -103,7 +103,7 @@ tracks/5/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(231.00002, 256)]
+"values": [Vector2(2028, -386)]
 }
 
 [sub_resource type="Animation" id="Animation_mjxo2"]
@@ -450,10 +450,10 @@ horizontal_alignment = 2
 z_index = 7
 custom_minimum_size = Vector2(400, 0)
 clip_contents = false
-offset_left = 231.00002
-offset_top = 256.0
-offset_right = 761.9995
-offset_bottom = 517.0
+offset_left = 2028.0
+offset_top = -386.0
+offset_right = 2558.9995
+offset_bottom = -125.0
 rotation = 0.12876847
 theme = ExtResource("1_ia4hv")
 theme_override_colors/default_color = Color(0, 0, 0, 1)
