@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://be6hm1uja0tj5" path="res://src/ui/hud.gd" id="1_4ul33"]
 [ext_resource type="Theme" uid="uid://maqxnhvp58cj" path="res://src/ui/themes/theme.tres" id="1_hu4tt"]
+[ext_resource type="PackedScene" uid="uid://6d8n8uinb1kr" path="res://src/ui/pause-menu.tscn" id="3_fonul"]
 
 [node name="HUD" type="Control" unique_id=1827238346]
 layout_mode = 3
@@ -31,3 +32,7 @@ size_flags_vertical = 0
 theme = ExtResource("1_hu4tt")
 text = "00:00:000"
 horizontal_alignment = 1
+
+[node name="PauseMenu" parent="MarginContainer" unique_id=1244389894 instance=ExtResource("3_fonul")]
+visible = false
+layout_mode = 2

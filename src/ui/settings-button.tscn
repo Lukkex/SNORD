@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://cheyslyr2i0cg"]
+
+[ext_resource type="Theme" uid="uid://maqxnhvp58cj" path="res://src/ui/themes/theme.tres" id="1_a76n8"]
+[ext_resource type="Script" uid="uid://bi2c4ahdn0sss" path="res://src/ui/settings_button.gd" id="2_wv5t5"]
+
+[node name="SettingsButton" type="Button"]
+theme = ExtResource("1_a76n8")
+text = "Settings"
+script = ExtResource("2_wv5t5")
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]
