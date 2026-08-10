@@ -13,6 +13,8 @@ class_name Player
 @export_range(1,5) var channel : int = 3 ## set the starting channel from 0 to 4
 
 var character : CharProfile
+var forawrd_multiplier : float = 1.0
+var backward_multiuplier : float = 1.0
 
 func _ready() -> void:
 	add_to_group("players")
@@ -31,7 +33,7 @@ func update_characrer():
 
 func _physics_process(delta: float) -> void:
 	speed_multiplier = Global.speed_multiplier
-	velocity.x = get_gravity().y * delta * speed_multiplier
+	velocity.x = get_gravity().y * delta * speed_multiplier * forawrd_multiplier * backward_multiuplier
 	print(velocity)
 	
 	if channel: _set_y_pos(channel)
@@ -47,6 +49,16 @@ func _input(event: InputEvent) -> void:
 		AudioManager.snord1.play()
 		if channel != 5: channel += 1
 		else: pass # NOTE: can add error sound effect or som here and flash sprite red or som
+	
+	if event.is_action_pressed("right"):
+		forawrd_multiplier = 1.7
+	if event.is_action_pressed("left"):
+		backward_multiuplier *= 0.6
+	
+	if event.is_action_released("right"):
+		forawrd_multiplier = 1.0
+	if event.is_action_released("left"): 
+		backward_multiuplier = 1.0
 
 func _set_y_pos(height):
 	position.y = height * 8 - 8 * 5 # 8 pixels per channel, might need tweaking
