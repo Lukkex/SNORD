@@ -8,4 +8,6 @@ func _ready() -> void:
 	if set_text != "button": text = set_text
 
 func _on_pressed() -> void:
+	AudioManager.stop_all_sounds()
+	get_tree().paused = false
 	if scene: get_tree().change_scene_to_file(scene)

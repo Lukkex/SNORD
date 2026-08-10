@@ -1,0 +1,151 @@
+[gd_scene format=3 uid="uid://8nphu5g07kig"]
+
+[ext_resource type="Script" uid="uid://dm5lia48v5go3" path="res://src/ui/settings.gd" id="1_e7wif"]
+[ext_resource type="FontFile" uid="uid://dqggmya61lh5x" path="res://assets/FFFFORWA.TTF" id="2_2qg2r"]
+[ext_resource type="PackedScene" uid="uid://dyrgksnr8lee3" path="res://src/ui/settings-back-button.tscn" id="2_erjg3"]
+[ext_resource type="Texture2D" uid="uid://c0bfqa1vxg7ud" path="res://assets/snord kinda big.png" id="2_g2810"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_65qiy"]
+font = ExtResource("2_2qg2r")
+font_size = 30
+
+[sub_resource type="LabelSettings" id="LabelSettings_peg72"]
+font = ExtResource("2_2qg2r")
+
+[node name="Settings" type="Control" unique_id=982690456]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_e7wif")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1528670997]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="MarginContainer" unique_id=946260678]
+layout_mode = 2
+color = Color(0.033853278, 0.033853278, 0.033853274, 1)
+
+[node name="GhostCat" type="TextureRect" parent="MarginContainer" unique_id=1410878542]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 0
+texture = ExtResource("2_g2810")
+stretch_mode = 2
+flip_h = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=40160867]
+layout_mode = 2
+theme_override_constants/separation = -1
+
+[node name="SettingsLabel" type="Label" parent="MarginContainer/VBoxContainer" unique_id=2048889808]
+layout_mode = 2
+text = "
+Settings"
+label_settings = SubResource("LabelSettings_65qiy")
+horizontal_alignment = 1
+
+[node name="VolumeLabel" type="Label" parent="MarginContainer/VBoxContainer" unique_id=1989358326]
+layout_mode = 2
+text = "
+
+Volume"
+label_settings = SubResource("LabelSettings_peg72")
+
+[node name="Volume" type="HSlider" parent="MarginContainer/VBoxContainer" unique_id=1006715939]
+layout_mode = 2
+min_value = -10.0
+max_value = 5.0
+
+[node name="MuteLabel" type="Label" parent="MarginContainer/VBoxContainer" unique_id=573377865]
+layout_mode = 2
+text = "
+
+Mute"
+label_settings = SubResource("LabelSettings_peg72")
+
+[node name="MuteEnabler" type="OptionButton" parent="MarginContainer/VBoxContainer" unique_id=1396744583]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_2qg2r")
+selected = 1
+item_count = 2
+popup/item_0/text = "I HATE hearing"
+popup/item_0/id = 0
+popup/item_1/text = "I LOVE hearing"
+popup/item_1/id = 1
+
+[node name="TimerLabel" type="Label" parent="MarginContainer/VBoxContainer" unique_id=1732610367]
+layout_mode = 2
+text = "
+
+Are you a Speedrunner? :3"
+label_settings = SubResource("LabelSettings_peg72")
+
+[node name="TimerEnabler" type="OptionButton" parent="MarginContainer/VBoxContainer" unique_id=2064229110]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_2qg2r")
+selected = 1
+item_count = 2
+popup/item_0/text = "YES!!!"
+popup/item_0/id = 0
+popup/item_1/text = "Nope :3"
+popup/item_1/id = 1
+
+[node name="ResolutionLabel" type="Label" parent="MarginContainer/VBoxContainer" unique_id=1256292652]
+layout_mode = 2
+text = "
+
+Resolution"
+label_settings = SubResource("LabelSettings_peg72")
+
+[node name="Resolutions" type="OptionButton" parent="MarginContainer/VBoxContainer" unique_id=1298005582]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_2qg2r")
+selected = 2
+item_count = 3
+popup/item_0/text = "1920x1080"
+popup/item_0/id = 0
+popup/item_1/text = "1600x900"
+popup/item_1/id = 1
+popup/item_2/text = "1280x720"
+popup/item_2/id = 2
+
+[node name="FullscreenLabel" type="Label" parent="MarginContainer/VBoxContainer" unique_id=1403856381]
+layout_mode = 2
+text = "
+
+Window Mode"
+label_settings = SubResource("LabelSettings_peg72")
+
+[node name="FullscreenEnabler" type="OptionButton" parent="MarginContainer/VBoxContainer" unique_id=650277053]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_2qg2r")
+selected = 1
+item_count = 3
+popup/item_0/text = "Fullscreen"
+popup/item_0/id = 0
+popup/item_1/text = "Borderless Window"
+popup/item_1/id = 1
+popup/item_2/text = "Windowed"
+popup/item_2/id = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer" unique_id=1817662180]
+layout_mode = 2
+size_flags_vertical = 8
+alignment = 1
+
+[node name="BackButton" parent="MarginContainer/HBoxContainer" unique_id=1530596493 instance=ExtResource("2_erjg3")]
+layout_mode = 2
+
+[connection signal="value_changed" from="MarginContainer/VBoxContainer/Volume" to="." method="_on_volume_value_changed"]
+[connection signal="item_selected" from="MarginContainer/VBoxContainer/MuteEnabler" to="." method="_on_mute_enabler_item_selected"]
+[connection signal="item_selected" from="MarginContainer/VBoxContainer/TimerEnabler" to="." method="_on_timer_enabler_item_selected"]
+[connection signal="item_selected" from="MarginContainer/VBoxContainer/Resolutions" to="." method="_on_resolutions_item_selected"]
+[connection signal="item_selected" from="MarginContainer/VBoxContainer/FullscreenEnabler" to="." method="_on_fullscreen_enabler_item_selected"]

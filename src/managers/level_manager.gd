@@ -13,6 +13,11 @@ func next_level() -> bool:
 	current_level += 1
 	return true
 
+func is_on_last_level() -> bool:
+	if current_level == levels.size() -1:
+		return true
+	return false
+
 func get_level_scene(level_num : int) -> String:
 	return levels[level_num]
 

@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://c2ovgfs6123eq" path="res://src/player/player.gd" id="1_4flbx"]
 [ext_resource type="Texture2D" uid="uid://c1qw3gbmlbqrr" path="res://src/player/snord.png" id="2_4ntmi"]
+[ext_resource type="PackedScene" uid="uid://1ny0o5ay1a17" path="res://src/ui/HUD.tscn" id="3_mf2ua"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4ntmi"]
 size = Vector2(6, 6)
@@ -20,6 +21,10 @@ shape = SubResource("RectangleShape2D_4ntmi")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=374385633]
 zoom = Vector2(10, 10)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Camera2D" unique_id=1467546285]
+
+[node name="HUD" parent="Camera2D/CanvasLayer" unique_id=1827238346 instance=ExtResource("3_mf2ua")]
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=609722824]
 texture = ExtResource("2_4ntmi")

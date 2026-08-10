@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://dyrgksnr8lee3"]
+
+[ext_resource type="Theme" uid="uid://maqxnhvp58cj" path="res://src/ui/themes/theme.tres" id="1_a76n8"]
+[ext_resource type="Script" uid="uid://cvgn45tmthpv" path="res://src/ui/settings_back_button.gd" id="2_ctkkj"]
+
+[node name="BackButton" type="Button"]
+theme = ExtResource("1_a76n8")
+text = "Back"
+script = ExtResource("2_ctkkj")
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]
