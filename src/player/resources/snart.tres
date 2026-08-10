@@ -15,4 +15,5 @@ flair = "peon."
 bg_color = Color(0.3823494, 0.32898095, 0.8309826, 1)
 character_sprite = SubResource("AtlasTexture_dl8f8")
 speed_multiplier = 1.7
+audio_file = "uid://cvku887d3cgmt"
 metadata/_custom_type_script = "uid://ds00hxh8i02lp"

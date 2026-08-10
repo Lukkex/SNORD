@@ -15,4 +15,5 @@ flair = "ss."
 bg_color = Color(0.80781406, 0.51215756, 0.19699952, 1)
 character_sprite = SubResource("AtlasTexture_2bggk")
 speed_multiplier = 3.0
+audio_file = "uid://dp7snvyf3ahu4"
 metadata/_custom_type_script = "uid://ds00hxh8i02lp"

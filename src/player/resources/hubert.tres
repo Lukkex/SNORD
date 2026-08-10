@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="CharProfile" format=3 uid="uid://bb8d61sb1p1v3"]
+
+[ext_resource type="Texture2D" uid="uid://cgbk372a6bxrg" path="res://src/ui/player_select/sprites/snordlings.png" id="1_pjsqt"]
+[ext_resource type="Script" uid="uid://ds00hxh8i02lp" path="res://src/ui/player_select/char_profile.gd" id="2_qx53q"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g80vi"]
+atlas = ExtResource("1_pjsqt")
+region = Rect2(56, 0, 8, 8)
+
+[resource]
+script = ExtResource("2_qx53q")
+character_name = "Hubert Hubertson"
+description = "has a resting bitch face. They're actually really kind when you get to know them. Infamous around their peers, highly unapproachable.s"
+flair = "..hey"
+bg_color = Color(0.37, 0.06265333, 0.040700007, 1)
+character_sprite = SubResource("AtlasTexture_g80vi")
+speed_multiplier = 0.4
+audio_file = "uid://d3w556dyu7ne"
+metadata/_custom_type_script = "uid://ds00hxh8i02lp"

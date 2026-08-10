@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="CharProfile" format=3 uid="uid://dpx380i1n6n"]
+
+[ext_resource type="Texture2D" uid="uid://cgbk372a6bxrg" path="res://src/ui/player_select/sprites/snordlings.png" id="1_7wbb4"]
+[ext_resource type="Script" uid="uid://ds00hxh8i02lp" path="res://src/ui/player_select/char_profile.gd" id="2_vrlvx"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sqbmo"]
+atlas = ExtResource("1_7wbb4")
+region = Rect2(48, 0, 8, 8)
+
+[resource]
+script = ExtResource("2_vrlvx")
+character_name = "Kyle"
+description = "The cooler Snord. Literally everything Snord wants to be. Kyle's hair is a constant reminder that Snord will never amount to anything outside their destined existence. We don't like Kyle"
+flair = "What's up, chump?"
+bg_color = Color(0.23919895, 0.26539922, 0.1773937, 1)
+character_sprite = SubResource("AtlasTexture_sqbmo")
+speed_multiplier = 0.1
+audio_file = "uid://chgr7yvsow7v4"
+metadata/_custom_type_script = "uid://ds00hxh8i02lp"
