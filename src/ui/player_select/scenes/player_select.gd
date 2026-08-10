@@ -32,14 +32,12 @@ func _ready() -> void:
 			return
 	
 	confirmation_button.visible = false
-	SignalBus.character_selected.connect(ready)
+	SignalBus.character_selected.connect(character_ready)
 
-func ready(character):
+func character_ready(character):
 	selected_character = character
 	Global.character = selected_character
 	confirmation_button.visible = true
-	AudioManager.set_character_sound()
-	AudioManager.play_character_move_sound()
 
 func _on_confirmation_button_pressed() -> void:
 	Global.character = selected_character

@@ -219,6 +219,20 @@ tracks/7/keys = {
 "update": 0,
 "values": [Vector2(1947.0001, -402.99997), Vector2(1947.0001, -402.99997), Vector2(231.00002, 256)]
 }
+tracks/8/type = "method"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath(".")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(1.25),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"play_character_sound"
+}]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_3o431"]
 _data = {
@@ -452,7 +466,7 @@ custom_minimum_size = Vector2(400, 0)
 clip_contents = false
 offset_left = 2028.0
 offset_top = -386.0
-offset_right = 2558.9995
+offset_right = 2558.999
 offset_bottom = -125.0
 rotation = 0.12876847
 theme = ExtResource("1_ia4hv")
