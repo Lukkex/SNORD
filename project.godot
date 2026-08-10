@@ -25,7 +25,7 @@ config/icon="uid://c1qw3gbmlbqrr"
 Global="*uid://cwyxt7i38frqk"
 SignalBus="*uid://btmpx1p8x011u"
 AudioManager="*uid://dpm1xg7813svx"
-LevelManager="*uid://ddpi18wqpksiw"
+LevelManager="*uid://dqim0xuicygtw"
 
 [display]
 
