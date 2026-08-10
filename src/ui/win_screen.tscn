@@ -4,8 +4,6 @@
 [ext_resource type="Script" uid="uid://bqs2mhcdx2v65" path="res://src/ui/win_screen.gd" id="1_su5wl"]
 [ext_resource type="PackedScene" uid="uid://dtl4fy58wfpbr" path="res://src/ui/buttons/button.tscn" id="2_wmwda"]
 [ext_resource type="PackedScene" uid="uid://6ieeuwg2234v" path="res://src/ui/main_menu.tscn" id="4_su5wl"]
-[ext_resource type="PackedScene" uid="uid://bvsowf1ovra1a" path="res://src/levels/level_2.tscn" id="5_su5wl"]
-[ext_resource type="PackedScene" uid="uid://c4qr8vdt8bk8g" path="res://src/levels/level.tscn" id="6_r8jah"]
 
 [node name="WinScreen" type="Control" unique_id=195482948]
 layout_mode = 3
@@ -16,46 +14,44 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_su5wl")
 
-[node name="Snord" type="Sprite2D" parent="." unique_id=701335145]
-position = Vector2(568, 301)
-scale = Vector2(136.89287, 51.8125)
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=502879123]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Snord" type="Sprite2D" parent="MarginContainer" unique_id=701335145]
+position = Vector2(1488.5, 548)
+scale = Vector2(35.571426, 77.25001)
 texture = ExtResource("1_l2arl")
 
-[node name="Label" type="Label" parent="." unique_id=366544740]
-layout_mode = 0
-offset_left = 151.0
-offset_top = -5.0
-offset_right = 919.0
-offset_bottom = 83.0
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer" unique_id=1209506229]
+layout_mode = 2
+alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer" unique_id=1412675826]
+layout_mode = 2
+theme_override_constants/separation = 182
+
+[node name="Label" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer" unique_id=366544740]
+layout_mode = 2
 theme_override_font_sizes/font_size = 64
 text = "Excellent work, padawan"
 
-[node name="MainMenuButton" parent="." unique_id=1727489594 instance=ExtResource("2_wmwda")]
-layout_mode = 0
-offset_left = 221.0
-offset_top = 546.0
-offset_right = 1295.9999
-offset_bottom = 796.0
+[node name="NextLevelButton" parent="MarginContainer/HBoxContainer/VBoxContainer" unique_id=1086564258 instance=ExtResource("2_wmwda")]
+layout_mode = 2
+text = "next level"
+
+[node name="RetryButton" parent="MarginContainer/HBoxContainer/VBoxContainer" unique_id=983857561 instance=ExtResource("2_wmwda")]
+layout_mode = 2
+text = "retry"
+
+[node name="MainMenuButton" parent="MarginContainer/HBoxContainer/VBoxContainer" unique_id=1727489594 instance=ExtResource("2_wmwda")]
+layout_mode = 2
 text = "go to menu"
 scene = ExtResource("4_su5wl")
 
-[node name="NextLevelButton" parent="." unique_id=1086564258 instance=ExtResource("2_wmwda")]
-layout_mode = 0
-offset_left = 460.0
-offset_top = 568.0
-offset_right = 1534.9999
-offset_bottom = 818.0
-text = "next level"
-scene = ExtResource("5_su5wl")
-
-[node name="RetryButton" parent="." unique_id=983857561 instance=ExtResource("2_wmwda")]
-layout_mode = 0
-offset_left = 716.0
-offset_top = 541.0
-offset_right = 1790.9999
-offset_bottom = 791.0
-text = "retry"
-scene = ExtResource("6_r8jah")
-
-[connection signal="pressed" from="NextLevelButton" to="." method="_on_next_level_button_pressed"]
-[connection signal="pressed" from="RetryButton" to="." method="_on_retry_button_pressed"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/NextLevelButton" to="." method="_on_next_level_button_pressed"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/RetryButton" to="." method="_on_retry_button_pressed"]
