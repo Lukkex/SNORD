@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://dtl4fy58wfpbr" path="res://src/ui/buttons/button.tscn" id="4_5mgu5"]
 [ext_resource type="Script" uid="uid://cxv7ae718vqpt" path="res://src/ui/buttons/quit_button.gd" id="5_h03rr"]
 [ext_resource type="PackedScene" uid="uid://dgycxi3l5alvd" path="res://src/ui/player_select/scenes/player_select.tscn" id="5_o1bnh"]
-[ext_resource type="PackedScene" uid="uid://dnl2cxegrcl6a" path="res://src/ui/debug_menu.tscn" id="7_35tjg"]
+[ext_resource type="PackedScene" uid="uid://1ny0o5ay1a17" path="res://src/ui/HUD.tscn" id="7_35tjg"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5mgu5"]
 
@@ -138,6 +138,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=572745356]
 libraries/ = SubResource("AnimationLibrary_tmx6h")
