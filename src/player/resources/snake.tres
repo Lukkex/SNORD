@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="CharProfile" format=3 uid="uid://cnagn7i5lmo5r"]
+
+[ext_resource type="Texture2D" uid="uid://cgbk372a6bxrg" path="res://src/ui/player_select/sprites/snordlings.png" id="1_cy0xg"]
+[ext_resource type="Script" uid="uid://ds00hxh8i02lp" path="res://src/ui/player_select/char_profile.gd" id="2_g72f7"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2bggk"]
+atlas = ExtResource("1_cy0xg")
+region = Rect2(40, 0, 8, 8)
+
+[resource]
+script = ExtResource("2_g72f7")
+character_name = "Snake"
+description = "literally a snake.. how did you get here?"
+flair = "ss."
+bg_color = Color(0.80781406, 0.51215756, 0.19699952, 1)
+character_sprite = SubResource("AtlasTexture_2bggk")
+speed_multiplier = 3.0
+metadata/_custom_type_script = "uid://ds00hxh8i02lp"

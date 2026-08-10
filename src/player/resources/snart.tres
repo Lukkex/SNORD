@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="CharProfile" format=3 uid="uid://ltogccyb5q73"]
+
+[ext_resource type="Texture2D" uid="uid://cgbk372a6bxrg" path="res://src/ui/player_select/sprites/snordlings.png" id="1_ldfq4"]
+[ext_resource type="Script" uid="uid://ds00hxh8i02lp" path="res://src/ui/player_select/char_profile.gd" id="2_flp0v"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dl8f8"]
+atlas = ExtResource("1_ldfq4")
+region = Rect2(32, 0, 8, 8)
+
+[resource]
+script = ExtResource("2_flp0v")
+character_name = "Snart Von Shniensen"
+description = "Clearly a distinguished gentlesnord. The royalty among peasants. He doesn't do anything because he has servants to do things for him."
+flair = "peon."
+bg_color = Color(0.3823494, 0.32898095, 0.8309826, 1)
+character_sprite = SubResource("AtlasTexture_dl8f8")
+speed_multiplier = 1.7
+metadata/_custom_type_script = "uid://ds00hxh8i02lp"

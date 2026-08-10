@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="CharProfile" format=3 uid="uid://dsuqufrhushpm"]
+
+[ext_resource type="Texture2D" uid="uid://cgbk372a6bxrg" path="res://src/ui/player_select/sprites/snordlings.png" id="1_sgauo"]
+[ext_resource type="Script" uid="uid://ds00hxh8i02lp" path="res://src/ui/player_select/char_profile.gd" id="2_nu4ks"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7ser6"]
+atlas = ExtResource("1_sgauo")
+region = Rect2(8, 0, 8, 8)
+
+[resource]
+script = ExtResource("2_nu4ks")
+character_name = "Snorlina Slooker"
+description = "Truly a bitch, but shes the female lead, pursue her."
+flair = "Im sexy and I know it"
+bg_color = Color(0.9242132, 0.5599199, 0.83996004, 1)
+character_sprite = SubResource("AtlasTexture_7ser6")
+speed_multiplier = 1.1
+metadata/_custom_type_script = "uid://ds00hxh8i02lp"

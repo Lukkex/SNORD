@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="CharProfile" format=3 uid="uid://77ifpc5j6sw4"]
+
+[ext_resource type="Texture2D" uid="uid://cgbk372a6bxrg" path="res://src/ui/player_select/sprites/snordlings.png" id="1_moagf"]
+[ext_resource type="Script" uid="uid://ds00hxh8i02lp" path="res://src/ui/player_select/char_profile.gd" id="2_4ktad"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c5gok"]
+atlas = ExtResource("1_moagf")
+region = Rect2(16, 0, 8, 8)
+
+[resource]
+script = ExtResource("2_4ktad")
+character_name = "Snose Sid"
+description = "big nose, small personality. This guy does NOT THINK EVER AT ALL. But he is incredibly dependable, and ever loyal."
+flair = "Snose smash."
+bg_color = Color(0.5510623, 0.7255916, 0.47859716, 1)
+character_sprite = SubResource("AtlasTexture_c5gok")
+speed_multiplier = 1.5
+metadata/_custom_type_script = "uid://ds00hxh8i02lp"
