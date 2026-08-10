@@ -30,6 +30,7 @@ bg_color = Color(0, 0, 0, 1)
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_gy441"]
 
 [node name="PauseMenu" type="MarginContainer" unique_id=581864470]
+process_mode = 3
 top_level = true
 z_index = 10
 anchors_preset = 15
