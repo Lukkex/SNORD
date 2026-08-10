@@ -36,9 +36,7 @@ func pausemenu():
 		AudioManager.play_character_move_sound()
 
 func _on_resume_pressed():
-	if visible:
-		visible = false
-		get_tree().paused = false
+	pausemenu()
 
 func _on_restart_pressed() -> void:
 	AudioManager.stop_all_sounds()
