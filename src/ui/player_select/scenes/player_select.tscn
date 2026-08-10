@@ -10,32 +10,32 @@
 [ext_resource type="Resource" uid="uid://cl5m8eo3qymfy" path="res://src/player/resources/snodd.tres" id="6_eyotc"]
 [ext_resource type="Resource" uid="uid://ltogccyb5q73" path="res://src/player/resources/snart.tres" id="7_nd7sw"]
 [ext_resource type="Resource" uid="uid://cnagn7i5lmo5r" path="res://src/player/resources/snake.tres" id="8_7lfci"]
+[ext_resource type="Texture2D" uid="uid://cgbk372a6bxrg" path="res://src/ui/player_select/sprites/snordlings.png" id="9_g80vi"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_krjuy"]
-atlas = ExtResource("3_c5gok")
+[sub_resource type="AtlasTexture" id="AtlasTexture_sqbmo"]
+atlas = ExtResource("9_g80vi")
 region = Rect2(48, 0, 8, 8)
 
-[sub_resource type="Resource" id="Resource_35tjg"]
+[sub_resource type="Resource" id="Resource_rcyvg"]
 script = ExtResource("2_r5ekk")
-character_name = "Kyle"
+character_name = "Kyrle"
 description = "The cooler Snord. Literally everything Snord wants to be. Kyle's hair is a constant reminder that Snord will never amount to anything outside their destined existence. We don't like Kyle"
-flair = "What's up, chump?"
-bg_color = Color(0.36259738, 0.356676, 0.27511576, 1)
-character_sprite = SubResource("AtlasTexture_krjuy")
+bg_color = Color(0.23919895, 0.26539922, 0.1773937, 1)
+character_sprite = SubResource("AtlasTexture_sqbmo")
 speed_multiplier = 0.1
 metadata/_custom_type_script = "uid://ds00hxh8i02lp"
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_r5ekk"]
-atlas = ExtResource("3_c5gok")
+[sub_resource type="AtlasTexture" id="AtlasTexture_g80vi"]
+atlas = ExtResource("9_g80vi")
 region = Rect2(56, 0, 8, 8)
 
 [sub_resource type="Resource" id="Resource_g80vi"]
 script = ExtResource("2_r5ekk")
 character_name = "Hubert Hubertson"
-description = "has a resting bitch face. They're actually really kind when you get to know them. Infamous around their peers, highly unapproachable."
-flair = "hey"
-bg_color = Color(0.4097882, 0.05495488, 0.15032193, 1)
-character_sprite = SubResource("AtlasTexture_r5ekk")
+description = "has a resting bitch face. They're actually really kind when you get to know them. Infamous around their peers, highly unapproachable.s"
+flair = "..hey"
+bg_color = Color(0.37, 0.06265333, 0.040700007, 1)
+character_sprite = SubResource("AtlasTexture_g80vi")
 speed_multiplier = 0.4
 metadata/_custom_type_script = "uid://ds00hxh8i02lp"
 
@@ -47,7 +47,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_krjuy")
-char_array = Array[ExtResource("2_r5ekk")]([SubResource("Resource_krjuy"), SubResource("Resource_r5ekk"), SubResource("Resource_xwsro"), SubResource("Resource_t7ldo"), SubResource("Resource_hit5b"), SubResource("Resource_rcyvg"), SubResource("Resource_35tjg"), SubResource("Resource_g80vi")])
+char_array = Array[ExtResource("2_r5ekk")]([ExtResource("3_rcyvg"), ExtResource("4_g80vi"), ExtResource("5_x3a8t"), ExtResource("6_eyotc"), ExtResource("7_nd7sw"), ExtResource("8_7lfci"), SubResource("Resource_rcyvg"), SubResource("Resource_g80vi")])
 target_scene = "uid://c4qr8vdt8bk8g"
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=530807629]
