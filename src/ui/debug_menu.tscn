@@ -63,3 +63,8 @@ scene = "uid://c4qr8vdt8bk8g"
 layout_mode = 2
 text = "level 2"
 scene = "uid://bvsowf1ovra1a"
+
+[node name="Level 3" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=1401844782 instance=ExtResource("3_jbpcu")]
+layout_mode = 2
+text = "level 3"
+scene = "uid://ctu5tyliul42x"
