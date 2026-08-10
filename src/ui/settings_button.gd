@@ -1,5 +1,5 @@
 extends Button
-@onready var settings_menu = $"../../Settings"
+@onready var settings_menu = $"../../../../Settings"
 
 func _on_mouse_entered() -> void:
 	# Play sound
