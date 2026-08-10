@@ -40,5 +40,6 @@ func ready(character):
 
 func _on_confirmation_button_pressed() -> void:
 	Global.character = selected_character
+	SignalBus.game_started.emit()
 	if target_scene: get_tree().change_scene_to_file(target_scene)
 	else: print("scene not set")
