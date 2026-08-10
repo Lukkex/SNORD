@@ -3,7 +3,9 @@
 [ext_resource type="Texture2D" uid="uid://c1qw3gbmlbqrr" path="res://src/player/snord.png" id="1_l2arl"]
 [ext_resource type="Script" uid="uid://bqs2mhcdx2v65" path="res://src/ui/win_screen.gd" id="1_su5wl"]
 [ext_resource type="PackedScene" uid="uid://dtl4fy58wfpbr" path="res://src/ui/buttons/button.tscn" id="2_wmwda"]
-[ext_resource type="PackedScene" uid="uid://1ny0o5ay1a17" path="res://src/ui/HUD.tscn" id="4_mu7nr"]
+[ext_resource type="PackedScene" uid="uid://6ieeuwg2234v" path="res://src/ui/main_menu.tscn" id="4_su5wl"]
+[ext_resource type="PackedScene" uid="uid://bvsowf1ovra1a" path="res://src/levels/level_2.tscn" id="5_su5wl"]
+[ext_resource type="PackedScene" uid="uid://c4qr8vdt8bk8g" path="res://src/levels/level.tscn" id="6_r8jah"]
 
 [node name="WinScreen" type="Control" unique_id=195482948]
 layout_mode = 3
@@ -35,7 +37,7 @@ offset_top = 546.0
 offset_right = 1295.9999
 offset_bottom = 796.0
 text = "go to menu"
-scene = ExtResource("4_mu7nr")
+scene = ExtResource("4_su5wl")
 
 [node name="NextLevelButton" parent="." unique_id=1086564258 instance=ExtResource("2_wmwda")]
 layout_mode = 0
@@ -44,6 +46,7 @@ offset_top = 568.0
 offset_right = 1534.9999
 offset_bottom = 818.0
 text = "next level"
+scene = ExtResource("5_su5wl")
 
 [node name="RetryButton" parent="." unique_id=983857561 instance=ExtResource("2_wmwda")]
 layout_mode = 0
@@ -52,6 +55,7 @@ offset_top = 541.0
 offset_right = 1790.9999
 offset_bottom = 791.0
 text = "retry"
+scene = ExtResource("6_r8jah")
 
 [connection signal="pressed" from="NextLevelButton" to="." method="_on_next_level_button_pressed"]
 [connection signal="pressed" from="RetryButton" to="." method="_on_retry_button_pressed"]
