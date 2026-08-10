@@ -15,4 +15,5 @@ flair = "Im sexy and I know it"
 bg_color = Color(0.9242132, 0.5599199, 0.83996004, 1)
 character_sprite = SubResource("AtlasTexture_7ser6")
 speed_multiplier = 1.1
+audio_file = "uid://dq0fpnqkao8ul"
 metadata/_custom_type_script = "uid://ds00hxh8i02lp"

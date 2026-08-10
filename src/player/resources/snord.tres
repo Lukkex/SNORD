@@ -16,4 +16,5 @@ wow."
 flair = "Who do you think you are? Me!"
 bg_color = Color(0.94038236, 0.9581949, 0.7113911, 1)
 character_sprite = SubResource("AtlasTexture_1tj25")
+audio_file = "uid://c1m6f6h85nuno"
 metadata/_custom_type_script = "uid://ds00hxh8i02lp"

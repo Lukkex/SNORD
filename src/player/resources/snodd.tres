@@ -15,4 +15,5 @@ flair = "Im blue baby dabba da dooo im blueuee dabba de dabba dooooo"
 bg_color = Color(0.53387487, 0.74634236, 0.9573378, 1)
 character_sprite = SubResource("AtlasTexture_3scau")
 speed_multiplier = 0.7
+audio_file = "uid://cwjgj8ooo20s4"
 metadata/_custom_type_script = "uid://ds00hxh8i02lp"

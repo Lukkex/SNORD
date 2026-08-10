@@ -13,3 +13,5 @@ class_name CharProfile
 @export var character_sprite : AtlasTexture = null
 ## Speed Multiplier
 @export var speed_multiplier : float = 1.0
+## Character Sound
+@export_file var audio_file : String = ""
