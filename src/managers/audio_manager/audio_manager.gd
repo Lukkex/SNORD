@@ -8,6 +8,7 @@ extends Node2D
 # var audio_stream_player : AudioStreamPlayer
 
 func _ready() -> void:
+	SignalBus.character_selected.connect(set_character_sound)
 	SignalBus.game_started.connect(set_character_sound)
 
 func stop_all_sounds() -> void:

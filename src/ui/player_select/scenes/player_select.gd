@@ -36,7 +36,10 @@ func _ready() -> void:
 
 func ready(character):
 	selected_character = character
+	Global.character = selected_character
 	confirmation_button.visible = true
+	AudioManager.set_character_sound()
+	AudioManager.play_character_move_sound()
 
 func _on_confirmation_button_pressed() -> void:
 	Global.character = selected_character

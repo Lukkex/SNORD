@@ -3,7 +3,6 @@ extends Button
 @export var set_text : String = "button"
 @export_file("*.tscn") var scene : String
 
-
 func _ready() -> void:
 	if set_text != "button": text = set_text
 
