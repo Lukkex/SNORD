@@ -11,6 +11,8 @@ class_name Player
 @export var speed_multiplier : float
 @export var collision_on := true
 @export_range(1,5) var channel : int = 3 ## set the starting channel from 0 to 4
+@export_range(1,3) var actv_forward_multiplier : float = 1.7 ## When you press D or right arrow, multiplies speed by this amount
+@export_range(0,1) var actv_backward_multiplier : float = 0.6 ## When you press A or left arrow, multiplies speed by this amount
 
 var character : CharProfile
 var forawrd_multiplier : float = 1.0
@@ -51,9 +53,9 @@ func _input(event: InputEvent) -> void:
 		else: pass # NOTE: can add error sound effect or som here and flash sprite red or som
 	
 	if event.is_action_pressed("right"):
-		forawrd_multiplier = 1.7
+		forawrd_multiplier = actv_forward_multiplier
 	if event.is_action_pressed("left"):
-		backward_multiuplier *= 0.6
+		backward_multiuplier = actv_backward_multiplier
 	
 	if event.is_action_released("right"):
 		forawrd_multiplier = 1.0
