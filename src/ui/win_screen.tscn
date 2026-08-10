@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://c1qw3gbmlbqrr" path="res://src/player/snord.png" id="1_l2arl"]
 [ext_resource type="Script" uid="uid://bqs2mhcdx2v65" path="res://src/ui/win_screen.gd" id="1_su5wl"]
 [ext_resource type="PackedScene" uid="uid://dtl4fy58wfpbr" path="res://src/ui/buttons/button.tscn" id="2_wmwda"]
-[ext_resource type="PackedScene" uid="uid://6ieeuwg2234v" path="res://src/ui/main_menu.tscn" id="4_su5wl"]
+[ext_resource type="PackedScene" uid="uid://1ny0o5ay1a17" path="res://src/ui/HUD.tscn" id="4_su5wl"]
 [ext_resource type="PackedScene" uid="uid://bvsowf1ovra1a" path="res://src/levels/level_2.tscn" id="5_su5wl"]
 [ext_resource type="PackedScene" uid="uid://c4qr8vdt8bk8g" path="res://src/levels/level.tscn" id="6_r8jah"]
 
