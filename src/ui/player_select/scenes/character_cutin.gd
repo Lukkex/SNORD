@@ -64,6 +64,10 @@ func shake_particles(duration: float = 1):
 	gpu_particles_2d.emitting = false
 	gpu_particles_2d_3.emitting = false
 
+func play_character_sound():
+	AudioManager.set_character_sound()
+	AudioManager.play_character_move_sound()
+
 func recolor_bg(color : Color):
 	for x in bg2.get_children():
 		if x is ColorRect:

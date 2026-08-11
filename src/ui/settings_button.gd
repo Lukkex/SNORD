@@ -7,6 +7,7 @@ func _on_mouse_entered() -> void:
 
 func _on_pressed() -> void:
 	# Play sound
+	AudioManager.play_character_move_sound()
 	#AudioManager.select_sfx.play()
 	if !settings_menu.visible:
 		settings_menu.visible = true

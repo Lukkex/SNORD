@@ -20,7 +20,6 @@ func _ready() -> void:
 	flames_effect.emitting = false
 	SignalBus.character_selected.connect(cut_flames)
 
-
 func prep(char_profile : CharProfile) -> void:
 	if char_profile == null: 
 		print("char profile is null- ", self)
