@@ -4,20 +4,33 @@ extends Node2D
 
 @onready var snordmusicloop = $SnordMusicLoop
 @onready var snord1 = $SnordSound1
+@onready var antagonist_sound: AudioStreamPlayer = $AntagonistSound
 
 # var audio_stream_player : AudioStreamPlayer
 
 func _ready() -> void:
 	SignalBus.character_selected.connect(set_character_sound)
+	SignalBus.game_started.connect(set_antagonist_sound)
 	SignalBus.game_started.connect(set_character_sound)
+	
 
 func stop_all_sounds() -> void:
 	for sound in get_children():
 		sound.stop()
 
-func set_character_sound() -> void:
+func set_character_sound(_arg1 = null) -> void:
 	print(Global.character.audio_file)
 	snord1.stream = load(Global.character.audio_file)
+
+## TODO Set antag sound depending on chosen character (basically make it kyle if player didnt chose kyle but something else if they did
+func set_antagonist_sound(_arg1 = null) -> void:
+	pass
+
+func play_antagonist_sound() -> void:
+	var audio_stream_player = AudioStreamPlayer.new()
+	add_child(audio_stream_player)
+	audio_stream_player.stream = antagonist_sound.stream
+	audio_stream_player.play()
 
 func play_character_move_sound() -> void:
 	var audio_stream_player = AudioStreamPlayer.new()

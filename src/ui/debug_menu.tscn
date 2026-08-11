@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://dnl2cxegrcl6a"]
 
+[ext_resource type="Script" uid="uid://b68xjagfiol7c" path="res://src/ui/debug_menu.gd" id="1_bx3kg"]
 [ext_resource type="Theme" uid="uid://maqxnhvp58cj" path="res://src/ui/themes/theme.tres" id="2_udugg"]
 [ext_resource type="PackedScene" uid="uid://dtl4fy58wfpbr" path="res://src/ui/buttons/button.tscn" id="3_jbpcu"]
 
@@ -10,6 +11,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_bx3kg")
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=1170567293]
 layout_mode = 1
@@ -68,3 +70,8 @@ scene = "uid://bvsowf1ovra1a"
 layout_mode = 2
 text = "level 3"
 scene = "uid://ctu5tyliul42x"
+
+[node name="Level 4" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=951866040 instance=ExtResource("3_jbpcu")]
+layout_mode = 2
+text = "level 4"
+scene = "uid://0l68dnrv6obx"
