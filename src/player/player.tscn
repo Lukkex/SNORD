@@ -10,7 +10,7 @@ size = Vector2(6, 6)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_btcbx"]
 size = Vector2(6, 6)
 
-[node name="Player" type="CharacterBody2D" unique_id=935365934]
+[node name="Player" type="CharacterBody2D" unique_id=935365934 groups=["players"]]
 collision_layer = 2
 collision_mask = 0
 script = ExtResource("1_4flbx")

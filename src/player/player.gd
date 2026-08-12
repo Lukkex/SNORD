@@ -37,7 +37,7 @@ func update_characrer():
 func _physics_process(delta: float) -> void:
 	speed_multiplier = Global.speed_multiplier
 	velocity.x = get_gravity().y * delta * speed_multiplier * forawrd_multiplier * backward_multiuplier
-	print(velocity)
+	#print(velocity)
 	
 	if channel: _set_y_pos(channel)
 	
@@ -67,15 +67,16 @@ func _set_y_pos(height):
 	position.y = height * 8 - 8 * 5 # 8 pixels per channel, might need tweaking
 	# NOTE: Can add vertical shake when moving here
 
-
 func _on_collision_area_body_entered(body: Node2D) -> void:
 	if body.name == "Spikes" and collision_on:
-		print("die")
-		AudioManager.play_character_move_sound()
-		camera_2d.reparent(get_tree().current_scene)
-		SignalBus.player_died.emit()
-		queue_free()
+		die()
 	if body.name == "Victory":
 		print("win")
 		AudioManager.play_character_move_sound()
 		SignalBus.player_win.emit()
+
+func die():
+	AudioManager.play_character_move_sound()
+	camera_2d.reparent(get_tree().current_scene)
+	SignalBus.player_died.emit(self)
+	queue_free()

@@ -4,4 +4,4 @@
 
 [node name="LevelManager" type="Node2D" unique_id=959671533]
 script = ExtResource("1_er22g")
-levels = Array[String](["res://src/levels/level.tscn", "res://src/levels/level_2.tscn", "uid://ctu5tyliul42x"])
+levels = Array[String](["res://src/levels/level.tscn", "res://src/levels/level_2.tscn", "uid://ctu5tyliul42x", "uid://0l68dnrv6obx"])

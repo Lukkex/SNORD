@@ -1,0 +1,237 @@
+[gd_scene format=3 uid="uid://dqsr11jss0wg0"]
+
+[ext_resource type="Texture2D" uid="uid://u8oqgm2c35h3" path="res://src/enemies/the_antagonist/antagonist.png" id="1_5nivl"]
+[ext_resource type="Script" uid="uid://bwnwxhcnwswou" path="res://src/enemies/the_antagonist/antagonist.gd" id="1_f0ieg"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_77v21"]
+size = Vector2(31, 56)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f0ieg"]
+atlas = ExtResource("1_5nivl")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n3ub5"]
+atlas = ExtResource("1_5nivl")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8t1wa"]
+atlas = ExtResource("1_5nivl")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y2cqc"]
+atlas = ExtResource("1_5nivl")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h41jb"]
+atlas = ExtResource("1_5nivl")
+region = Rect2(256, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_by6jm"]
+atlas = ExtResource("1_5nivl")
+region = Rect2(320, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rrsdd"]
+atlas = ExtResource("1_5nivl")
+region = Rect2(384, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ohj6x"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f0ieg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n3ub5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8t1wa")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y2cqc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h41jb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_by6jm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rrsdd")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="Animation" id="Animation_5nivl"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
+"update": 1,
+"values": []
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Hitbox/CollisionShape2D:disabled")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_f0ieg"]
+resource_name = "bite"
+length = 0.8
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.25, 0.35, 0.55, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [3, 4, 5, 6, 3]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Hitbox/CollisionShape2D:disabled")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.25, 0.55),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [true, false, true]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.8),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"KYLE"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_n3ub5"]
+resource_name = "open_mouth"
+length = 2.0
+step = 0.25
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1.25, 1.75),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.5),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"KYLE"
+}]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_8t1wa"]
+_data = {
+&"RESET": SubResource("Animation_5nivl"),
+&"bite": SubResource("Animation_f0ieg"),
+&"open_mouth": SubResource("Animation_n3ub5")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ohj6x"]
+size = Vector2(20, 21)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dro30"]
+size = Vector2(70, 56)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vj3cr"]
+size = Vector2(59, 56)
+
+[node name="Antagonist" type="CharacterBody2D" unique_id=965918403]
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("1_f0ieg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2125713050]
+position = Vector2(-5.5, 0)
+shape = SubResource("RectangleShape2D_77v21")
+debug_color = Color(0.0969794, 0.61204934, 0.6121186, 0.41960785)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1555532186]
+sprite_frames = SubResource("SpriteFrames_ohj6x")
+frame = 3
+flip_h = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1774206706]
+libraries/ = SubResource("AnimationLibrary_8t1wa")
+
+[node name="Hitbox" type="Area2D" parent="." unique_id=1579842370]
+position = Vector2(10, 2.5)
+collision_layer = 0
+collision_mask = 2
+monitoring = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox" unique_id=2095634200]
+shape = SubResource("RectangleShape2D_ohj6x")
+disabled = true
+debug_color = Color(0.99459845, 0, 0.22688904, 0.41960785)
+
+[node name="BiteTimer" type="Timer" parent="." unique_id=1456535430]
+process_callback = 0
+
+[node name="DetectionBox" type="Area2D" parent="." unique_id=351150276]
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DetectionBox" unique_id=1958771845]
+position = Vector2(25, 0)
+shape = SubResource("RectangleShape2D_dro30")
+debug_color = Color(0.6293666, 0.5257313, 0.20010054, 0.41960785)
+
+[node name="ChompRadius" type="Area2D" parent="." unique_id=1744212855]
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ChompRadius" unique_id=1828348221]
+position = Vector2(19.5, 0)
+shape = SubResource("RectangleShape2D_vj3cr")
+debug_color = Color(0.83229256, 0.3841284, 0.21055189, 0.41960785)
+
+[connection signal="body_entered" from="Hitbox" to="." method="_on_hitbox_body_entered"]
+[connection signal="timeout" from="BiteTimer" to="." method="_on_bite_timer_timeout"]
+[connection signal="body_entered" from="DetectionBox" to="." method="_on_detection_box_body_entered"]
+[connection signal="body_entered" from="ChompRadius" to="." method="_on_chomp_radius_body_entered"]
+[connection signal="body_exited" from="ChompRadius" to="." method="_on_chomp_radius_body_exited"]

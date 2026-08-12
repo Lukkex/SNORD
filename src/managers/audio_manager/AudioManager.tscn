@@ -3,6 +3,7 @@
 [ext_resource type="AudioStream" uid="uid://cb1mk040g48u8" path="res://assets/sounds/loop.wav" id="1_2nh25"]
 [ext_resource type="Script" uid="uid://c8dewukqt7qwk" path="res://src/managers/audio_manager/audio_manager.gd" id="1_d16gy"]
 [ext_resource type="AudioStream" uid="uid://n3oymxbclm0b" path="res://assets/sounds/characters/0_snord.mp3" id="3_er85w"]
+[ext_resource type="AudioStream" uid="uid://chgr7yvsow7v4" path="res://assets/sounds/characters/6_kyle.mp3" id="4_qrjph"]
 
 [node name="AudioManager" type="Node2D" unique_id=1692788353]
 script = ExtResource("1_d16gy")
@@ -14,3 +15,6 @@ volume_db = -14.312
 
 [node name="SnordSound1" type="AudioStreamPlayer" parent="." unique_id=1545981927]
 stream = ExtResource("3_er85w")
+
+[node name="AntagonistSound" type="AudioStreamPlayer" parent="." unique_id=619408182]
+stream = ExtResource("4_qrjph")

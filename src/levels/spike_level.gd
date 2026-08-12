@@ -13,7 +13,7 @@ func _ready() -> void:
 	AudioManager.snordmusicloop.play()
 	Global.speed_multiplier = level_speed_multiplier * Global.character.speed_multiplier
 
-func _restart():
+func _restart(_player_that_died = null):
 	await get_tree().create_timer(1).timeout
 	get_tree().reload_current_scene()
 

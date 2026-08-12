@@ -1,6 +1,5 @@
 extends Control
 
-@onready var quiz_manager : Control = $"../../QuizManager"
 @onready var settings_menu: Control = $Settings
 @onready var character_name: Label = $MarginContainer/HBoxContainer/CharacterName
 

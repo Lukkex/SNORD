@@ -2,7 +2,7 @@ extends Node2D
 
 @export_file var levels : Array[String] = [
 	"res://src/levels/level.tscn", 
-	"res://src/levels/level_2.tscn"
+	"res://src/levels/level_2.tscn",
 ]
 @onready var current_level : int = 0
 
