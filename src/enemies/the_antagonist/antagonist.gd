@@ -68,3 +68,15 @@ func _on_chomp_radius_body_exited(body: Node2D) -> void:
 
 func _on_bite_timer_timeout() -> void:
 	bite_lock = false
+	
+@onready var tilemap_collider: Area2D = $TilemapCollider
+
+
+## Trying to make antag destroy cells but tilemaps are fucking me
+func _on_tilemap_collider_body_entered(body: Node2D) -> void:
+	if body.get_parent().has_method("break_tile"): 
+		var tilemaplayer : TileMapLayer = body
+		#var cell_pos = body.local_to_map(collision_pos)
+		#tilemap.erase_cell(1 ,tile_pos)
+		
+		#body.get_parent().break_tile(body.position)

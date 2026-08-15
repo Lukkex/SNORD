@@ -180,8 +180,11 @@ size = Vector2(70, 56)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vj3cr"]
 size = Vector2(59, 56)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f0ieg"]
+size = Vector2(20, 56)
+
 [node name="Antagonist" type="CharacterBody2D" unique_id=965918403]
-collision_layer = 2
+collision_layer = 4
 collision_mask = 2
 script = ExtResource("1_f0ieg")
 
@@ -230,8 +233,18 @@ position = Vector2(19.5, 0)
 shape = SubResource("RectangleShape2D_vj3cr")
 debug_color = Color(0.83229256, 0.3841284, 0.21055189, 0.41960785)
 
+[node name="TilemapCollider" type="Area2D" parent="." unique_id=2033921807]
+collision_layer = 4
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TilemapCollider" unique_id=1535552059]
+position = Vector2(7, 0)
+shape = SubResource("RectangleShape2D_f0ieg")
+debug_color = Color(0.61348, 0.707516, 0.9710787, 0.41960785)
+
 [connection signal="body_entered" from="Hitbox" to="." method="_on_hitbox_body_entered"]
 [connection signal="timeout" from="BiteTimer" to="." method="_on_bite_timer_timeout"]
 [connection signal="body_entered" from="DetectionBox" to="." method="_on_detection_box_body_entered"]
 [connection signal="body_entered" from="ChompRadius" to="." method="_on_chomp_radius_body_entered"]
 [connection signal="body_exited" from="ChompRadius" to="." method="_on_chomp_radius_body_exited"]
+[connection signal="body_entered" from="TilemapCollider" to="." method="_on_tilemap_collider_body_entered"]
