@@ -78,5 +78,6 @@ func _on_collision_area_body_entered(body: Node2D) -> void:
 func die():
 	AudioManager.play_character_move_sound()
 	camera_2d.reparent(get_tree().current_scene)
+	Global.can_pause = false
 	SignalBus.player_died.emit(self)
 	queue_free()

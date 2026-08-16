@@ -15,6 +15,7 @@ func _ready() -> void:
 
 func _restart(_player_that_died = null):
 	await get_tree().create_timer(1).timeout
+	Global.can_pause = true
 	get_tree().reload_current_scene()
 
 func _win():

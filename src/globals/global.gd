@@ -8,3 +8,5 @@ var player : Player
 var player_camera : Camera2D
 var timer_enabled : bool = true
 var character : CharProfile = preload("uid://c1m6f6h85nuno")
+
+var can_pause : bool = true

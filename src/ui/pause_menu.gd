@@ -10,7 +10,7 @@ func _ready() -> void:
 	get_tree().paused = false
 
 func _input(event: InputEvent) -> void:
-	if event.is_action_pressed("escape"):
+	if event.is_action_pressed("escape") and Global.can_pause:
 		character_name.text = Global.character.character_name
 		settings_menu.visible = false
 		pausemenu()
