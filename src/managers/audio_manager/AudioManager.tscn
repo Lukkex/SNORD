@@ -4,6 +4,16 @@
 [ext_resource type="Script" uid="uid://c8dewukqt7qwk" path="res://src/managers/audio_manager/audio_manager.gd" id="1_d16gy"]
 [ext_resource type="AudioStream" uid="uid://n3oymxbclm0b" path="res://assets/sounds/characters/0_snord.mp3" id="3_er85w"]
 [ext_resource type="AudioStream" uid="uid://chgr7yvsow7v4" path="res://assets/sounds/characters/6_kyle.mp3" id="4_qrjph"]
+[ext_resource type="AudioStream" uid="uid://ctjcx8arkwcqb" path="res://assets/sounds/death/death_scream_bitcrushed-01.wav" id="5_kpyt7"]
+[ext_resource type="AudioStream" uid="uid://djaraguc0ey04" path="res://assets/sounds/death/death_scream_bitcrushed-02.wav" id="6_varsg"]
+[ext_resource type="AudioStream" uid="uid://xi6d6krnr17y" path="res://assets/sounds/death/death_sound_bitcrushed-01.wav" id="7_lru2m"]
+[ext_resource type="AudioStream" uid="uid://dvg0i2adg2eqc" path="res://assets/sounds/death/death_sound_bitcrushed-02.wav" id="8_40edi"]
+[ext_resource type="AudioStream" uid="uid://bucp2npovpn7s" path="res://assets/sounds/death/death_sound_bitcrushed-03.wav" id="9_6etk0"]
+[ext_resource type="AudioStream" uid="uid://bn2ljufm0m27l" path="res://assets/sounds/death/death_sound_bitcrushed-04.wav" id="10_mor6q"]
+[ext_resource type="AudioStream" uid="uid://5o4xkhnbcut3" path="res://assets/sounds/death/death_sound_bitcrushed-05.wav" id="11_xcb84"]
+[ext_resource type="AudioStream" uid="uid://c1ns3co4k46o6" path="res://assets/sounds/death/death_sound_bitcrushed-06.wav" id="12_olfcb"]
+[ext_resource type="AudioStream" uid="uid://drdsg5v6brcln" path="res://assets/sounds/death/death_sound_bitcrushed-07.wav" id="13_i3whk"]
+[ext_resource type="AudioStream" uid="uid://dss6sgfjo2sdo" path="res://assets/sounds/death/death_sound_bitcrushed-08.wav" id="14_knyqu"]
 
 [node name="AudioManager" type="Node2D" unique_id=1692788353]
 script = ExtResource("1_d16gy")
@@ -18,3 +28,33 @@ stream = ExtResource("3_er85w")
 
 [node name="AntagonistSound" type="AudioStreamPlayer" parent="." unique_id=619408182]
 stream = ExtResource("4_qrjph")
+
+[node name="death_scream1" type="AudioStreamPlayer" parent="." unique_id=1601575955]
+stream = ExtResource("5_kpyt7")
+
+[node name="death_scream2" type="AudioStreamPlayer" parent="." unique_id=1629777449]
+stream = ExtResource("6_varsg")
+
+[node name="death_sound1" type="AudioStreamPlayer" parent="." unique_id=500931219]
+stream = ExtResource("7_lru2m")
+
+[node name="death_sound2" type="AudioStreamPlayer" parent="." unique_id=2142215088]
+stream = ExtResource("8_40edi")
+
+[node name="death_sound3" type="AudioStreamPlayer" parent="." unique_id=1876360405]
+stream = ExtResource("9_6etk0")
+
+[node name="death_sound4" type="AudioStreamPlayer" parent="." unique_id=257246432]
+stream = ExtResource("10_mor6q")
+
+[node name="death_sound5" type="AudioStreamPlayer" parent="." unique_id=686109456]
+stream = ExtResource("11_xcb84")
+
+[node name="death_sound6" type="AudioStreamPlayer" parent="." unique_id=1546958707]
+stream = ExtResource("12_olfcb")
+
+[node name="death_sound7" type="AudioStreamPlayer" parent="." unique_id=1896941181]
+stream = ExtResource("13_i3whk")
+
+[node name="death_sound8" type="AudioStreamPlayer" parent="." unique_id=1987390507]
+stream = ExtResource("14_knyqu")

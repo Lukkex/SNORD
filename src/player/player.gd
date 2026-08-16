@@ -10,6 +10,7 @@ class_name Player
 @export var default_sprite : Texture
 @export var speed_multiplier : float
 @export var collision_on := true
+@export var snord_on_death := false
 @export_range(1,5) var channel : int = 3 ## set the starting channel from 0 to 4
 @export_range(1,3) var actv_forward_multiplier : float = 1.7 ## When you press D or right arrow, multiplies speed by this amount
 @export_range(0,1) var actv_backward_multiplier : float = 0.6 ## When you press A or left arrow, multiplies speed by this amount
@@ -33,6 +34,10 @@ func _ready() -> void:
 	Global.player_camera = camera_2d
 	speed_multiplier = Global.speed_multiplier
 	
+	update_controls()
+
+## Handles persistence of input between levels
+func update_controls() -> void:
 	if Input.is_anything_pressed():
 		for action in ["left", "right"]:
 			if Input.is_action_pressed("right"):
@@ -43,6 +48,9 @@ func _ready() -> void:
 				Global.back_input_multiplier = actv_backward_multiplier
 			else:
 				Global.back_input_multiplier = 1.0
+	else: 
+		Global.fwd_input_multiplier = 1.0
+		Global.back_input_multiplier = 1.0
 
 func update_characrer():
 	sprite_2d.texture = character.character_sprite
@@ -90,8 +98,6 @@ func _on_collision_area_body_entered(body: Node2D) -> void:
 		SignalBus.player_win.emit()
 
 func die():
-	AudioManager.play_character_move_sound()
-	
 	camera_2d.reparent(get_tree().current_scene)
 	var player_particles = GPUParticles2D.new()
 	player_particles.explosiveness = 1.0
@@ -106,4 +112,6 @@ func die():
 	
 	Global.can_pause = false
 	SignalBus.player_died.emit(self)
+	if snord_on_death: AudioManager.play_character_move_sound()
+	else: AudioManager.play_death_sound(global_position)
 	queue_free()
