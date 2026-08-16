@@ -4,9 +4,11 @@ extends Node2D
 @onready var spikes: TileMapLayer = $Spikes
 const TILE_BREAK_AREA = preload("uid://bdf36hjufx0bj")
 
+@export var tile_desctruction_exceptions : Array[TileMapLayer]
+
 func _ready() -> void:
 	for map_layer in get_children():
-		if map_layer is TileMapLayer and map_layer.name != "Background":
+		if map_layer is TileMapLayer and not map_layer in tile_desctruction_exceptions:
 			var tile_array : Array[Vector2i] = map_layer.get_used_cells()
 			
 			for tile in tile_array:
@@ -20,3 +22,4 @@ func _ready() -> void:
 
 func tile_detected(tile_import, layer_import):
 	layer_import.erase_cell(tile_import)
+	
