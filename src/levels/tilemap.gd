@@ -35,4 +35,4 @@ func _ready() -> void:
 
 func tile_detected(tile_import, layer_import):
 	layer_import.erase_cell(tile_import)
-	
+	AudioManager.play_tile_break_sound(tile_import)

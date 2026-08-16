@@ -55,7 +55,8 @@ position = Vector2(14, -8)
 [node name="Antagonist" parent="." unique_id=965918403 instance=ExtResource("3_losr6")]
 position = Vector2(-245, -4)
 
-[node name="GPUParticles2D" type="GPUParticles2D" parent="." unique_id=552077537]
+[node name="DebugParticles(ForEditor)" type="GPUParticles2D" parent="." unique_id=552077537]
+visible = false
 emitting = false
 lifetime = 4.0
 explosiveness = 1.0
