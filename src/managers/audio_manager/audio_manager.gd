@@ -12,7 +12,6 @@ func _ready() -> void:
 	SignalBus.character_selected.connect(set_character_sound)
 	SignalBus.game_started.connect(set_antagonist_sound)
 	SignalBus.game_started.connect(set_character_sound)
-	
 
 func stop_all_sounds() -> void:
 	for sound in get_children():

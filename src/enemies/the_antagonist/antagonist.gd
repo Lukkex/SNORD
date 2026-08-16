@@ -4,6 +4,7 @@ extends CharacterBody2D
 @export var bite_cooldown : float = 1.0
 ## speed adder for antag, 0.0 should match player speed
 @export_range(-5.0,5.0) var antag_speed_adder : float = 1.0
+@export var moving : bool = true
 
 ## How fast antag moves, should automatically change depending on player spd
 var relative_player_speed : float
@@ -23,7 +24,7 @@ func _ready() -> void:
 func _physics_process(delta: float) -> void:
 	relative_player_speed = Global.speed_multiplier
 	
-	if Global.player != null:
+	if Global.player != null and moving:
 		position.y = Global.player.global_position.y
 		velocity.x = (get_gravity().y * delta * relative_player_speed) + (get_gravity().y * delta * antag_speed_adder)
 		velocity.x *= sign(Global.player.position.x - position.x)

@@ -5,6 +5,7 @@
 [ext_resource type="Script" uid="uid://g5eu8xn8bsjv" path="res://src/levels/tilemap.gd" id="2_d3dsx"]
 [ext_resource type="PackedScene" uid="uid://dn80t7we4r4ww" path="res://src/player/player.tscn" id="2_wdp73"]
 [ext_resource type="PackedScene" uid="uid://dqsr11jss0wg0" path="res://src/enemies/the_antagonist/antagonist.tscn" id="3_losr6"]
+[ext_resource type="Material" uid="uid://c832bg8y8wxlm" path="res://assets/visual/particles/MapTileDestructionBase.tres" id="6_72kxd"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_losr6"]
 texture = ExtResource("1_pkrb7")
@@ -22,24 +23,6 @@ tile_size = Vector2i(8, 8)
 physics_layer_0/collision_layer = 1
 physics_layer_0/collision_mask = 2
 sources/0 = SubResource("TileSetAtlasSource_losr6")
-
-[sub_resource type="CurveXYZTexture" id="CurveXYZTexture_77v21"]
-
-[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_ohj6x"]
-particle_flag_disable_z = true
-angle_min = -179.99998
-angle_max = 180.00002
-direction = Vector3(1, -0.75, 0)
-initial_velocity_min = 40.0
-initial_velocity_max = 150.0
-angular_velocity_min = -720.0
-angular_velocity_max = 719.99994
-directional_velocity_min = 1.0
-directional_velocity_max = 1.0
-directional_velocity_curve = SubResource("CurveXYZTexture_77v21")
-radial_velocity_min = -2.2351742e-05
-radial_velocity_max = -2.2351742e-05
-gravity = Vector3(0, 98, 0)
 
 [node name="Level 4" type="Node2D" unique_id=1631051779]
 script = ExtResource("1_wdp73")
@@ -72,7 +55,8 @@ position = Vector2(14, -8)
 [node name="Antagonist" parent="." unique_id=965918403 instance=ExtResource("3_losr6")]
 position = Vector2(-245, -4)
 
-[node name="GPUParticles2D" type="GPUParticles2D" parent="." unique_id=505802484]
+[node name="GPUParticles2D" type="GPUParticles2D" parent="." unique_id=552077537]
+emitting = false
 lifetime = 4.0
 explosiveness = 1.0
-process_material = SubResource("ParticleProcessMaterial_ohj6x")
+process_material = ExtResource("6_72kxd")
