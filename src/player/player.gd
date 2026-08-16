@@ -14,6 +14,9 @@ class_name Player
 @export_range(1,3) var actv_forward_multiplier : float = 1.7 ## When you press D or right arrow, multiplies speed by this amount
 @export_range(0,1) var actv_backward_multiplier : float = 0.6 ## When you press A or left arrow, multiplies speed by this amount
 
+# Constants
+const PLAYER_DIE_PARTICLES = preload("uid://b50egqpcue3dc")
+
 var character : CharProfile
 #var input_multiplier : float = 1.0
 #var backward_multiuplier : float = 1.0
@@ -93,7 +96,13 @@ func die():
 	var player_particles = GPUParticles2D.new()
 	player_particles.explosiveness = 1.0
 	player_particles.one_shot = true
-	#player_particles.
+	var player_particle_material = PLAYER_DIE_PARTICLES
+	player_particle_material.color = Global.character.die_color # default colors are... interesting :3
+	player_particles.process_material = player_particle_material
+	player_particles.emitting = true
+	get_parent().add_child(player_particles)
+	player_particles.global_position = global_position
+	await get_tree().process_frame
 	
 	Global.can_pause = false
 	SignalBus.player_died.emit(self)

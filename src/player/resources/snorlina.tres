@@ -12,6 +12,7 @@ script = ExtResource("2_nu4ks")
 character_name = "Snorlina Slooker"
 description = "Truly a bitch, but shes the female lead, pursue her."
 flair = "Im sexy and I know it"
+die_color = Color(0.95041114, 0.35768363, 0.6633496, 1)
 bg_color = Color(0.9242132, 0.5599199, 0.83996004, 1)
 character_sprite = SubResource("AtlasTexture_7ser6")
 speed_multiplier = 1.1

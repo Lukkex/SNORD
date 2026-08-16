@@ -12,6 +12,7 @@ script = ExtResource("2_flp0v")
 character_name = "Snart Von Shniensen"
 description = "Clearly a distinguished gentlesnord. The royalty among peasants. He doesn't do anything because he has servants to do things for him."
 flair = "peon."
+die_color = Color(0.57, 0.32775, 0.1425, 1)
 bg_color = Color(0.3823494, 0.32898095, 0.8309826, 1)
 character_sprite = SubResource("AtlasTexture_dl8f8")
 speed_multiplier = 1.7

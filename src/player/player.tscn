@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://c2ovgfs6123eq" path="res://src/player/player.gd" id="1_4flbx"]
 [ext_resource type="Texture2D" uid="uid://c1qw3gbmlbqrr" path="res://src/player/snord.png" id="2_4ntmi"]
 [ext_resource type="PackedScene" uid="uid://1ny0o5ay1a17" path="res://src/ui/HUD.tscn" id="3_mf2ua"]
+[ext_resource type="Material" uid="uid://b50egqpcue3dc" path="res://assets/PlayerDieParticles.tres" id="4_244u8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4ntmi"]
 size = Vector2(6, 6)
@@ -48,5 +49,10 @@ collision_layer = 0
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CollisionArea" unique_id=325598919]
 shape = SubResource("RectangleShape2D_btcbx")
 debug_color = Color(0.9930658, 0, 0.2497159, 0.41960785)
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="." unique_id=875540587]
+emitting = false
+explosiveness = 1.0
+process_material = ExtResource("4_244u8")
 
 [connection signal="body_entered" from="CollisionArea" to="." method="_on_collision_area_body_entered"]

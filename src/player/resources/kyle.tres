@@ -12,6 +12,7 @@ script = ExtResource("2_vrlvx")
 character_name = "Kyle"
 description = "The cooler Snord. Literally everything Snord wants to be. Kyle's hair is a constant reminder that Snord will never amount to anything outside their destined existence. We don't like Kyle"
 flair = "What's up, chump?"
+die_color = Color(0.81, 0.70848, 0.42929998, 1)
 bg_color = Color(0.23919895, 0.26539922, 0.1773937, 1)
 character_sprite = SubResource("AtlasTexture_sqbmo")
 speed_multiplier = 0.1
