@@ -17,7 +17,8 @@ func _ready() -> void:
 
 func _input(event: InputEvent) -> void:
 	if Input.is_anything_pressed() and death_timer != null:
-		death_timer.emit_signal("timeout")
+		if death_timer.time_left <= 0.5:
+			death_timer.emit_signal("timeout")
 
 func _restart(_player_that_died = null):
 	death_timer = get_tree().create_timer(1)

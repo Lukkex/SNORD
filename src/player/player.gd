@@ -15,8 +15,8 @@ class_name Player
 @export_range(0,1) var actv_backward_multiplier : float = 0.6 ## When you press A or left arrow, multiplies speed by this amount
 
 var character : CharProfile
-var forawrd_multiplier : float = 1.0
-var backward_multiuplier : float = 1.0
+#var input_multiplier : float = 1.0
+#var backward_multiuplier : float = 1.0
 
 func _ready() -> void:
 	add_to_group("players")
@@ -29,6 +29,17 @@ func _ready() -> void:
 	Global.player = self
 	Global.player_camera = camera_2d
 	speed_multiplier = Global.speed_multiplier
+	
+	if Input.is_anything_pressed():
+		for action in ["left", "right"]:
+			if Input.is_action_pressed("right"):
+				Global.fwd_input_multiplier = actv_forward_multiplier
+			else: 
+				Global.fwd_input_multiplier = 1.0
+			if Input.is_action_pressed("left"):
+				Global.back_input_multiplier = actv_backward_multiplier
+			else:
+				Global.back_input_multiplier = 1.0
 
 func update_characrer():
 	sprite_2d.texture = character.character_sprite
@@ -36,7 +47,7 @@ func update_characrer():
 
 func _physics_process(delta: float) -> void:
 	speed_multiplier = Global.speed_multiplier
-	velocity.x = get_gravity().y * delta * speed_multiplier * forawrd_multiplier * backward_multiuplier
+	velocity.x = get_gravity().y * delta * speed_multiplier * Global.fwd_input_multiplier * Global.back_input_multiplier
 	#print(velocity)
 	
 	if channel: _set_y_pos(channel)
@@ -54,14 +65,14 @@ func _input(event: InputEvent) -> void:
 		else: pass # NOTE: can add error sound effect or som here and flash sprite red or som
 	
 	if event.is_action_pressed("right"):
-		forawrd_multiplier = actv_forward_multiplier
+		Global.fwd_input_multiplier = actv_forward_multiplier
 	if event.is_action_pressed("left"):
-		backward_multiuplier = actv_backward_multiplier
+		Global.back_input_multiplier = actv_backward_multiplier
 	
 	if event.is_action_released("right"):
-		forawrd_multiplier = 1.0
+		Global.fwd_input_multiplier = 1.0
 	if event.is_action_released("left"): 
-		backward_multiuplier = 1.0
+		Global.back_input_multiplier = 1.0
 
 func _set_y_pos(height):
 	position.y = height * 8 - 8 * 5 # 8 pixels per channel, might need tweaking
