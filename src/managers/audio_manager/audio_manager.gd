@@ -11,11 +11,16 @@ extends Node2D
 
 # var audio_stream_player : AudioStreamPlayer
 
+const tile_break_sounds = [
+	preload("uid://qnj65bq5jhcw"),
+	preload("uid://r17rvq4wjb0k"),
+	preload("uid://cixf6alxdra2e")
+]
+
 func _ready() -> void:
 	SignalBus.character_selected.connect(set_character_sound)
 	SignalBus.game_started.connect(set_antagonist_sound)
 	SignalBus.game_started.connect(set_character_sound)
-	
 
 func stop_all_sounds() -> void:
 	for sound in get_children():
@@ -56,3 +61,13 @@ func play_death_sound(position) -> void:
 	audio_stream_player1.play()
 	await get_tree().create_timer(0.2).timeout
 	audio_stream_player2.play()
+
+func play_tile_break_sound(position: Vector2) -> void:
+	var audio_stream_player = AudioStreamPlayer2D.new()
+	audio_stream_player.stream = tile_break_sounds.pick_random()
+	
+	get_tree().root.add_child(audio_stream_player)
+	audio_stream_player.global_position = position
+	audio_stream_player.play()
+	await audio_stream_player.finished
+	audio_stream_player.queue_free()
