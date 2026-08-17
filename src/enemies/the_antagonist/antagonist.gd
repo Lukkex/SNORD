@@ -36,7 +36,7 @@ func _physics_process(delta: float) -> void:
 
 ## Called solely by animation player
 func KYLE():
-	AudioManager.play_antagonist_sound()
+	AudioManager.play_antagonist_sound(global_position)
 
 ## TODO: Run this once when the antag gets introduced
 func bare_teeth():
