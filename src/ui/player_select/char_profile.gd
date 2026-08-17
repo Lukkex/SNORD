@@ -7,6 +7,8 @@ class_name CharProfile
 @export_multiline() var description: String = ""
 ## What would they say right now?
 @export var flair: String = ""
+## Color they spew when dying
+@export var die_color : Color = Color.from_hsv(0.0, 0.0, 1.0, 1.0)
 ## Favorite color
 @export var bg_color : Color = Color.from_hsv(0.0, 0.0, 1.0, 1.0)
 ## Sprite

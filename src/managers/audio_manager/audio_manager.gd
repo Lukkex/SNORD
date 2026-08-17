@@ -6,6 +6,9 @@ extends Node2D
 @onready var snord1 = $SnordSound1
 @onready var antagonist_sound: AudioStreamPlayer = $AntagonistSound
 
+@onready var death_screams = [$death_scream1, $death_scream2]
+@onready var death_sounds = [$death_sound1, $death_sound2, $death_sound3, $death_sound4, $death_sound5, $death_sound6, $death_sound7, $death_sound8]
+
 # var audio_stream_player : AudioStreamPlayer
 
 const tile_break_sounds = [
@@ -42,6 +45,22 @@ func play_character_move_sound() -> void:
 	add_child(audio_stream_player)
 	audio_stream_player.stream = snord1.stream
 	audio_stream_player.play()
+
+func play_death_sound(position) -> void:
+	var audio_stream_player1 = AudioStreamPlayer2D.new()
+	add_child(audio_stream_player1)
+	audio_stream_player1.position = position
+	audio_stream_player1.stream = death_screams.pick_random().stream
+	
+	var audio_stream_player2 = AudioStreamPlayer2D.new()
+	add_child(audio_stream_player2)
+	audio_stream_player2.position = position
+	audio_stream_player2.stream = death_sounds.pick_random().stream
+	audio_stream_player2.volume_db = 8
+	
+	audio_stream_player1.play()
+	await get_tree().create_timer(0.2).timeout
+	audio_stream_player2.play()
 
 func play_tile_break_sound(position: Vector2) -> void:
 	var audio_stream_player = AudioStreamPlayer2D.new()

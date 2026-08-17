@@ -12,6 +12,7 @@ script = ExtResource("2_qx53q")
 character_name = "Hubert Hubertson"
 description = "has a resting bitch face. They're actually really kind when you get to know them. Infamous around their peers, highly unapproachable.s"
 flair = "..hey"
+die_color = Color(1, 0.44, 0.6359999, 1)
 bg_color = Color(0.37, 0.06265333, 0.040700007, 1)
 character_sprite = SubResource("AtlasTexture_g80vi")
 speed_multiplier = 0.4

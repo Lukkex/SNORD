@@ -14,6 +14,7 @@ description = "The guy. literally, name of the game. They're cult classic and do
 
 wow."
 flair = "Who do you think you are? Me!"
+die_color = Color(0.93, 0.88257, 0.4557, 1)
 bg_color = Color(0.94038236, 0.9581949, 0.7113911, 1)
 character_sprite = SubResource("AtlasTexture_1tj25")
 audio_file = "uid://n3oymxbclm0b"
