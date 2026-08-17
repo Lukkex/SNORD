@@ -3,33 +3,7 @@
 [ext_resource type="Theme" uid="uid://maqxnhvp58cj" path="res://src/ui/themes/theme.tres" id="1_ia4hv"]
 [ext_resource type="Script" uid="uid://d3a5bronnimwu" path="res://src/ui/player_select/scenes/character_cutin.gd" id="1_iel81"]
 [ext_resource type="Texture2D" uid="uid://cgbk372a6bxrg" path="res://src/ui/player_select/sprites/snordlings.png" id="1_qow5p"]
-
-[sub_resource type="Curve" id="Curve_iel81"]
-_limits = [-1.0, 1.0, 0.0, 5.0]
-_data = [Vector2(0, -1), 0.0, 0.0, 0, 0, Vector2(1.3617885, 1), 0.0, 0.0, 0, 0, Vector2(2.621951, -1), 0.0, 0.0, 0, 0, Vector2(3.7804875, 1), 0.0, 0.0, 0, 0, Vector2(5, -1), 0.0, 0.0, 0, 0]
-point_count = 5
-
-[sub_resource type="CurveTexture" id="CurveTexture_iel81"]
-curve = SubResource("Curve_iel81")
-
-[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_ohj6x"]
-particle_flag_disable_z = true
-angle_min = -89.99999
-angle_max = 90.000015
-angular_velocity_min = -436.05002
-angular_velocity_max = 400.55997
-radial_velocity_min = 190.01997
-radial_velocity_max = 999.99994
-gravity = Vector3(0, 980, 0)
-scale_min = 0.0
-scale_max = 30.9
-color = Color(0.27752784, 0.2775277, 0.27752772, 1)
-hue_variation_min = -1.0
-hue_variation_max = 0.99999994
-hue_variation_curve = SubResource("CurveTexture_iel81")
-collision_mode = 1
-collision_friction = 0.0
-collision_bounce = 0.0
+[ext_resource type="Material" uid="uid://3kfk2fnwx65m" path="res://assets/visual/particles/CharSelectShakingParticles.tres" id="2_mjxo2"]
 
 [sub_resource type="Animation" id="Animation_iel81"]
 length = 0.001
@@ -256,7 +230,7 @@ emitting = false
 amount = 12
 lifetime = 4.0
 explosiveness = 0.69
-process_material = SubResource("ParticleProcessMaterial_ohj6x")
+process_material = ExtResource("2_mjxo2")
 
 [node name="bg" type="Control" parent="left" unique_id=1931292630]
 anchors_preset = 0
@@ -364,7 +338,7 @@ emitting = false
 amount = 12
 lifetime = 4.0
 explosiveness = 0.69
-process_material = SubResource("ParticleProcessMaterial_ohj6x")
+process_material = ExtResource("2_mjxo2")
 
 [node name="bg" type="Control" parent="right" unique_id=1263564211]
 anchors_preset = 0
