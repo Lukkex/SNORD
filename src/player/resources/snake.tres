@@ -12,6 +12,7 @@ script = ExtResource("2_g72f7")
 character_name = "Snake"
 description = "literally a snake.. how did you get here?"
 flair = "ss."
+die_color = Color(0.40243688, 0.53865707, 0.15533125, 1)
 bg_color = Color(0.80781406, 0.51215756, 0.19699952, 1)
 character_sprite = SubResource("AtlasTexture_2bggk")
 speed_multiplier = 3.0

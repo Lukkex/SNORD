@@ -12,6 +12,7 @@ script = ExtResource("2_4ktad")
 character_name = "Snose Sid"
 description = "big nose, small personality. This guy does NOT THINK EVER AT ALL. But he is incredibly dependable, and ever loyal."
 flair = "Snose smash."
+die_color = Color(0.9711072, 0.57437855, 0.3497614, 1)
 bg_color = Color(0.5510623, 0.7255916, 0.47859716, 1)
 character_sprite = SubResource("AtlasTexture_c5gok")
 speed_multiplier = 1.5
