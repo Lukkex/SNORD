@@ -22,7 +22,7 @@ sources/0 = SubResource("TileSetAtlasSource_1y8me")
 
 [node name="Level 2" type="Node2D" unique_id=1010816279]
 script = ExtResource("1_xdadj")
-level_speed_multiplier = 15.0
+level_speed_multiplier = 12.0
 level_num = 2
 metadata/_custom_type_script = "uid://dapxehjhoagb"
 

@@ -26,7 +26,7 @@ sources/0 = SubResource("TileSetAtlasSource_losr6")
 
 [node name="Level 4" type="Node2D" unique_id=407797031]
 script = ExtResource("1_72kxd")
-level_speed_multiplier = 5.0
+level_speed_multiplier = 2.0
 level_num = 4
 metadata/_custom_type_script = "uid://dapxehjhoagb"
 

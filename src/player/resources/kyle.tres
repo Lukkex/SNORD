@@ -15,6 +15,6 @@ flair = "What's up, chump?"
 die_color = Color(0.81, 0.70848, 0.42929998, 1)
 bg_color = Color(0.23919895, 0.26539922, 0.1773937, 1)
 character_sprite = SubResource("AtlasTexture_sqbmo")
-speed_multiplier = 0.1
+speed_multiplier = 0.3
 audio_file = "uid://chgr7yvsow7v4"
 metadata/_custom_type_script = "uid://ds00hxh8i02lp"
