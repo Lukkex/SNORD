@@ -23,7 +23,7 @@ sources/0 = SubResource("TileSetAtlasSource_6koly")
 [node name="Level 3" type="Node2D" unique_id=104300440]
 script = ExtResource("1_6koly")
 level_speed_multiplier = 10.0
-level_num = 2
+level_num = 3
 metadata/_custom_type_script = "uid://dapxehjhoagb"
 
 [node name="Tilemap" type="Node2D" parent="." unique_id=590079255]
