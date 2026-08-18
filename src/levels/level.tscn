@@ -1,7 +1,7 @@
 [gd_scene format=4 uid="uid://c4qr8vdt8bk8g"]
 
+[ext_resource type="Script" uid="uid://dapxehjhoagb" path="res://src/levels/spike_level.gd" id="1_aeuny"]
 [ext_resource type="Texture2D" uid="uid://cv7kamnm1d0qa" path="res://assets/snord tilemap.png" id="1_u52ul"]
-[ext_resource type="Script" uid="uid://cvik30apwdvcx" path="res://src/levels/level.gd" id="1_vonw3"]
 [ext_resource type="PackedScene" uid="uid://dn80t7we4r4ww" path="res://src/player/player.tscn" id="3_aeuny"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vonw3"]
@@ -20,8 +20,10 @@ physics_layer_0/collision_layer = 1
 physics_layer_0/collision_mask = 2
 sources/0 = SubResource("TileSetAtlasSource_vonw3")
 
-[node name="Level" type="Node2D" unique_id=1071215022]
-script = ExtResource("1_vonw3")
+[node name="Level" type="Node2D" unique_id=800408057]
+script = ExtResource("1_aeuny")
+level_speed_multiplier = 10.0
+metadata/_custom_type_script = "uid://dapxehjhoagb"
 
 [node name="Tilemap" type="Node2D" parent="." unique_id=548573735]
 position = Vector2(-18, -44)
