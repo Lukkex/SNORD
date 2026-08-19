@@ -27,5 +27,5 @@ func swap_scene_to_current_level() -> void:
 
 func swap_scene_to_next_level() -> void:
 	if next_level():
-		if levels[current_level+1]:
-			get_tree().change_scene_to_file(levels[current_level+1])
+		if levels[current_level]:
+			get_tree().change_scene_to_file(levels[current_level])
