@@ -21,8 +21,10 @@ physics_layer_0/collision_layer = 1
 physics_layer_0/collision_mask = 2
 sources/0 = SubResource("TileSetAtlasSource_1y8me")
 
-[node name="Level 2" type="Node2D" unique_id=1211048516]
+[node name="Level 2" type="Node2D" unique_id=1010816279]
 script = ExtResource("1_xdadj")
+level_speed_multiplier = 10.0
+level_num = 2
 metadata/_custom_type_script = "uid://dapxehjhoagb"
 
 [node name="Tilemap" type="Node2D" parent="." unique_id=370759093]
