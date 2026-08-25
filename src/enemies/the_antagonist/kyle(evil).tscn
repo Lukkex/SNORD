@@ -1,37 +1,37 @@
 [gd_scene format=3 uid="uid://dqsr11jss0wg0"]
 
-[ext_resource type="Texture2D" uid="uid://u8oqgm2c35h3" path="res://src/enemies/the_antagonist/antagonist.png" id="1_5nivl"]
-[ext_resource type="Script" uid="uid://bwnwxhcnwswou" path="res://src/enemies/the_antagonist/antagonist.gd" id="1_f0ieg"]
+[ext_resource type="Script" uid="uid://bwnwxhcnwswou" path="res://src/enemies/the_antagonist/kyle(evil).gd" id="1_04uxy"]
+[ext_resource type="Texture2D" uid="uid://u8oqgm2c35h3" path="res://src/enemies/the_antagonist/kyle(evil).png" id="2_04uxy"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_77v21"]
 size = Vector2(31, 56)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_f0ieg"]
-atlas = ExtResource("1_5nivl")
+atlas = ExtResource("2_04uxy")
 region = Rect2(0, 0, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_n3ub5"]
-atlas = ExtResource("1_5nivl")
+atlas = ExtResource("2_04uxy")
 region = Rect2(64, 0, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8t1wa"]
-atlas = ExtResource("1_5nivl")
+atlas = ExtResource("2_04uxy")
 region = Rect2(128, 0, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_y2cqc"]
-atlas = ExtResource("1_5nivl")
+atlas = ExtResource("2_04uxy")
 region = Rect2(192, 0, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_h41jb"]
-atlas = ExtResource("1_5nivl")
+atlas = ExtResource("2_04uxy")
 region = Rect2(256, 0, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_by6jm"]
-atlas = ExtResource("1_5nivl")
+atlas = ExtResource("2_04uxy")
 region = Rect2(320, 0, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_rrsdd"]
-atlas = ExtResource("1_5nivl")
+atlas = ExtResource("2_04uxy")
 region = Rect2(384, 0, 64, 64)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ohj6x"]
@@ -183,10 +183,10 @@ size = Vector2(59, 56)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_f0ieg"]
 size = Vector2(20, 56)
 
-[node name="Antagonist" type="CharacterBody2D" unique_id=965918403]
+[node name="Kyle(Evil)" type="CharacterBody2D" unique_id=965918403]
 collision_layer = 4
 collision_mask = 2
-script = ExtResource("1_f0ieg")
+script = ExtResource("1_04uxy")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2125713050]
 position = Vector2(-5.5, 0)
@@ -195,7 +195,6 @@ debug_color = Color(0.0969794, 0.61204934, 0.6121186, 0.41960785)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1555532186]
 sprite_frames = SubResource("SpriteFrames_ohj6x")
-frame = 3
 flip_h = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1774206706]

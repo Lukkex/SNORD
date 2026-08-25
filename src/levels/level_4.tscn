@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://kktdgmt063g" path="res://src/levels/level_4.gd" id="1_wdp73"]
 [ext_resource type="Script" uid="uid://g5eu8xn8bsjv" path="res://src/levels/tilemap.gd" id="2_d3dsx"]
 [ext_resource type="PackedScene" uid="uid://dn80t7we4r4ww" path="res://src/player/player.tscn" id="2_wdp73"]
-[ext_resource type="PackedScene" uid="uid://dqsr11jss0wg0" path="res://src/enemies/the_antagonist/antagonist.tscn" id="3_losr6"]
+[ext_resource type="PackedScene" uid="uid://dqsr11jss0wg0" path="res://src/enemies/the_antagonist/kyle(evil).tscn" id="3_losr6"]
 [ext_resource type="Material" uid="uid://c832bg8y8wxlm" path="res://assets/visual/particles/MapTileDestructionBase.tres" id="6_72kxd"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_losr6"]

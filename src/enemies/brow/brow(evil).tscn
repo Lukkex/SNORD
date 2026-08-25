@@ -1,0 +1,157 @@
+[gd_scene format=3 uid="uid://b8nbbpyk3vj42"]
+
+[ext_resource type="Texture2D" uid="uid://hvttspfwch7k" path="res://src/enemies/brow/sneyebrow.png" id="1_e1kud"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6yq7d"]
+atlas = ExtResource("1_e1kud")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cj0sq"]
+atlas = ExtResource("1_e1kud")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lovsl"]
+atlas = ExtResource("1_e1kud")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6vxks"]
+atlas = ExtResource("1_e1kud")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3q1iu"]
+atlas = ExtResource("1_e1kud")
+region = Rect2(64, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_acr2x"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6yq7d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cj0sq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lovsl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6vxks")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3q1iu")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_e1kud"]
+size = Vector2(14, 16)
+
+[sub_resource type="Animation" id="Animation_e1kud"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [4]
+}
+
+[sub_resource type="Animation" id="Animation_cj0sq"]
+resource_name = "laugh"
+loop_mode = 1
+step = 0.125
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.125, 0.25, 0.375, 0.5, 0.625, 0.75),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [1, 2, 1, 2, 1, 2, 3]
+}
+
+[sub_resource type="Animation" id="Animation_lovsl"]
+resource_name = "laugh_squint"
+length = 0.25
+loop_mode = 1
+step = 0.125
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.125, 0.25),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [1, 2, 1]
+}
+
+[sub_resource type="Animation" id="Animation_6yq7d"]
+resource_name = "shrug"
+length = 1.5
+loop_mode = 1
+step = 0.125
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.125, 0.25, 0.5, 0.625, 0.75, 1, 1.125, 1.25, 1.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 0, 1, 1, 0, 0, 0, 1, 0]
+}
+
+[sub_resource type="Animation" id="Animation_6vxks"]
+resource_name = "speak"
+length = 0.25
+loop_mode = 1
+step = 0.125
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.125, 0.25),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [3, 4, 3]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_cj0sq"]
+_data = {
+&"RESET": SubResource("Animation_e1kud"),
+&"laugh": SubResource("Animation_cj0sq"),
+&"laugh_squint": SubResource("Animation_lovsl"),
+&"shrug": SubResource("Animation_6yq7d"),
+&"speak": SubResource("Animation_6vxks")
+}
+
+[node name="Brow(Evil)" type="CharacterBody2D" unique_id=170279413]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=964307492]
+sprite_frames = SubResource("SpriteFrames_acr2x")
+frame = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=600104086]
+position = Vector2(1, 0)
+shape = SubResource("RectangleShape2D_e1kud")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1623584367]
+libraries/ = SubResource("AnimationLibrary_cj0sq")
