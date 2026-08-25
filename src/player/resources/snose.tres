@@ -15,6 +15,6 @@ flair = "Snose smash."
 die_color = Color(0.9711072, 0.57437855, 0.3497614, 1)
 bg_color = Color(0.5510623, 0.7255916, 0.47859716, 1)
 character_sprite = SubResource("AtlasTexture_c5gok")
-speed_multiplier = 1.5
+speed_multiplier = 1.4
 audio_file = "uid://bejbviwhadrrp"
 metadata/_custom_type_script = "uid://ds00hxh8i02lp"

@@ -15,6 +15,6 @@ flair = "..hey"
 die_color = Color(1, 0.44, 0.6359999, 1)
 bg_color = Color(0.37, 0.06265333, 0.040700007, 1)
 character_sprite = SubResource("AtlasTexture_g80vi")
-speed_multiplier = 0.4
+speed_multiplier = 0.7
 audio_file = "uid://d3w556dyu7ne"
 metadata/_custom_type_script = "uid://ds00hxh8i02lp"

@@ -34,9 +34,10 @@ func set_character_sound(_arg1 = null) -> void:
 func set_antagonist_sound(_arg1 = null) -> void:
 	pass
 
-func play_antagonist_sound() -> void:
-	var audio_stream_player = AudioStreamPlayer.new()
+func play_antagonist_sound(position) -> void:
+	var audio_stream_player = AudioStreamPlayer2D.new()
 	add_child(audio_stream_player)
+	audio_stream_player.position = position
 	audio_stream_player.stream = antagonist_sound.stream
 	audio_stream_player.play()
 
