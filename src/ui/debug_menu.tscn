@@ -20,16 +20,24 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_constants/margin_left = 25
+theme_override_constants/margin_top = 25
+theme_override_constants/margin_right = 25
+theme_override_constants/margin_bottom = 25
 
 [node name="ColorRect" type="ColorRect" parent="MarginContainer" unique_id=1013900705]
 layout_mode = 2
 color = Color(0, 0, 0, 1)
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=202024635]
+[node name="TheHolder" type="VBoxContainer" parent="MarginContainer" unique_id=202024635]
 layout_mode = 2
 theme_override_constants/separation = 3
 
-[node name="Label" type="Label" parent="MarginContainer/VBoxContainer" unique_id=1353671048]
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/TheHolder" unique_id=1300219188]
+layout_mode = 2
+theme_override_constants/separation = 100
+
+[node name="Label" type="Label" parent="MarginContainer/TheHolder/VBoxContainer" unique_id=1353671048]
 layout_mode = 2
 theme = ExtResource("2_udugg")
 text = "
@@ -39,39 +47,18 @@ text = "
 haha this is the debug menu haha yeah gottem woohoo yeah"
 horizontal_alignment = 1
 
-[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=117009920]
+[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/TheHolder/VBoxContainer" unique_id=117009920]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 6
 alignment = 1
 
-[node name="WinScreen" parent="MarginContainer/VBoxContainer/HBoxContainer2" unique_id=282253013 instance=ExtResource("3_jbpcu")]
+[node name="WinScreen" parent="MarginContainer/TheHolder/VBoxContainer/HBoxContainer2" unique_id=282253013 instance=ExtResource("3_jbpcu")]
 layout_mode = 2
 text = "win screen"
 scene = "uid://bwi1x7xvk1aue"
 
-[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=632668600]
+[node name="LevelRack" type="HBoxContainer" parent="MarginContainer/TheHolder" unique_id=632668600]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 6
-alignment = 1
-
-[node name="Level 1" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=1962539473 instance=ExtResource("3_jbpcu")]
-layout_mode = 2
-text = "level 1"
-scene = "uid://c4qr8vdt8bk8g"
-
-[node name="Level 2" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=971260451 instance=ExtResource("3_jbpcu")]
-layout_mode = 2
-text = "level 2"
-scene = "uid://bvsowf1ovra1a"
-
-[node name="Level 3" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=1401844782 instance=ExtResource("3_jbpcu")]
-layout_mode = 2
-text = "level 3"
-scene = "uid://ctu5tyliul42x"
-
-[node name="Level 4" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=951866040 instance=ExtResource("3_jbpcu")]
-layout_mode = 2
-text = "level 4"
-scene = "uid://0l68dnrv6obx"

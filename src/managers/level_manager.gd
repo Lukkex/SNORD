@@ -1,9 +1,6 @@
 extends Node2D
 
-@export_file var levels : Array[String] = [
-	"res://src/levels/level.tscn", 
-	"res://src/levels/level_2.tscn",
-]
+@export_file var levels : Array[String] = []
 @onready var current_level : int = 0
 
 func next_level() -> bool:

@@ -1,4 +1,5 @@
 extends Button
+class_name CustomButton
 
 @export var set_text : String = "button"
 @export_file("*.tscn") var scene : String
