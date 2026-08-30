@@ -1,14 +1,15 @@
 extends Node2D
 class_name destructible_tilemap
 
-@onready var walls: TileMapLayer = $Walls
-@onready var spikes: TileMapLayer = $Spikes
 const TILE_BREAK_AREA = preload("uid://bdf36hjufx0bj")
 const MAP_TILE_DESTRUCTION_BASE_MATERIAL = preload("uid://c832bg8y8wxlm")
 
 @export var destruction_enabled : bool = true
 @export var tile_desctruction_exceptions : Array[TileMapLayer]
 
+@onready var obstacles_layer: TileMapLayer = $Obstacles
+
+## Instantiates break particles on EVERYTHING in the tilemap layers
 func _ready() -> void:
 	for map_layer in get_children():
 		if map_layer is TileMapLayer and not map_layer in tile_desctruction_exceptions:
@@ -38,3 +39,12 @@ func _ready() -> void:
 func tile_detected(tile_import, layer_import):
 	layer_import.erase_cell(tile_import)
 	AudioManager.play_tile_break_sound(tile_import)
+
+func rig_obstacles():
+	var tile_array : Array[Vector2i] = obstacles_layer.get_used_cells()
+	
+	for tile in tile_array:
+		pass
+
+func _on_cell_changed(coords: Vector2i) -> void:
+	pass
