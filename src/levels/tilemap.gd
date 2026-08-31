@@ -45,6 +45,3 @@ func rig_obstacles():
 	
 	for tile in tile_array:
 		pass
-
-func _on_cell_changed(coords: Vector2i) -> void:
-	pass
