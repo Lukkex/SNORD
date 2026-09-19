@@ -1,0 +1,82 @@
+[gd_scene format=3 uid="uid://b0l824lm6dkyv"]
+
+[ext_resource type="ArrayMesh" uid="uid://dcemwmbd1jo1n" path="res://src/player/3DSnord/Snord6D.obj" id="1_u2pvf"]
+[ext_resource type="Texture2D" uid="uid://c1qw3gbmlbqrr" path="res://src/player/snord.png" id="2_5pa82"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_ohj6x"]
+radius = 0.89922845
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_vj3cr"]
+noise_type = 4
+seed = 16
+frequency = 1.0
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_dro30"]
+noise = SubResource("FastNoiseLite_vj3cr")
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_5a0n5"]
+frequency = 0.0168
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_8avi4"]
+noise = SubResource("FastNoiseLite_5a0n5")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ohj6x"]
+albedo_texture = ExtResource("2_5pa82")
+metallic = 0.55
+metallic_texture = ExtResource("2_5pa82")
+roughness = 0.13
+rim_enabled = true
+rim_tint = 0.94
+clearcoat_enabled = true
+clearcoat = 0.53
+clearcoat_roughness = 0.81
+clearcoat_texture = ExtResource("2_5pa82")
+anisotropy = 0.31
+ao_enabled = true
+ao_light_affect = 1.0
+ao_texture = ExtResource("2_5pa82")
+heightmap_scale = 2.59
+heightmap_flip_tangent = true
+heightmap_texture = SubResource("NoiseTexture2D_8avi4")
+subsurf_scatter_enabled = true
+subsurf_scatter_strength = 1.0
+backlight_enabled = true
+backlight = Color(0.70380783, 0.70380783, 0.70380783, 1)
+refraction_scale = 0.82
+refraction_texture = ExtResource("2_5pa82")
+detail_albedo = ExtResource("2_5pa82")
+detail_normal = SubResource("NoiseTexture2D_dro30")
+grow = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_77v21"]
+albedo_texture = ExtResource("2_5pa82")
+metallic = 1.0
+metallic_texture = ExtResource("2_5pa82")
+roughness = 0.35
+
+[sub_resource type="Environment" id="Environment_ohj6x"]
+ambient_light_color = Color(0.6378432, 0.6378432, 0.63784313, 1)
+
+[node name="3DSnord" type="Node3D" unique_id=1181716839]
+
+[node name="CharacterBody3D" type="CharacterBody3D" parent="." unique_id=1431798069]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D" unique_id=366714750]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.29286408, 0, 0)
+shape = SubResource("SphereShape3D_ohj6x")
+debug_color = Color(5.2943824e-06, 0.6319847, 0.4597625, 0.41960785)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="CharacterBody3D" unique_id=28642484]
+mesh = ExtResource("1_u2pvf")
+surface_material_override/0 = SubResource("StandardMaterial3D_ohj6x")
+surface_material_override/1 = SubResource("StandardMaterial3D_77v21")
+
+[node name="AreaLight3D" type="AreaLight3D" parent="." unique_id=1291654790]
+transform = Transform3D(0.95396596, -0.05263484, -0.29526013, 0, -0.9844796, 0.17549923, -0.29991493, -0.16742028, -0.93916005, -1.3158115, 1.0006981, -3.9311984)
+light_energy = 2.99
+light_indirect_energy = 5.0
+light_size = 1.0
+light_specular = 8.0
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1744063405]
+environment = SubResource("Environment_ohj6x")
