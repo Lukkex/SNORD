@@ -13,15 +13,6 @@
 [ext_resource type="Resource" uid="uid://dpx380i1n6n" path="res://src/player/resources/kyle.tres" id="9_x3a8t"]
 [ext_resource type="Resource" uid="uid://bb8d61sb1p1v3" path="res://src/player/resources/hubert.tres" id="10_eyotc"]
 
-[sub_resource type="Resource" id="Resource_e1kud"]
-script = ExtResource("2_r5ekk")
-character_name = "3D Snord"
-description = "Snord but in three dimensions"
-flair = "Snord."
-die_color = Color(0.92099476, 0.9209946, 0.9209946, 1)
-bg_color = Color(0.97, 0.9009683, 0.3783, 1)
-metadata/_custom_type_script = "uid://ds00hxh8i02lp"
-
 [node name="PlayerSelect" type="Control" unique_id=13376186]
 layout_mode = 3
 anchors_preset = 15
@@ -30,7 +21,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_krjuy")
-char_array = Array[ExtResource("2_r5ekk")]([ExtResource("3_rcyvg"), ExtResource("4_g80vi"), ExtResource("5_x3a8t"), ExtResource("6_eyotc"), ExtResource("7_nd7sw"), ExtResource("8_7lfci"), ExtResource("9_x3a8t"), ExtResource("10_eyotc"), SubResource("Resource_e1kud")])
+char_array = Array[ExtResource("2_r5ekk")]([ExtResource("3_rcyvg"), ExtResource("4_g80vi"), ExtResource("5_x3a8t"), ExtResource("6_eyotc"), ExtResource("7_nd7sw"), ExtResource("8_7lfci"), ExtResource("9_x3a8t"), ExtResource("10_eyotc")])
 target_scene = "uid://c4qr8vdt8bk8g"
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=530807629]

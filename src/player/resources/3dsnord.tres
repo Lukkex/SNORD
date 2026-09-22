@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="CharProfile" format=3 uid="uid://bgmirofkfcpus"]
+
+[ext_resource type="ArrayMesh" uid="uid://dcemwmbd1jo1n" path="res://src/player/3DSnord/Snord6D.obj" id="1_33hko"]
+[ext_resource type="Script" uid="uid://ds00hxh8i02lp" path="res://src/ui/player_select/char_profile.gd" id="1_vhivy"]
+
+[resource]
+script = ExtResource("1_vhivy")
+character_name = "3D Snord"
+description = "snord but in three dimensions."
+flair = "sno O O 00 0## - - #() 00 o rd"
+die_color = Color(0.34730053, 0.27038893, 0.05505503, 1)
+bg_color = Color(0.99, 0.83061004, 0.3069, 1)
+character_model = ExtResource("1_33hko")
+audio_file = "uid://n3oymxbclm0b"
+metadata/_custom_type_script = "uid://ds00hxh8i02lp"

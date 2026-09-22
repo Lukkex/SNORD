@@ -1,0 +1,147 @@
+[gd_scene format=3 uid="uid://e27w6abcec6n"]
+
+[ext_resource type="PackedScene" uid="uid://b0l824lm6dkyv" path="res://src/player/3DSnord/3d_snord.tscn" id="1_wfk1a"]
+
+[sub_resource type="Environment" id="Environment_06bj1"]
+ambient_light_color = Color(0.6378432, 0.6378432, 0.63784313, 1)
+
+[sub_resource type="Animation" id="Animation_vxrmv"]
+resource_name = "snord_jump"
+length = 2.0
+loop_mode = 1
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SubViewport/3DSnord:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(25.132742, 0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("SubViewport/3DSnord:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.7, 1, 1.3, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 0, 5), Vector3(0, 0, 5.5), Vector3(0, 0, 5), Vector3(0, 0, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("SubViewport/AreaLight3D:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(1.2563049, 2.4272084, 1.8219652), Vector3(1.256, 2.427, 7.322), Vector3(1.2563049, 2.4272084, 1.8219652)]
+}
+
+[sub_resource type="Animation" id="Animation_06bj1"]
+resource_name = "snord_spin"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SubViewport/3DSnord:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 3.159046, 0), Vector3(0, 6.2831855, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_vxrmv"]
+_data = {
+&"snord_jump": SubResource("Animation_vxrmv"),
+&"snord_spin": SubResource("Animation_06bj1")
+}
+
+[sub_resource type="AnimationNodeAdd2" id="AnimationNodeAdd2_wfk1a"]
+filter_enabled = true
+filters = ["SubViewport/3DSnord:rotation"]
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_06bj1"]
+animation = &"snord_jump"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_orx48"]
+animation = &"snord_spin"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_wfk1a"]
+animation = &"snord_jump"
+
+[sub_resource type="AnimationNodeBlend2" id="AnimationNodeBlend2_suei4"]
+filter_enabled = true
+filters = ["SubViewport/3DSnord:rotation"]
+
+[sub_resource type="AnimationNodeBlend2" id="AnimationNodeBlend2_06bj1"]
+filter_enabled = true
+filters = ["SubViewport/3DSnord:position", "SubViewport/AreaLight3D:position"]
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_vxrmv"]
+animation = &"snord_spin"
+
+[sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_of4pj"]
+graph_offset = Vector2(-1117.0344, -5.804062)
+nodes/Blend2/node = SubResource("AnimationNodeBlend2_06bj1")
+nodes/Blend2/position = Vector2(-500, 60)
+nodes/Animation/node = SubResource("AnimationNodeAnimation_wfk1a")
+nodes/Animation/position = Vector2(-760, 220)
+nodes/BlendSpace1D/node = SubResource("AnimationNodeAnimation_vxrmv")
+nodes/BlendSpace1D/position = Vector2(-900, 0)
+nodes/Add2/node = SubResource("AnimationNodeAdd2_wfk1a")
+nodes/Add2/position = Vector2(-320, 460)
+"nodes/Animation 2/node" = SubResource("AnimationNodeAnimation_06bj1")
+"nodes/Animation 2/position" = Vector2(-500, 640)
+"nodes/Animation 3/node" = SubResource("AnimationNodeAnimation_orx48")
+"nodes/Animation 3/position" = Vector2(-680, 540)
+"nodes/Blend2 2/node" = SubResource("AnimationNodeBlend2_suei4")
+"nodes/Blend2 2/position" = Vector2(-40, 200)
+node_connections = [&"output", 0, &"Blend2 2", &"Blend2", 0, &"BlendSpace1D", &"Blend2", 1, &"Animation", &"Add2", 0, &"Animation 3", &"Add2", 1, &"Animation 2", &"Blend2 2", 0, &"Blend2", &"Blend2 2", 1, &"Add2"]
+
+[node name="SubViewportContainer" type="SubViewportContainer" unique_id=1030963434]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="SubViewport" type="SubViewport" parent="." unique_id=385360991]
+handle_input_locally = false
+render_target_update_mode = 4
+
+[node name="AreaLight3D" type="AreaLight3D" parent="SubViewport" unique_id=609271538]
+transform = Transform3D(-0.98771435, 0.04488597, 0.14968498, 0.08507013, -0.64904875, 0.7559754, 0.13108553, 0.7594215, 0.63725626, 1.2562665, 2.4271822, 2.515038)
+light_energy = 2.99
+light_indirect_energy = 5.0
+light_size = 1.0
+light_specular = 8.0
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="SubViewport" unique_id=1608328842]
+environment = SubResource("Environment_06bj1")
+
+[node name="3DSnord" parent="SubViewport" unique_id=1181716839 instance=ExtResource("1_wfk1a")]
+transform = Transform3D(0.8068914, 0.3334207, 0.4876033, 0, -0.8254671, 0.56445026, 0.59069985, -0.45545006, -0.6660623, 0, 0, 0.9000888)
+
+[node name="Camera3D" type="Camera3D" parent="SubViewport" unique_id=1830628946]
+transform = Transform3D(1, 0, 0, 0, 0.9959566, 0.08983628, 0, -0.08983628, 0.9959566, 0, 0.362, 8.428572)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1546650255]
+libraries/ = SubResource("AnimationLibrary_vxrmv")
+
+[node name="AnimationTree" type="AnimationTree" parent="." unique_id=1380998490]
+tree_root = SubResource("AnimationNodeBlendTree_of4pj")
+anim_player = NodePath("../AnimationPlayer")
+parameters/Blend2/blend_amount = 1.0
+parameters/Add2/add_amount = 1.0
+"parameters/Blend2 2/blend_amount" = 1.0
