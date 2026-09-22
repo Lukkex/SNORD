@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="CharProfile" format=3 uid="uid://cl5m8eo3qymfy"]
 
 [ext_resource type="Texture2D" uid="uid://cgbk372a6bxrg" path="res://src/ui/player_select/sprites/snordlings.png" id="1_tu2d5"]
-[ext_resource type="Script" uid="uid://ds00hxh8i02lp" path="res://src/ui/player_select/char_profile.gd" id="2_yriwj"]
+[ext_resource type="Script" uid="uid://ds00hxh8i02lp" path="res://src/player/resources/char_profile.gd" id="2_yriwj"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3scau"]
 atlas = ExtResource("1_tu2d5")

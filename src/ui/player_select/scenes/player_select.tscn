@@ -2,7 +2,7 @@
 
 [ext_resource type="Theme" uid="uid://maqxnhvp58cj" path="res://src/ui/themes/theme.tres" id="1_ems7s"]
 [ext_resource type="Script" uid="uid://b1wb6alytgg4b" path="res://src/ui/player_select/scenes/player_select.gd" id="1_krjuy"]
-[ext_resource type="Script" uid="uid://ds00hxh8i02lp" path="res://src/ui/player_select/char_profile.gd" id="2_r5ekk"]
+[ext_resource type="Script" uid="uid://ds00hxh8i02lp" path="res://src/player/resources/char_profile.gd" id="2_r5ekk"]
 [ext_resource type="Resource" uid="uid://c1m6f6h85nuno" path="res://src/player/resources/snord.tres" id="3_rcyvg"]
 [ext_resource type="PackedScene" uid="uid://dlmdhmvgi52kx" path="res://src/ui/player_select/scenes/character_cutin.tscn" id="4_2n0j3"]
 [ext_resource type="Resource" uid="uid://dsuqufrhushpm" path="res://src/player/resources/snorlina.tres" id="4_g80vi"]
@@ -12,6 +12,7 @@
 [ext_resource type="Resource" uid="uid://cnagn7i5lmo5r" path="res://src/player/resources/snake.tres" id="8_7lfci"]
 [ext_resource type="Resource" uid="uid://dpx380i1n6n" path="res://src/player/resources/kyle.tres" id="9_x3a8t"]
 [ext_resource type="Resource" uid="uid://bb8d61sb1p1v3" path="res://src/player/resources/hubert.tres" id="10_eyotc"]
+[ext_resource type="Resource" uid="uid://bgmirofkfcpus" path="res://src/player/resources/3dsnord.tres" id="11_eyotc"]
 
 [node name="PlayerSelect" type="Control" unique_id=13376186]
 layout_mode = 3
@@ -21,7 +22,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_krjuy")
-char_array = Array[ExtResource("2_r5ekk")]([ExtResource("3_rcyvg"), ExtResource("4_g80vi"), ExtResource("5_x3a8t"), ExtResource("6_eyotc"), ExtResource("7_nd7sw"), ExtResource("8_7lfci"), ExtResource("9_x3a8t"), ExtResource("10_eyotc")])
+char_array = Array[ExtResource("2_r5ekk")]([ExtResource("3_rcyvg"), ExtResource("4_g80vi"), ExtResource("5_x3a8t"), ExtResource("6_eyotc"), ExtResource("7_nd7sw"), ExtResource("8_7lfci"), ExtResource("9_x3a8t"), ExtResource("10_eyotc"), ExtResource("11_eyotc")])
 target_scene = "uid://c4qr8vdt8bk8g"
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=530807629]
