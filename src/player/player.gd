@@ -84,6 +84,10 @@ func _input(event: InputEvent) -> void:
 		Global.fwd_input_multiplier = 1.0
 	if event.is_action_released("left"): 
 		Global.back_input_multiplier = 1.0
+	
+	# Jumping action!
+	if event.is_action_pressed("up"):
+		SignalBus.player_jump.emit()
 
 func _set_y_pos(height):
 	position.y = height * 8 - 8 * 5 # 8 pixels per channel, might need tweaking

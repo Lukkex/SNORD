@@ -2,6 +2,7 @@ extends AnimationTree
 
 
 func _ready() -> void:
+	active = true
 	SignalBus.player_jump.connect(play_jump_animation)
 
 func play_jump_animation() -> void:

@@ -137,14 +137,14 @@ filter_enabled = true
 filters = ["SubViewport/3DSnord:position", "SubViewport/AreaLight3D:position"]
 
 [sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_2pndl"]
-graph_offset = Vector2(-753.3913, 43.52597)
+graph_offset = Vector2(-1108.7518, 24.221176)
 nodes/output/position = Vector2(180, 260)
 nodes/Animation/node = SubResource("AnimationNodeAnimation_3jbuy")
 nodes/Animation/position = Vector2(-920, 200)
 "nodes/Animation 2/node" = SubResource("AnimationNodeAnimation_vxrmv")
-"nodes/Animation 2/position" = Vector2(-900, -20)
+"nodes/Animation 2/position" = Vector2(-920, -40)
 "nodes/Animation 3/node" = SubResource("AnimationNodeAnimation_orx48")
-"nodes/Animation 3/position" = Vector2(-820.23315, 503.1236)
+"nodes/Animation 3/position" = Vector2(-880, 500)
 "nodes/Animation 4/node" = SubResource("AnimationNodeAnimation_suei4")
 "nodes/Animation 4/position" = Vector2(-699.76697, 779.48724)
 nodes/Add2/node = SubResource("AnimationNodeAdd2_06bj1")
@@ -166,17 +166,17 @@ advance_mode = 2
 advance_condition = &"jump"
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_7as8l"]
+switch_mode = 2
 advance_mode = 2
-advance_condition = &"walk"
 
 [sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_ohj6x"]
 states/BlendTree/node = SubResource("AnimationNodeBlendTree_2pndl")
 states/BlendTree/position = Vector2(499, 242)
 states/Start/position = Vector2(233, 108)
 states/snord_spin/node = SubResource("AnimationNodeAnimation_jepce")
-states/snord_spin/position = Vector2(489, 51)
+states/snord_spin/position = Vector2(493, 51)
 transitions = ["Start", "snord_spin", SubResource("AnimationNodeStateMachineTransition_kdo3x"), "snord_spin", "BlendTree", SubResource("AnimationNodeStateMachineTransition_745hu"), "BlendTree", "snord_spin", SubResource("AnimationNodeStateMachineTransition_7as8l")]
-graph_offset = Vector2(-247, -42)
+graph_offset = Vector2(-251, -77)
 
 [node name="SubViewportContainer" type="SubViewportContainer" unique_id=1030963434]
 offset_right = 40.0
@@ -205,10 +205,10 @@ transform = Transform3D(1, 0, 0, 0, 0.9959566, 0.08983628, 0, -0.08983628, 0.995
 libraries/ = SubResource("AnimationLibrary_vxrmv")
 
 [node name="3DSnordAnimationTree" type="AnimationTree" parent="." unique_id=255174438]
+active = false
 tree_root = SubResource("AnimationNodeStateMachine_ohj6x")
 anim_player = NodePath("../AnimationPlayer")
 parameters/conditions/jump = false
-parameters/conditions/walk = false
 parameters/BlendTree/Add2/add_amount = 1.0
 parameters/BlendTree/Blend2/blend_amount = 1.0
 "parameters/BlendTree/Blend2 2/blend_amount" = 1.0
