@@ -12,6 +12,7 @@ extends CanvasLayer
 @onready var description: RichTextLabel = $Lore/Descriptoin
 @onready var sprite_2d: Sprite2D = $left/character/Sprite2D
 @onready var character_nameplate: Label = $left/character/Name
+@onready var character_ui: Control = $left/character
 
 @onready var gpu_particles_2d: GPUParticles2D = $left/GPUParticles2D
 @onready var gpu_particles_2d_3: GPUParticles2D = $right/GPUParticles2D3
@@ -25,7 +26,19 @@ func _ready() -> void:
 
 func cut_in(character : CharProfile = null):
 	if character != null: 
-		sprite_2d.texture = character.character_sprite
+		# clear old shit lmao
+		for child in character_ui.get_children():
+			if child is SubViewportContainer:
+				child.queue_free()
+		
+		
+		if character.character_sprite:
+			sprite_2d.visible = true
+			sprite_2d.texture = character.character_sprite
+		elif character.three_dimensional_rigup:
+			var threedee_char_visual : SubViewportContainer = character.three_dimensional_rigup.instantiate()
+			sprite_2d.visible = false
+			sprite_2d.get_parent().add_child(threedee_char_visual)
 		character_nameplate.text = character.character_name
 		description.text = character.description
 		flair.text = character.flair

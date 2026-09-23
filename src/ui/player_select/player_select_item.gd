@@ -25,7 +25,12 @@ func prep(char_profile : CharProfile) -> void:
 		print("char profile is null- ", self)
 	character = char_profile
 	
-	texture_rect.texture = character.character_sprite
+	if character.character_sprite:
+		texture_rect.texture = character.character_sprite
+	elif character.three_dimensional_rigup:
+		var threedee_model : SubViewportContainer = character.three_dimensional_rigup.instantiate()
+		#threedee_model.set("filter", MOUSE_FILTER_IGNORE)
+		texture_rect.add_child(threedee_model)
 	flames_effect.texture = character.character_sprite
 	char_name.text = character.character_name
 	portrait_background.color = character.bg_color

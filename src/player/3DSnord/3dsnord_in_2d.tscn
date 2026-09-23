@@ -181,8 +181,10 @@ graph_offset = Vector2(-251, -77)
 [node name="SubViewportContainer" type="SubViewportContainer" unique_id=1030963434]
 offset_right = 40.0
 offset_bottom = 40.0
+mouse_filter = 2
 
 [node name="SubViewport" type="SubViewport" parent="." unique_id=385360991]
+transparent_bg = true
 handle_input_locally = false
 render_target_update_mode = 4
 
@@ -200,6 +202,7 @@ environment = SubResource("Environment_06bj1")
 
 [node name="Camera3D" type="Camera3D" parent="SubViewport" unique_id=1830628946]
 transform = Transform3D(1, 0, 0, 0, 0.9959566, 0.08983628, 0, -0.08983628, 0.9959566, 0, 0.362, 8.428572)
+current = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1546650255]
 libraries/ = SubResource("AnimationLibrary_vxrmv")
