@@ -111,6 +111,22 @@ theme_override_styles/normal = SubResource("StyleBoxEmpty_5mgu5")
 text = "PLAY"
 scene = "uid://dgycxi3l5alvd"
 
+[node name="LevelButton" parent="MarginContainer2/VBoxContainer" unique_id=1579489496 instance=ExtResource("4_5mgu5")]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 36
+theme_override_styles/normal = SubResource("StyleBoxEmpty_5mgu5")
+text = "LEVEL SELECT"
+scene = "uid://dgycxi3l5alvd"
+
+[node name="CharacterSelect" parent="MarginContainer2/VBoxContainer" unique_id=819995445 instance=ExtResource("4_5mgu5")]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 36
+theme_override_styles/normal = SubResource("StyleBoxEmpty_5mgu5")
+text = "CHARACTERS"
+scene = "uid://dgycxi3l5alvd"
+
 [node name="QuitButton" parent="MarginContainer2/VBoxContainer" unique_id=1105960784 instance=ExtResource("4_5mgu5")]
 layout_mode = 2
 size_flags_horizontal = 4
@@ -130,6 +146,7 @@ text = ""
 scene = "uid://dnl2cxegrcl6a"
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=721688956]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
