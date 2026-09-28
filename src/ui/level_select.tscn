@@ -1,14 +1,10 @@
-[gd_scene format=3 uid="uid://6ieeuwg2234v"]
+[gd_scene format=3 uid="uid://becvh8yrhoifa"]
 
-[ext_resource type="Script" uid="uid://c4w6bvcumr6mp" path="res://src/ui/main_menu.gd" id="1_qoywa"]
-[ext_resource type="Theme" uid="uid://maqxnhvp58cj" path="res://src/ui/themes/theme.tres" id="2_f0s2b"]
-[ext_resource type="VideoStream" uid="uid://cv3tied3utv0i" path="res://assets/SNORDv2.ogv" id="3_5mgu5"]
-[ext_resource type="PackedScene" uid="uid://dtl4fy58wfpbr" path="res://src/ui/buttons/button.tscn" id="4_5mgu5"]
-[ext_resource type="Script" uid="uid://cxv7ae718vqpt" path="res://src/ui/buttons/quit_button.gd" id="5_h03rr"]
+[ext_resource type="Script" uid="uid://c4w6bvcumr6mp" path="res://src/ui/main_menu.gd" id="1_3dqr6"]
+[ext_resource type="Theme" uid="uid://maqxnhvp58cj" path="res://src/ui/themes/theme.tres" id="2_10ygn"]
+[ext_resource type="PackedScene" uid="uid://dtl4fy58wfpbr" path="res://src/ui/buttons/button.tscn" id="4_rctef"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5mgu5"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_h03rr"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wnslw"]
 
@@ -56,7 +52,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_qoywa")
+script = ExtResource("1_3dqr6")
 
 [node name="MarginContainer2" type="MarginContainer" parent="." unique_id=1333499321]
 layout_mode = 1
@@ -65,76 +61,64 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme = ExtResource("2_f0s2b")
+theme = ExtResource("2_10ygn")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer2" unique_id=1880367365]
 layout_mode = 2
-theme = ExtResource("2_f0s2b")
+theme = ExtResource("2_10ygn")
 alignment = 1
 
-[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="MarginContainer2/VBoxContainer" unique_id=872612135]
+[node name="Label" type="Label" parent="MarginContainer2/VBoxContainer" unique_id=21003283]
 layout_mode = 2
-size_flags_horizontal = 4
-stream = ExtResource("3_5mgu5")
-speed_scale = 0.569
-autoplay = true
-loop = true
+theme_override_font_sizes/font_size = 59
+text = "
+SELECT A LEVEL"
+horizontal_alignment = 1
 
 [node name="CrazyAssShit" type="Label" parent="MarginContainer2/VBoxContainer" unique_id=708686742]
 layout_mode = 2
-theme = ExtResource("2_f0s2b")
+theme = ExtResource("2_10ygn")
 theme_override_font_sizes/font_size = 11
-text = "The Legendary Conquerer of the Nine Realms: FATES REBORN
-ULTIMATE DELUXE REDUX COLLECTOR'S EDITION REMASTER v2.0
-GAMEPASS + DLC INCLUDED"
-horizontal_alignment = 1
-
-[node name="TextureRect" type="TextureRect" parent="MarginContainer2/VBoxContainer" unique_id=161012356]
-layout_mode = 2
-
-[node name="CrazyAssShit2" type="Label" parent="MarginContainer2/VBoxContainer" unique_id=911396368]
-layout_mode = 2
-theme = ExtResource("2_f0s2b")
-theme_override_font_sizes/font_size = 11
-text = "  
+text = "
 
 
 "
 horizontal_alignment = 1
 
-[node name="PlayButton" parent="MarginContainer2/VBoxContainer" unique_id=282253013 instance=ExtResource("4_5mgu5")]
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer2/VBoxContainer" unique_id=2144019653]
+layout_mode = 2
+size_flags_vertical = 3
+alignment = 1
+
+[node name="Level1" parent="MarginContainer2/VBoxContainer/HBoxContainer" unique_id=282253013 instance=ExtResource("4_rctef")]
+layout_mode = 2
+text = "Level 1"
+scene = "uid://c4qr8vdt8bk8g"
+
+[node name="Level2" parent="MarginContainer2/VBoxContainer/HBoxContainer" unique_id=1161490700 instance=ExtResource("4_rctef")]
+layout_mode = 2
+text = "Level 2"
+scene = "uid://bvsowf1ovra1a"
+
+[node name="Level3" parent="MarginContainer2/VBoxContainer/HBoxContainer" unique_id=95712929 instance=ExtResource("4_rctef")]
+layout_mode = 2
+text = "Level 3"
+scene = "uid://ctu5tyliul42x"
+
+[node name="Level4" parent="MarginContainer2/VBoxContainer/HBoxContainer" unique_id=667677421 instance=ExtResource("4_rctef")]
+layout_mode = 2
+text = "Level 4"
+scene = "uid://0l68dnrv6obx"
+
+[node name="MainMenu" parent="MarginContainer2/VBoxContainer" unique_id=819995445 instance=ExtResource("4_rctef")]
 layout_mode = 2
 size_flags_horizontal = 4
 theme_override_font_sizes/font_size = 36
 theme_override_styles/normal = SubResource("StyleBoxEmpty_5mgu5")
-text = "PLAY"
-scene = "uid://dgycxi3l5alvd"
+text = "MAIN MENU"
+scene = "uid://6ieeuwg2234v"
 
-[node name="LevelButton" parent="MarginContainer2/VBoxContainer" unique_id=1579489496 instance=ExtResource("4_5mgu5")]
-layout_mode = 2
-size_flags_horizontal = 4
-theme_override_font_sizes/font_size = 36
-theme_override_styles/normal = SubResource("StyleBoxEmpty_5mgu5")
-text = "LEVEL SELECT"
-scene = "uid://becvh8yrhoifa"
-
-[node name="CharacterSelect" parent="MarginContainer2/VBoxContainer" unique_id=819995445 instance=ExtResource("4_5mgu5")]
-layout_mode = 2
-size_flags_horizontal = 4
-theme_override_font_sizes/font_size = 36
-theme_override_styles/normal = SubResource("StyleBoxEmpty_5mgu5")
-text = "CHARACTERS"
-scene = "uid://dgycxi3l5alvd"
-
-[node name="QuitButton" parent="MarginContainer2/VBoxContainer" unique_id=1105960784 instance=ExtResource("4_5mgu5")]
-layout_mode = 2
-size_flags_horizontal = 4
-theme_override_font_sizes/font_size = 36
-theme_override_styles/normal = SubResource("StyleBoxEmpty_h03rr")
-text = "QUIT"
-script = ExtResource("5_h03rr")
-
-[node name="DebugButton" parent="MarginContainer2" unique_id=389251316 instance=ExtResource("4_5mgu5")]
+[node name="DebugButton" parent="MarginContainer2" unique_id=389251316 instance=ExtResource("4_rctef")]
 layout_mode = 2
 size_flags_horizontal = 8
 size_flags_vertical = 0
