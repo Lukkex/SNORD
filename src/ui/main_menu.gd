@@ -5,7 +5,8 @@ extends Control
 @onready var color_rect: ColorRect = $ColorRect
 
 func _ready() -> void:
-	#music.play()
+	AudioManager.stop_all_sounds()
+	AudioManager.main_menu.play()
 	if animation_player != null: 
 		animation_player.play("fade_in")
 		await animation_player.animation_finished

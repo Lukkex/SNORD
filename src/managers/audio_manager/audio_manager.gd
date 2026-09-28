@@ -5,7 +5,7 @@ extends Node2D
 @onready var snordmusicloop = $SnordMusicLoop
 @onready var snord1 = $SnordSound1
 @onready var antagonist_sound: AudioStreamPlayer = $AntagonistSound
-
+@onready var main_menu: AudioStreamPlayer = $MainMenu
 @onready var death_screams = [$death_scream1, $death_scream2]
 @onready var death_sounds = [$death_sound1, $death_sound2, $death_sound3, $death_sound4, $death_sound5, $death_sound6, $death_sound7, $death_sound8]
 
