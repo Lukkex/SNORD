@@ -26,7 +26,7 @@ func _physics_process(delta: float) -> void:
 	
 	if Global.player != null and moving:
 		position.y = Global.player.global_position.y
-		velocity.x = (get_gravity().y * delta * relative_player_speed) + (get_gravity().y * delta * antag_speed_adder)
+		velocity.x = (get_gravity().y * delta * relative_player_speed) + (get_gravity().y * delta * (antag_speed_adder/relative_player_speed) )
 		velocity.x *= sign(Global.player.position.x - position.x)
 	
 	if bite_bool:
@@ -36,7 +36,7 @@ func _physics_process(delta: float) -> void:
 
 ## Called solely by animation player
 func KYLE():
-	AudioManager.play_antagonist_sound()
+	AudioManager.play_antagonist_sound(global_position)
 
 ## TODO: Run this once when the antag gets introduced
 func bare_teeth():

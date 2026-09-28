@@ -2,7 +2,7 @@ extends Node2D
 class_name SpikeLevel
 
 @export var level_speed_multiplier : float = 1.0
-@export_range(1, 3) var level_num : int = 0
+@export_range(1, 4) var level_num : int = 0
 
 const WIN_SCREEN = preload("uid://bwi1x7xvk1aue")
 

@@ -1,10 +1,12 @@
 extends Node2D
+class_name destructible_tilemap
 
 @onready var walls: TileMapLayer = $Walls
 @onready var spikes: TileMapLayer = $Spikes
 const TILE_BREAK_AREA = preload("uid://bdf36hjufx0bj")
 const MAP_TILE_DESTRUCTION_BASE_MATERIAL = preload("uid://c832bg8y8wxlm")
 
+@export var destruction_enabled : bool = true
 @export var tile_desctruction_exceptions : Array[TileMapLayer]
 
 func _ready() -> void:
