@@ -28,5 +28,6 @@ func _restart(_player_that_died = null):
 	get_tree().reload_current_scene()
 
 func _win():
-	
+	death_timer = get_tree().create_timer(0.05)
+	await death_timer.timeout
 	get_tree().change_scene_to_packed(WIN_SCREEN)

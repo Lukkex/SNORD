@@ -6,13 +6,13 @@ extends Node2D
 	"res://src/levels/level_3.tscn",
 	"res://src/levels/level_4.tscn",
 ]
-@onready var current_level : int = 0
+@onready var current_level : int = 1
 
 var level_times : Dictionary = {
-	1:"0", 
-	2:"0",
-	3:"0",
-	4:"0",
+	1:"null", 
+	2:"null",
+	3:"null",
+	4:"null",
 } 
 
 func next_level() -> bool:
@@ -41,3 +41,7 @@ func swap_scene_to_next_level() -> void:
 
 func update_level_time(time : String) -> void:
 	level_times[current_level] = time
+	SignalBus.level_time_updated.emit()
+
+func get_current_level_time() -> String:
+	return level_times[current_level]
