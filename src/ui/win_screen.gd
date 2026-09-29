@@ -7,7 +7,7 @@ var scene : PackedScene
 
 func _ready() -> void:
 	next_level_button.visible = true
-	time_label.text = "Level #" + str(LevelManager.current_level) + ": " + LevelManager.get_current_level_time()
+	time_label.text = "Level #" + str(LevelManager.get_current_level()) + ": " + LevelManager.get_current_level_time()
 	
 	if LevelManager.is_on_last_level():
 		next_level_button.visible = false

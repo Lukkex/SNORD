@@ -9,6 +9,8 @@ extends Node2D
 @onready var current_level : int = 1
 
 var level_times : Dictionary = {
+	-1:"how the hell did you get here bruh",
+	0:"null",
 	1:"null", 
 	2:"null",
 	3:"null",
@@ -20,10 +22,12 @@ func next_level() -> bool:
 		print("Error: No next level!")
 		return false
 	current_level += 1
+	print("Next level: " + str(current_level))
 	return true
 
 func is_on_last_level() -> bool:
 	if current_level == levels.size() -1:
+		print("Last level!")
 		return true
 	return false
 
@@ -45,3 +49,6 @@ func update_level_time(time : String) -> void:
 
 func get_current_level_time() -> String:
 	return level_times[current_level]
+
+func get_current_level() -> int:
+	return current_level

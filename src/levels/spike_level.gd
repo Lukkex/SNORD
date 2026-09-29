@@ -10,6 +10,7 @@ var death_timer : SceneTreeTimer
 
 func _ready() -> void:
 	LevelManager.current_level = level_num - 1
+	print("Entering level " + str(LevelManager.current_level))
 	SignalBus.player_died.connect(_restart)
 	SignalBus.player_win.connect(_win)
 	AudioManager.snordmusicloop.play()
