@@ -3,8 +3,17 @@ extends Node2D
 @export_file var levels : Array[String] = [
 	"res://src/levels/level.tscn", 
 	"res://src/levels/level_2.tscn",
+	"res://src/levels/level_3.tscn",
+	"res://src/levels/level_4.tscn",
 ]
 @onready var current_level : int = 0
+
+var level_times : Dictionary = {
+	1:"0", 
+	2:"0",
+	3:"0",
+	4:"0",
+} 
 
 func next_level() -> bool:
 	if current_level + 1 >= levels.size():
@@ -29,3 +38,6 @@ func swap_scene_to_next_level() -> void:
 	if next_level():
 		if levels[current_level]:
 			get_tree().change_scene_to_file(levels[current_level])
+
+func update_level_time(time : String) -> void:
+	level_times[current_level] = time

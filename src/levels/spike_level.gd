@@ -28,4 +28,5 @@ func _restart(_player_that_died = null):
 	get_tree().reload_current_scene()
 
 func _win():
+	
 	get_tree().change_scene_to_packed(WIN_SCREEN)
